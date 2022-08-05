@@ -1,0 +1,18 @@
+.button {
+	color : #000;
+	background : rgba(255, 255, 255, 0.7);
+	border : 1px solid rgba(0, 0, 0, 0.5);
+	border-radius : 10px;
+	position : fixed;
+	right : 5em;
+	bottom : 5em;
+	padding : 0.5em 1.2em;
+	font-family : Helvetica, Arial;
+	font-size : 1.2em;
+	float: right;
+}
+
+.button:hover {
+	background : rgba(255, 255, 255, 0.9); 
+	cursor: pointer;
+}

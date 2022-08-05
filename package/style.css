@@ -1,0 +1,43 @@
+html {
+	background: rgb(0, 10, 25);
+	font-family: Helvetica, Arial;
+	font-size: 	20px;
+	min-width: 	15em;
+}
+input {
+	height: 	1em;
+	width: 		1em;
+	outline: 	none;
+	margin: 	10px;
+	border: 	none;
+	border-radius: 2px;
+}
+
+fieldset {
+	background:	rgb(242, 242, 242);
+	border: 	none;
+	border-radius: .5em;
+}
+
+header {
+	display: 	block;
+	width: 		100%;
+	margin: 	0;
+	background: rgb(51, 204, 255);
+}
+
+h1 {
+	color: 		rgb(51, 204, 255);
+}
+
+div {
+	color: white;
+}
+
+tr:hover {
+	background: #555;
+}
+
+td {
+	border: none;
+}

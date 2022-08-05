@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link rel="stylesheet" href="style.css">
+  </head>
+  <body>
+	<h1>
+		AutoSkip v0.1
+	</h1>
+	<form>
+		<fieldset>
+			<input type="checkbox" id="inputAutoStart" />
+			<label for="inputAutoStart">Autostart Video</label>
+			<hr />
+			<input type="checkbox" id="inputSkipIntro" />
+			<label for="inputSkipIntro">Always skip intro</label>
+			<br />
+			<input type="checkbox" id="inputSkipOutro" />
+			<label for="inputSkipOutro">Always skip outro</label>
+			<br />
+			<small>When off, a button will be displayed.</small>
+		</fieldset>
+	</form>
+	<br />
+	
+	<div>
+		<h4>Your watchlist</h4>
+		<table style="width: 100%">
+			<thead>
+				<tr>
+					<td>Name</td>
+					<td>Episode</td>
+					<td></td>
+				</tr>
+			</thead>
+			<tbody id="tableWatchlist" style="overflow-y: auto; max-height: 5em">
+			</tbody>
+		</table>
+	</div>
+	<br />
+	
+    <script src="popup.js"></script>
+  </body>
+</html>

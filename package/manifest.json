@@ -1,0 +1,30 @@
+{
+	"name": "AutoSkipper",
+	"description": "Add Netflix-like skip buttons and features to online video players. Currently only supports gogoanime.lu.",
+	"version": "0.1",
+	"manifest_version": 3,
+	"permissions": ["storage", "tabs"], 
+	"icons": {
+		"16": "Icon16px.png",
+		"48": "Icon48px.png",
+		"128": "Icon128px.png"
+	},
+	"content_scripts": [{
+		"matches": ["*://*.gogoanime.lu/*-episode-*"],
+		"js": ["content-script.js"]
+	},{
+		"matches": ["*://*.goload.io/streaming.php?*"],
+		"css": ["embedded.css"],
+		"js": ["embedded.js"]
+	}],
+	"background": {
+		"service_worker": "background.js"
+	},
+	"action": {
+		"default_popup": "popup.html"
+	},
+	"web_accessible_resources": [{
+		"resources": ["inject.js"],
+		"matches": ["<all_urls>"]
+	}]
+}
