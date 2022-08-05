@@ -5,6 +5,8 @@ let skipOutro = true;
 
 let watchlist = {};
 
+let prevWindowState;
+
 chrome.runtime.onInstalled.addListener((details) => {
 	if (details.reason === chrome.runtime.OnInstalledReason.INSTALL) {
 	  chrome.storage.sync.set({ autoStart });
@@ -36,6 +38,25 @@ chrome.runtime.onMessage.addListener(
 			chrome.tabs.update(sender.tab.openerTabId, {active: true});
 		}
 		chrome.tabs.remove(sender.tab.id);
+	}
+	else if (request.fullscreen) {
+		if (request.fullscreen === true) {
+			// make window fullscreen
+			chrome.windows.getCurrent().then((window) => {
+				chrome.windows.update(window.id, { state: "fullscreen" });
+				prevWindowState = window.state;
+			});
+		}
+		else {
+			// get out of fullscreen
+			chrome.windows.getCurrent().then((window) => {
+				let newState = "normal";
+				if (prevWindowState) {
+					newState = prevWindowState;
+				}
+				chrome.windows.update(window.id, { state: newState });
+			});
+		}
 	}
   }
 );

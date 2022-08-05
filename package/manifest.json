@@ -1,7 +1,7 @@
 {
 	"name": "AutoSkipper",
 	"description": "Add Netflix-like skip buttons and features to online video players. Currently only supports gogoanime.lu.",
-	"version": "0.1",
+	"version": "0.2",
 	"manifest_version": 3,
 	"permissions": ["storage", "tabs"], 
 	"icons": {

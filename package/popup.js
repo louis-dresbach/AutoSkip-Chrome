@@ -1,6 +1,7 @@
 let inputSkipIntro = document.getElementById("inputSkipIntro");
 let inputSkipOutro = document.getElementById("inputSkipOutro");
 let inputAutoStart = document.getElementById("inputAutoStart");
+let inputAutoFullscreen = document.getElementById("inputAutoFullscreen");
 
 let tableWatchlist = document.getElementById("tableWatchlist");
 
@@ -13,6 +14,9 @@ function rem() {
 
 chrome.storage.sync.get("autoStart", ({ autoStart }) => {
   inputAutoStart.checked = autoStart;
+});
+chrome.storage.sync.get("autoFullscreen", ({ autoFullscreen }) => {
+  inputAutoFullscreen.checked = autoFullscreen;
 });
 chrome.storage.sync.get("skipIntro", ({ skipIntro }) => {
   inputSkipIntro.checked = skipIntro;
@@ -42,6 +46,14 @@ chrome.storage.sync.get("watchlist", ({ watchlist }) => {
 	}
 });
 
+inputAutoStart.addEventListener("change", () => {
+	let autoStart = inputAutoStart.checked;
+	chrome.storage.sync.set({ autoStart });
+});
+inputAutoFullscreen.addEventListener("change", () => {
+	let autoFullscreen = inputAutoFullscreen.checked;
+	chrome.storage.sync.set({ autoFullscreen });
+});
 inputSkipIntro.addEventListener("change", () => {
 	let skipIntro = inputSkipIntro.checked;
 	chrome.storage.sync.set({ skipIntro });
@@ -49,8 +61,4 @@ inputSkipIntro.addEventListener("change", () => {
 inputSkipOutro.addEventListener("change", () => {
 	let skipOutro = inputSkipOutro.checked;
 	chrome.storage.sync.set({ skipOutro });
-});
-inputAutoStart.addEventListener("change", () => {
-	let autoStart = inputAutoStart.checked;
-	chrome.storage.sync.set({ autoStart });
 });

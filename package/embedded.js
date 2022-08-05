@@ -10,6 +10,9 @@ let sO = false;
 chrome.storage.sync.get("autoStart", ({ autoStart }) => {
 	aS = autoStart;
 });
+chrome.storage.sync.get("autoFullscreen", ({ autoFullscreen }) => {
+	aF = autoFullscreen;
+});
 chrome.storage.sync.get("skipIntro", ({ skipIntro }) => {
   sI = skipIntro;
 });
@@ -52,6 +55,7 @@ const introLength = parseTime("4:48");
 const outroLength = parseTime("1:50");
 
 const nextEp = () => {
+	chrome.runtime.sendMessage({ fullscreen: false });
 	chrome.runtime.sendMessage({closeTab: true});
 }
 
@@ -112,6 +116,11 @@ const autoplay = () => {
 }
 
 window.onload = function () {
+	if(aF === true) {
+		// Make this view fullscreen
+		chrome.runtime.sendMessage({ fullscreen: true });
+	}
+
 	// auto-click to start
 	if(aS === true) {
 		setTimeout(() => { autoplay(); }, 500);
