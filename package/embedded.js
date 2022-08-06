@@ -1,11 +1,10 @@
 // Runs in the tab with the player
 
-const interval = 500;
+const interval = 200;
 
 let aS = false;
 let sI = false;
 let sO = false;
-
 
 chrome.storage.sync.get("autoStart", ({ autoStart }) => {
 	aS = autoStart;
@@ -55,7 +54,6 @@ const introLength = parseTime("4:48");
 const outroLength = parseTime("1:50");
 
 const nextEp = () => {
-	chrome.runtime.sendMessage({ fullscreen: false });
 	chrome.runtime.sendMessage({closeTab: true});
 }
 
@@ -65,45 +63,48 @@ const skipIntro = () => {
 
 
 const checkTime = () => {
-	let timeElapsed, timeCountDown, timeDuration;
+		if (document.visibilityState !== "hidden") {
+		let timeElapsed, timeCountDown, timeDuration;
 
-	const te = document.querySelector(".jw-text-elapsed");
-	const tc = document.querySelector(".jw-text-countdown");
-	const td = document.querySelector(".jw-text-duration");
+		const te = document.querySelector(".jw-text-elapsed");
+		const tc = document.querySelector(".jw-text-countdown");
+		const td = document.querySelector(".jw-text-duration");
 
-	if (te && tc && td) {
-		timeElapsed = parseTime(te.innerHTML);
-		timeCountDown = parseTime(tc.innerHTML);
-		timeDuration = parseTime(td.innerHTML);
-		
-		if (timeDuration > 0) {
-			//console.log("Time: " + timeElapsed + " : " + timeDuration);
+		if (te && tc && td) {
+			timeElapsed = parseTime(te.innerHTML);
+			timeCountDown = parseTime(tc.innerHTML);
+			timeDuration = parseTime(td.innerHTML);
 			
-			
-			// skip intro
-			if (timeElapsed < introLength - 5) {
-				if (sI) {
-					skipIntro();
+			if (timeDuration > 0) {
+				//console.log("Time: " + timeElapsed + " : " + timeDuration);
+				
+				
+				// skip intro
+				if (timeElapsed < introLength - 5) {
+					if (sI) {
+						skipIntro();
+					}
+					else {
+						si.style.display = "block";
+					}
 				}
 				else {
-					si.style.display = "block";
+					si.style.display = "none";
 				}
-			}
-			else {
-				si.style.display = "none";
-			}
 
-			// next episode button
-			if (outroLength > timeCountDown && timeElapsed > 30) {
-				if (sO) {
-					nextEp();
+				// next episode button
+				if (outroLength > timeCountDown && timeElapsed > 30) {
+					chrome.runtime.sendMessage({ fullscreen: false });
+					if (sO) {
+						nextEp();
+					}
+					else {
+						d.style.display = "block";
+					}
 				}
 				else {
-					d.style.display = "block";
+					d.style.display = "none";
 				}
-			}
-			else {
-				d.style.display = "none";
 			}
 		}
 	}
@@ -116,14 +117,16 @@ const autoplay = () => {
 }
 
 window.onload = function () {
-	if(aF === true) {
-		// Make this view fullscreen
-		chrome.runtime.sendMessage({ fullscreen: true });
-	}
+	if (document.visibilityState !== "hidden") {
+		if(aF === true) {
+			// Make this view fullscreen
+			chrome.runtime.sendMessage({ fullscreen: true });
+		}
 
-	// auto-click to start
-	if(aS === true) {
-		setTimeout(() => { autoplay(); }, 500);
+		// auto-click to start
+		if(aS === true) {
+			autoplay();
+		}
 	}
 	
 	d.style.display = "none";
@@ -138,7 +141,7 @@ window.onload = function () {
 	si.addEventListener("click", () => { skipIntro(); });
 	document.body.appendChild(si);
 	
-	setInterval(checkTime, interval);
+	timer = setInterval(checkTime, interval);
 }
 
 function injectScript (filePath, tag) {

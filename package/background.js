@@ -7,17 +7,21 @@ let watchlist = {};
 
 let prevWindowState;
 
+let playerData = {};
+
 chrome.runtime.onInstalled.addListener((details) => {
 	if (details.reason === chrome.runtime.OnInstalledReason.INSTALL) {
 	  chrome.storage.sync.set({ autoStart });
 	  chrome.storage.sync.set({ skipIntro });
 	  chrome.storage.sync.set({ skipOutro });
 	  chrome.storage.sync.set({ watchlist });
+	  chrome.storage.sync.set({ playerData });
 	}
 });
 
 chrome.runtime.onMessage.addListener(
   function(request, sender, sendResponse) {
+	//console.log ("Received message " + JSON.stringify(request));
     if (request.openTab) {
 		chrome.tabs.query({ url: request.openTab }, (tabs) => {
 			if (tabs.length > 0) {
@@ -39,24 +43,26 @@ chrome.runtime.onMessage.addListener(
 		}
 		chrome.tabs.remove(sender.tab.id);
 	}
-	else if (request.fullscreen) {
-		if (request.fullscreen === true) {
-			// make window fullscreen
-			chrome.windows.getCurrent().then((window) => {
+	else if (request.fullscreen === true) {
+		// make window fullscreen
+		chrome.windows.getCurrent().then((window) => {
+			if (window.state !== "fullscreen") {
 				chrome.windows.update(window.id, { state: "fullscreen" });
 				prevWindowState = window.state;
-			});
-		}
-		else {
-			// get out of fullscreen
-			chrome.windows.getCurrent().then((window) => {
+			}
+		});
+	}
+	else if (request.fullscreen === false) {
+		// get out of fullscreen
+		chrome.windows.getCurrent().then((window) => {
+			if (window.state === "fullscreen") {
 				let newState = "normal";
 				if (prevWindowState) {
 					newState = prevWindowState;
 				}
 				chrome.windows.update(window.id, { state: newState });
-			});
-		}
+			}
+		});
 	}
   }
 );
