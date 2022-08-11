@@ -5,6 +5,10 @@ let inputAutoFullscreen = document.getElementById("inputAutoFullscreen");
 
 let tableWatchlist = document.getElementById("tableWatchlist");
 
+document.querySelectorAll('[data-locale]').forEach(elem => {
+	elem.innerText = chrome.i18n.getMessage(elem.dataset.locale)
+});
+
 function rem() {
       // event.target will be the input element.
       var td = event.target.parentNode; 
@@ -31,7 +35,7 @@ const drawWatchlist = (watchlist) => {
 		cell1.addEventListener("click", () => { chrome.runtime.sendMessage({openTab: url(key, watchlist[key])}); });
 		cell2.addEventListener("click", () => { chrome.runtime.sendMessage({openTab: url(key, watchlist[key])}); });
 		cell3.addEventListener("click", () => { 
-			if (confirm("Do you really want to remove " + key + " from your watchlist?") === true) {
+			if (confirm(chrome.i18n.getMessage("delete_confirm", key)) === true) {
 				rem();
 				delete watchlist[key];
 				chrome.storage.sync.set({ watchlist });
@@ -39,7 +43,7 @@ const drawWatchlist = (watchlist) => {
 		});
 		cell1.innerHTML = key;
 		cell2.innerHTML = watchlist[key]["episode"];
-		cell3.innerHTML = "DEL";
+		cell3.innerHTML = chrome.i18n.getMessage("delete_short");
 	}
 }
 

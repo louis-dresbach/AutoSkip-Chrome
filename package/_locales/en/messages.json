@@ -1,4 +1,13 @@
 {
+	"title": {
+		"message": "Title",
+		"description": ""
+	},
+	"episode": {
+		"message": "Episode",
+		"description": ""
+	},
+	
 	"skip_intro": {
 		"message": "Skip Intro",
 		"description": "Button."
@@ -14,6 +23,44 @@
 	"currently_playing": {
 		"message": "Currently Playing",
 		"description": "Text."
+	},
+	"your_watchlist": {
+		"message": "Your watchlist",
+		"description": "Text."
+	},
+	"skip_intro": {
+		"message": "Always skip intro",
+		"description": "Checkbox."
+	},
+	"skip_outro": {
+		"message": "Always skip outro",
+		"description": "Checkbox."
+	},
+	"toggle_fullscreen": {
+		"message": "Toggle Fullscreen",
+		"description": "Checkbox."
+	},
+	"autostart": {
+		"message": "Autostart Video",
+		"description": "Checkbox."
+	},
+	"when_off": {
+		"message": "When off, a button will be displayed.",
+		"description": "Small text."
+	},
+	"delete_confirm": {
+		"message": "Do you really want to remove $title$ from your watchlist?",
+		"description": "Short version of delete",
+		"placeholders": {
+			"title": {
+				"content": "$1",
+				"example": "One Piece"
+			}
+		}
+	},
+	"delete_short": {
+		"message": "DEL",
+		"description": "Short version of delete"
 	},
 	"_": {
 		"message": "",

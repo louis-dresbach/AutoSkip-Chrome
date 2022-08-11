@@ -5,34 +5,34 @@
   </head>
   <body>
 	<h1>
-		AutoSkip v0.3
+		AutoSkipper v0.3
 	</h1>
 	<form>
 		<fieldset>
 			<input type="checkbox" id="inputAutoStart" />
-			<label for="inputAutoStart">Autostart Video</label>
+			<label for="inputAutoStart" data-locale="autostart">Autostart Video</label>
 			<br />
 			<input type="checkbox" id="inputAutoFullscreen" />
-			<label for="inputAutoFullscreen">Toggle Fullscreen</label>
+			<label for="inputAutoFullscreen" data-locale="toggle_fullscreen">Toggle Fullscreen</label>
 			<hr />
 			<input type="checkbox" id="inputSkipIntro" />
-			<label for="inputSkipIntro">Always skip intro</label>
+			<label for="inputSkipIntro" data-locale="skip_intro">Always skip intro</label>
 			<br />
 			<input type="checkbox" id="inputSkipOutro" />
-			<label for="inputSkipOutro">Always skip outro</label>
+			<label for="inputSkipOutro" data-locale="skip_outro">Always skip outro</label>
 			<br />
-			<small>When off, a button will be displayed.</small>
+			<small data-locale="when_off">When off, a button will be displayed.</small>
 		</fieldset>
 	</form>
 	<br />
 	
 	<div>
-		<h4>Your watchlist</h4>
+		<h4 data-locale="your_watchlist">Your watchlist</h4>
 		<table style="width: 100%">
 			<thead>
 				<tr>
-					<td>Name</td>
-					<td>Episode</td>
+					<td data-locale="title">Title</td>
+					<td data-locale="episode">Episode</td>
 					<td></td>
 				</tr>
 			</thead>
