@@ -19,6 +19,7 @@ chrome.runtime.onInstalled.addListener((details) => {
 	}
 });
 
+
 chrome.runtime.onMessage.addListener(
   function(request, sender, sendResponse) {
 	//console.log ("Received message " + JSON.stringify(request));
@@ -33,13 +34,20 @@ chrome.runtime.onMessage.addListener(
 				else
 					chrome.tabs.create({ url: request.openTab });
 			}
-			
 		});
 	}
 	else if (request.closeTab) {
 		if (sender.tab.openerTabId) {
 			chrome.tabs.sendMessage(sender.tab.openerTabId, {nextEpisode: true});
 			chrome.tabs.update(sender.tab.openerTabId, {active: true});
+		}
+		else {
+			chrome.tabs.query({ url: request.openTab }, (tabs) => {
+				if (tabs.length > 0) {
+					chrome.tabs.sendMessage(tabs[0].id, {nextEpisode: true});
+					chrome.tabs.update(tabs[0].id, {active: true});
+				}
+			});
 		}
 		chrome.tabs.remove(sender.tab.id);
 	}

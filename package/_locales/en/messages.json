@@ -1,0 +1,22 @@
+{
+	"skip_intro": {
+		"message": "Skip Intro",
+		"description": "Button."
+	},
+	"skip_recap": {
+		"message": "Skip Recap",
+		"description": "Button."
+	},
+	"next_episode": {
+		"message": "Next Episode",
+		"description": "Button."
+	},
+	"currently_playing": {
+		"message": "Currently Playing",
+		"description": "Text."
+	},
+	"_": {
+		"message": "",
+		"description": ""
+	}
+}
