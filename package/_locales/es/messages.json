@@ -1,0 +1,69 @@
+{
+	"title": {
+		"message": "Título",
+		"description": ""
+	},
+	"episode": {
+		"message": "Episodio",
+		"description": ""
+	},
+	
+	"skip_intro": {
+		"message": "Saltar la introducción",
+		"description": "Button."
+	},
+	"skip_recap": {
+		"message": "Saltar Recapitulación",
+		"description": "Button."
+	},
+	"next_episode": {
+		"message": "Próximo episodio",
+		"description": "Button."
+	},
+	"currently_playing": {
+		"message": "Actualmente en juego",
+		"description": "Text."
+	},
+	"your_watchlist": {
+		"message": "Su lista de vigilancia",
+		"description": "Text."
+	},
+	"skip_intro": {
+		"message": "Omitir siempre la introducción",
+		"description": "Checkbox."
+	},
+	"skip_outro": {
+		"message": "Omitir siempre el outro",
+		"description": "Checkbox."
+	},
+	"toggle_fullscreen": {
+		"message": "Alternar la pantalla completa",
+		"description": "Checkbox."
+	},
+	"autostart": {
+		"message": "Vídeo de arranque automático",
+		"description": "Checkbox."
+	},
+	"when_off": {
+		"message": "Cuando esté apagado, se mostrará un botón.",
+		"description": "Small text."
+	},
+	"delete_confirm": {
+		"message": "¿Realmente quieres eliminar $title$ de tu lista de vigilancia?",
+		"description": "Short version of delete",
+		"placeholders": {
+			"title": {
+				"content": "$1",
+				"example": "One Piece"
+			}
+		}
+	},
+	"delete_short": {
+		"message": "DEL",
+		"description": "Short version of delete"
+	},
+	"_": {
+		"message": "",
+		"description": ""
+	}
+}

@@ -1,0 +1,69 @@
+{
+	"title": {
+		"message": "Titel",
+		"description": ""
+	},
+	"episode": {
+		"message": "Folge",
+		"description": ""
+	},
+	
+	"skip_intro": {
+		"message": "Intro überspringen",
+		"description": "Button."
+	},
+	"skip_recap": {
+		"message": "Rekapitulation überspringen",
+		"description": "Button."
+	},
+	"next_episode": {
+		"message": "Nächste Episode",
+		"description": "Button."
+	},
+	"currently_playing": {
+		"message": "Zurzeit spielend",
+		"description": "Text."
+	},
+	"your_watchlist": {
+		"message": "Ihre Beobachtungsliste",
+		"description": "Text."
+	},
+	"skip_intro": {
+		"message": "Intro immer überspringen",
+		"description": "Checkbox."
+	},
+	"skip_outro": {
+		"message": "Outro immer auslassen",
+		"description": "Checkbox."
+	},
+	"toggle_fullscreen": {
+		"message": "Vollbild umschalten",
+		"description": "Checkbox."
+	},
+	"autostart": {
+		"message": "Autostart Video",
+		"description": "Checkbox."
+	},
+	"when_off": {
+		"message": "Wenn sie ausgeschaltet ist, wird eine Schaltfläche angezeigt.",
+		"description": "Small text."
+	},
+	"delete_confirm": {
+		"message": "Wollen Sie $title$ wirklich von Ihrer Beobachtungsliste entfernen?",
+		"description": "Short version of delete",
+		"placeholders": {
+			"title": {
+				"content": "$1",
+				"example": "One Piece"
+			}
+		}
+	},
+	"delete_short": {
+		"message": "DEL",
+		"description": "Short version of delete"
+	},
+	"_": {
+		"message": "",
+		"description": ""
+	}
+}
