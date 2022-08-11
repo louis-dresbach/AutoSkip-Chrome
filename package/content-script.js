@@ -1,5 +1,5 @@
 
-let title, episode;
+let title, season, episode;
 
 function capitalize (str) {
 	str = str.toLowerCase();
@@ -21,20 +21,34 @@ if (window.location.hostname === "gogoanime.lu") {
 	}
 }
 else if (window.location.hostname === "bs.to") {
-	let res = /serie\/([^\/]*)\/.*\/([^\/]*-Episode-[^\/]*)\//g.exec(window.location.pathname);
-	if (res.length === 3) {
+	let res = /serie\/([^\/]*)\/.*\/[^\/]*-Episode-([\d]*)[^\/]*\//g.exec(window.location.pathname);
+	if (res && res.length === 3) {
 		title = capitalize(res[1].split("-").join(" "));
-		episode = capitalize(res[2].split("-").join(" "));
+		season = -1;
+		episode = res[2];
+	}
+	else {
+		res = /serie\/([^\/]*)\/([\d*])*\/([\d*]*).*\/.*/g.exec(window.location.pathname);
+		if (res && res.length === 4) {
+			title = capitalize(res[1].split("-").join(" "));
+			season = res[2];
+			episode = res[3];
+		}
 	}
 }
 
+alert(season);
+
 chrome.storage.sync.set({ title });
+chrome.storage.sync.set({ season });
 chrome.storage.sync.set({ episode });
 
 chrome.storage.sync.get("watchlist", ({ watchlist }) => {
 	if (title && episode) {
 		watchlist[title] = {
+			"season": season,
 			"episode": episode,
+			"url": window.location.toString(),
 			"domain": window.location.hostname
 		};
 		chrome.storage.sync.set({ watchlist });

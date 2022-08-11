@@ -28,11 +28,11 @@
 		"message": "Ihre Beobachtungsliste",
 		"description": "Text."
 	},
-	"skip_intro": {
+	"always_skip_intro": {
 		"message": "Intro immer überspringen",
 		"description": "Checkbox."
 	},
-	"skip_outro": {
+	"always_skip_outro": {
 		"message": "Outro immer auslassen",
 		"description": "Checkbox."
 	},

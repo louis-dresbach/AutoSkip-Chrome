@@ -11,7 +11,7 @@
 		"128": "Icon128px.png"
 	},
 	"content_scripts": [{
-		"matches": ["*://*.gogoanime.lu/*-episode-*", "*://*.bs.to/serie/*Episode*"],
+		"matches": ["*://*.gogoanime.lu/*-episode-*", "*://*.bs.to/serie/*/*"],
 		"js": ["content-script.js"]
 	},{
 		"matches": ["*://*.goload.io/streaming.php?*", "*://*.vupload.com/v/*"],

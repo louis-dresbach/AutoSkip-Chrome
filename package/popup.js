@@ -15,15 +15,6 @@ function rem() {
       td.parentNode.removeChild(td);
 }
 
-const url = (key, obj) => {
-	switch (obj["domain"]) {
-		case "gogoanime.lu":
-			return "https://gogoanime.lu/" + key.replace(/ /g, "-") + "-episode-" + obj["episode"].replace(/ /g, "-");
-		case "bs.to":
-			return "https://bs.to/serie/" + key.replace(/ /g, "-") + "/5/" + obj["episode"].replace(/ /g, "-") + "/jps/Vupload";
-	}
-}
-
 const drawWatchlist = (watchlist) => {
 	tableWatchlist.innerHTML = "";
 	for (let key in watchlist) {
@@ -32,8 +23,8 @@ const drawWatchlist = (watchlist) => {
 		var cell1 = row.insertCell(0);
 		var cell2 = row.insertCell(1);
 		var cell3 = row.insertCell(2);
-		cell1.addEventListener("click", () => { chrome.runtime.sendMessage({openTab: url(key, watchlist[key])}); });
-		cell2.addEventListener("click", () => { chrome.runtime.sendMessage({openTab: url(key, watchlist[key])}); });
+		cell1.addEventListener("click", () => { chrome.runtime.sendMessage({ openTab: watchlist[key]["url"] }); });
+		cell2.addEventListener("click", () => { chrome.runtime.sendMessage({ openTab: watchlist[key]["url"] }); });
 		cell3.addEventListener("click", () => { 
 			if (confirm(chrome.i18n.getMessage("delete_confirm", key)) === true) {
 				rem();
@@ -42,7 +33,14 @@ const drawWatchlist = (watchlist) => {
 			}
 		});
 		cell1.innerHTML = key;
-		cell2.innerHTML = watchlist[key]["episode"];
+		
+		let ep = "";
+		let s = watchlist[key]["season"];
+		if (s !== undefined && s !== null && s !== -1) {
+			ep += "S" + s + "E";
+		}
+		ep += watchlist[key]["episode"]
+		cell2.innerHTML = ep;
 		cell3.innerHTML = chrome.i18n.getMessage("delete_short");
 	}
 }
@@ -84,7 +82,7 @@ inputSkipOutro.addEventListener("change", () => {
 
 let t, e;
 const updateCurrent = () => {
-	if (t !== null && e !== null) 
+	if (t !== null && t !== undefined && e !== null && e !== undefined) 
 		document.getElementById("current").innerHTML = "<b>" + chrome.i18n.getMessage("currently_playing") + "</b> <br />" + t + "<br />" + e;
 	else
 		document.getElementById("current").innerHTML = "";

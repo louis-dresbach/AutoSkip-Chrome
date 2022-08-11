@@ -28,11 +28,11 @@
 		"message": "Your watchlist",
 		"description": "Text."
 	},
-	"skip_intro": {
+	"always_skip_intro": {
 		"message": "Always skip intro",
 		"description": "Checkbox."
 	},
-	"skip_outro": {
+	"always_skip_outro": {
 		"message": "Always skip outro",
 		"description": "Checkbox."
 	},
