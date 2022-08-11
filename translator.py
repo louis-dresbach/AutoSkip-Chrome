@@ -25,7 +25,7 @@ if os.path.exists(path):
 			os.makedirs(path + lang)
 		
 		result = re.sub('("message":\s*)"([^"]*)"', translate, original)
-		w = open(path + lang + "/messages.json", "w")
+		w = open(path + lang + "/messages.json", "w", encoding='utf-8')
 		w.write(result)
 		w.close()
 		
