@@ -1,5 +1,22 @@
-
+// Runs on the website that has a link/iframe to the videoplayer
 let title, season, episode;
+
+const gogoanime = [
+	"gogoanime.lu", 
+	"gogoanime.ee",
+	"gogoanime.tel"
+]
+const bs = [
+	"bs.to",
+	"burningseries.co",
+	"burningseries.sx",
+	"burningseries.ac",
+	"burningseries.vc",
+	"burningseries.cx",
+	"burningseries.nz",
+	"burningseries.se",
+	"burningseries.tw"
+];
 
 function capitalize (str) {
 	str = str.toLowerCase();
@@ -12,61 +29,87 @@ function capitalize (str) {
     return str.join(" ");
 }
 
-if (window.location.hostname === "gogoanime.lu") {
-	let currentTitle = window.location.pathname.substring(1).split("-").join(" ");
-	let c = currentTitle.split(" episode ");
-	if (c.length == 2) {
-		title = capitalize(c[0]);
-		episode = capitalize(c[1]);
-	}
-}
-else if (window.location.hostname === "bs.to") {
-	let res = /serie\/([^\/]*)\/.*\/[^\/]*-Episode-([\d]*)[^\/]*\//g.exec(window.location.pathname);
-	if (res && res.length === 3) {
-		title = capitalize(res[1].split("-").join(" "));
-		season = -1;
-		episode = res[2];
-	}
-	else {
-		res = /serie\/([^\/]*)\/([\d*])*\/([\d*]*).*\/.*/g.exec(window.location.pathname);
-		if (res && res.length === 4) {
-			title = capitalize(res[1].split("-").join(" "));
-			season = res[2];
-			episode = res[3];
+function readTitle () {
+	if (gogoanime.includes(window.location.hostname)) {
+		let currentTitle = window.location.pathname.substring(1).split("-").join(" ");
+		let c = currentTitle.split(" episode ");
+		if (c.length > 0) {
+			title = capitalize(c[0]);
+			if (c.length == 2) {
+				season = -1;
+				episode = parseInt(c[1]);
+			}
 		}
 	}
-}
-
-alert(season);
-
-chrome.storage.sync.set({ title });
-chrome.storage.sync.set({ season });
-chrome.storage.sync.set({ episode });
-
-chrome.storage.sync.get("watchlist", ({ watchlist }) => {
-	if (title && episode) {
-		watchlist[title] = {
-			"season": season,
-			"episode": episode,
-			"url": window.location.toString(),
-			"domain": window.location.hostname
-		};
-		chrome.storage.sync.set({ watchlist });
+	else if (bs.includes(window.location.hostname)) {
+		let res = /serie\/([^\/]*)\/.*\/[^\/]*-Episode-([\d]*)[^\/]*\//g.exec(window.location.pathname);
+		if (res && res.length === 3) {
+			title = capitalize(res[1].split("-").join(" "));
+			season = -1;
+			episode = parseInt(res[2]);
+		}
+		else {
+			res = /serie\/([^\/]*)\/([\d*])*\/([\d*]*).*\/.*/g.exec(window.location.pathname);
+			if (res && res.length === 4) {
+				title = capitalize(res[1].split("-").join(" "));
+				season = parseInt(res[2]);
+				episode = parseInt(res[3]);
+			}
+		}
 	}
-});
 
-let divPlayer = document.getElementById("load_anime");
+	chrome.storage.sync.set({ title });
+	chrome.storage.sync.set({ season });
+	chrome.storage.sync.set({ episode });
 
-if(divPlayer) {
-	let iframe = divPlayer.querySelector('iframe');
-	chrome.runtime.sendMessage({openTab: iframe.src});
+	chrome.storage.sync.get("watchlist", ({ watchlist }) => {
+		if (title && episode) {
+			watchlist[title] = {
+				"season": 	season,
+				"episode": 	episode,
+				"url": 		window.location.toString(),
+				"domain": 	window.location.hostname
+			};
+			chrome.storage.sync.set({ watchlist });
+		}
+	});
 }
 
 chrome.runtime.onMessage.addListener(
   function(request, sender, sendResponse) {
     if (request.nextEpisode) {
 		// Click link to next episode
-		document.querySelector(".anime_video_body_episodes_r a").click();
+		if (gogoanime.includes(window.location.hostname)) {
+			document.querySelector(".anime_video_body_episodes_r a").click();
+		}
+		else if (bs.includes(window.location.hostname)) {
+			let a = document.querySelector("#episodes li.active").nextElementSibling.getElementsByTagName("a");
+			if (a.length === 1) {
+				a[0].click();
+			}
+		}
 	}
   }
 );
+
+window.onload = function () {
+	readTitle();
+	if (bs.includes(window.location.hostname)) {
+		let hosts = [/*"streamzz"*/, "vupload", "videovard", "vidoza", "streamtape"]; // our preferred hosts that work with this plugins
+		let tabs = document.querySelector(".hoster-tabs");
+		
+		// Default host is in our list
+		if (!hosts.includes(tabs.querySelector("li.active").innerText.trim().toLowerCase())) {
+			// Select the first host we find
+			for (let tab of tabs.getElementsByTagName("li")) {
+				if (hosts.includes(tab.innerText.trim().toLowerCase())) {
+					let a = tab.getElementsByTagName("a");
+					if (a.length === 1) {
+						a[0].click();
+						break;
+					}
+				}
+			}
+		}
+	}
+}

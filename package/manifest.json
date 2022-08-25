@@ -1,7 +1,7 @@
 {
 	"name": "AutoSkipper",
-	"description": "Add Netflix-like skip buttons and features to online video players. Currently only supports gogoanime.lu.",
-	"version": "0.3",
+	"description": "Add Netflix-like skip buttons and features to online video players. ",
+	"version": "0.4",
 	"manifest_version": 3,
 	"default_locale": "en",
 	"permissions": ["storage", "tabs"], 
@@ -11,12 +11,35 @@
 		"128": "Icon128px.png"
 	},
 	"content_scripts": [{
-		"matches": ["*://*.gogoanime.lu/*-episode-*", "*://*.bs.to/serie/*/*"],
+		"matches": [
+			"*://*.gogoanime.lu/*-episode-*", 
+			"*://*.gogoanime.ee/*-episode-*", 
+			"*://*.gogoanime.tel/*-episode-*", 
+			
+			"*://*.bs.to/serie/*/*", 
+			"*://*.burningseries.ac/serie/*/*", 
+			"*://*.burningseries.co/serie/*/*", 
+			"*://*.burningseries.cx/serie/*/*", 
+			"*://*.burningseries.nz/serie/*/*", 
+			"*://*.burningseries.se/serie/*/*", 
+			"*://*.burningseries.tw/serie/*/*", 
+			"*://*.burningseries.vc/serie/*/*", 
+			
+			"*://*.onepiece-tube.com/folge/*"
+		],
 		"js": ["content-script.js"]
 	},{
-		"matches": ["*://*.goload.io/streaming.php?*", "*://*.vupload.com/v/*"],
+		"matches": [
+			"*://*.goload.io/streaming.php?*", 
+			"*://*.vupload.com/v/*", 
+			"*://*.streamz.ws/wdu?*", 
+			"*://*.videovard.sx/e/*",
+			"*://*.vidoza.net/embed-*",
+			"*://*.streamtape.com/e/*"
+		],
 		"css": ["embedded.css"],
-		"js": ["embedded.js"]
+		"js": ["embedded.js"],
+		"all_frames": true
 	}],
 	"background": {
 		"service_worker": "background.js"
@@ -26,11 +49,7 @@
 	},
 	"web_accessible_resources": [
 		{
-			"resources": ["inject.js"],
-			"matches": ["<all_urls>"]
-		},
-		{
-			"resources": ["anime-titles.xml", "timestamps.json"],
+			"resources": ["constants.js", "inject.js", "anime-titles.xml", "timestamps.json"],
 			"matches": ["<all_urls>"]
 		}]
 }

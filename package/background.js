@@ -1,13 +1,13 @@
 
-let autoStart = true;
-let skipIntro = true;
-let skipOutro = true;
+var autoStart = true;
+var skipIntro = true;
+var skipOutro = true;
 
-let watchlist = {};
+var watchlist = {};
 
-let prevWindowState;
+var prevWindowState;
 
-let playerData = {};
+var playerData = {};
 
 chrome.runtime.onInstalled.addListener((details) => {
 	if (details.reason === chrome.runtime.OnInstalledReason.INSTALL) {
@@ -19,14 +19,16 @@ chrome.runtime.onInstalled.addListener((details) => {
 	}
 });
 
-
 chrome.runtime.onMessage.addListener(
   function(request, sender, sendResponse) {
 	//console.log ("Received message " + JSON.stringify(request));
     if (request.openTab) {
 		chrome.tabs.query({ url: request.openTab }, (tabs) => {
 			if (tabs.length > 0) {
-				chrome.tabs.update(tabs[0].id, {active: true});
+				if (typeof sender.tab !== "undefined" && typeof sender.tab.id !== "undefined")
+					chrome.tabs.update(tabs[0].id, { active: true, openerTabId: sender.tab.id });
+				else
+					chrome.tabs.update(tabs[0].id, { active: true });
 			}
 			else {
 				if (sender.tab)

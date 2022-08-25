@@ -1,4 +1,4 @@
-.button {
+.autoskipper_button {
 	color : #000;
 	background : rgba(255, 255, 255, 0.7);
 	border : .1em solid rgba(0, 0, 0, 0.8);
@@ -11,9 +11,11 @@
 	font-size : 1.5em;
 	font-weight: bold;
 	float: right;
+	z-index: 999999999;
+	margin: 0;
 }
 
-.button:hover {
+.autoskipper_button:hover {
 	background : rgba(255, 255, 255, 0.9); 
 	cursor: pointer;
 }
