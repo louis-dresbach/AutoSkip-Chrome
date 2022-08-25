@@ -7,6 +7,10 @@
 		"message": "Episodio",
 		"description": ""
 	},
+	"season": {
+		"message": "Temporada",
+		"description": ""
+	},
 	
 	"skip_intro": {
 		"message": "Saltar la introducción",
@@ -62,6 +66,32 @@
 		"message": "DEL",
 		"description": "Short version of delete"
 	},
+	
+	"group_watch": {
+		"message": "Grupo de Vigilancia",
+		"description": ""
+	},
+	"enter_group": {
+		"message": "Introduzca el ID del grupo al que desea unirse",
+		"description": ""
+	},
+	"join_group": {
+		"message": "Introduzca el ID del grupo al que desea unirse",
+		"description": ""
+	},
+	"leave_group": {
+		"message": "Dejar el grupo",
+		"description": ""
+	},
+	"in_group": {
+		"message": "En groupwatch",
+		"description": ""
+	},
+	"or": {
+		"message": "o",
+		"description": ""
+	},
+	
 	"_": {
 		"message": "",
 		"description": ""

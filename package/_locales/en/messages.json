@@ -7,6 +7,10 @@
 		"message": "Episode",
 		"description": ""
 	},
+	"season": {
+		"message": "Season",
+		"description": ""
+	},
 	
 	"skip_intro": {
 		"message": "Skip Intro",
@@ -62,6 +66,32 @@
 		"message": "DEL",
 		"description": "Short version of delete"
 	},
+	
+	"group_watch": {
+		"message": "Group Watch",
+		"description": ""
+	},
+	"enter_group": {
+		"message": "Enter group ID you wish to join",
+		"description": ""
+	},
+	"join_group": {
+		"message": "Enter group ID you wish to join",
+		"description": ""
+	},
+	"leave_group": {
+		"message": "Leave group",
+		"description": ""
+	},
+	"in_group": {
+		"message": "In groupwatch ",
+		"description": ""
+	},
+	"or": {
+		"message": "or",
+		"description": ""
+	},
+	
 	"_": {
 		"message": "",
 		"description": ""

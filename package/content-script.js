@@ -57,6 +57,14 @@ function readTitle () {
 			}
 		}
 	}
+	else if (window.location.hostname === "www.crunchyroll.com") {
+		let res = /\/[^\/]*\/([^\/]*)\/episode-([\d]*)-/g.exec(window.location.pathname);
+		if (res && res.length === 3) {
+			title = capitalize(res[1].split("-").join(" "));
+			season = -1;
+			episode = parseInt(res[2]);
+		}
+	}
 
 	chrome.storage.sync.set({ title });
 	chrome.storage.sync.set({ season });

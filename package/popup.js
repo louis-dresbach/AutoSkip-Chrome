@@ -17,7 +17,7 @@ function rem() {
 
 function rendercan() {
 	let trashcan = document.createElementNS("http://www.w3.org/2000/svg", "svg");
-	trashcan.setAttribute("fill", "white");
+	trashcan.setAttribute("fill", "black");
 	trashcan.setAttribute("viewBox", "0 0 120 120");
 	trashcan.setAttribute("stroke", "none");
 	trashcan.setAttribute("height", "1.1em");
@@ -100,10 +100,10 @@ const updateCurrent = () => {
 	let text = "";
 	if (t !== null && t !== undefined) {
 		text += "<b>" + chrome.i18n.getMessage("currently_playing") + "</b> <br />" + t + "<br />";
-		if (s !== null && s !== undefined)
-			text += "Season <b>" + s + "</b> | ";
+		if (s !== null && s !== undefined && s !== -1)
+			text += chrome.i18n.getMessage("season") + " <b>" + s + "</b> | ";
 		if (e !== null && e !== undefined)
-			text += "Episode <b>" + e + "</b><br />";
+			text += chrome.i18n.getMessage("episode") + " <b>" + e + "</b><br />";
 	}
 	
 	document.getElementById("current").innerHTML = text;
@@ -139,5 +139,100 @@ chrome.storage.onChanged.addListener((changes, area) => {
 		if ("watchlist" in changes) {
 			drawWatchlist(changes.watchlist.newValue);
 		}
+		if ("autoStart" in changes) {
+			inputAutoStart.checked = changes.autoStart.newValue;
+		}
+		if ("autoFullscreen" in changes) {
+			inputAutoFullscreen.checked = changes.autoFullscreen.newValue;
+		}
+		if ("skipIntro" in changes) {
+			inputSkipIntro.checked = changes.skipIntro.newValue;
+		}
+		if ("skipOutro" in changes) {
+			inputSkipOutro.checked = changes.skipOutro.newValue;
+		}
+		if ("watchlist" in changes) {
+			drawWatchlist(changes.watchlist.newValue);
+		}
+		if ("groupwatch" in changes) {
+			drawgroupwatch(changes.groupwatch.newValue);
+		}
     }
+});
+
+if (document.location.href.toString().includes("?lalala")) {
+	document.querySelector("#popup").remove();
+}
+else {
+	document.querySelector("#popup").addEventListener("click", (e) => {
+		window.open(window.location.toString() + "?lalala", 'popUpWindow','height=700, width=400, resizable=no, scrollbars=no, toolbar=no, menubar=no, location=no, directories=no, status=yes');
+		window.close();
+	});
+}
+var coll = document.getElementsByClassName("collapsible");
+
+for (let i = 0; i < coll.length; i++) {
+	coll[i].addEventListener("click", function(e) {
+		e.preventDefault();
+		this.classList.toggle("active");
+		var content = this.nextElementSibling;
+		if (content.style.maxHeight){
+			content.style.maxHeight = null;
+		} 
+		else {
+			content.style.maxHeight = content.scrollHeight + "px";
+		} 
+	});
+}
+
+const drawgroupwatch = (object) => {
+	if (!object || object === null)
+		return;
+	let gw = document.querySelector("#fieldgroupwatch");
+	if (object.roomid) {
+		gw.innerHTML = "";
+		let p = document.createElement("p");
+		p.innerHTML = chrome.i18n.getMessage("in_group") + "<i>" + object.roomid + "</i>";
+		gw.appendChild(p);
+		let lg = document.createElement("button");
+		lg.innerHTML = chrome.i18n.getMessage("leave_group");
+		lg.addEventListener("click", function (e) {
+			e.preventDefault();
+			chrome.runtime.sendMessage({ leaveGroupWatch: true });
+		});
+		gw.appendChild(lg);
+	}
+	else {
+		gw.innerHTML = "";
+		let ng = document.createElement("button");
+		ng.innerHTML = "Create new group";
+		ng.addEventListener("click", function (e) {
+			e.preventDefault();
+			chrome.runtime.sendMessage({ createGroupWatch: true });
+		});
+		gw.appendChild(ng);
+		gw.appendChild(document.createElement("br"));
+		gw.appendChild(document.createElement("br"));
+		let c = document.createElement("center");
+		c.innerHTML = chrome.i18n.getMessage("or");
+		gw.appendChild(c);
+		gw.appendChild(document.createElement("br"));
+		let igi = document.createElement("input");
+		igi.type = "text";
+		igi.className = "inputGroupId";
+		igi.placeholder = chrome.i18n.getMessage("enter_group");
+		gw.appendChild(igi);
+		let jg = document.createElement("button");
+		jg.innerHTML = chrome.i18n.getMessage("join_group");
+		jg.addEventListener("click", function (e) {
+			e.preventDefault();
+			chrome.runtime.sendMessage({ joinGroupWatch: document.querySelector(".inputGroupId").value });
+		});
+		gw.appendChild(jg);
+		gw.appendChild(document.createElement("br"));
+	}
+};
+
+chrome.storage.sync.get("groupwatch", ({ groupwatch }) => {
+	drawgroupwatch(groupwatch);
 });

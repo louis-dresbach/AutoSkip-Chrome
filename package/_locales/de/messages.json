@@ -7,6 +7,10 @@
 		"message": "Folge",
 		"description": ""
 	},
+	"season": {
+		"message": "Saison",
+		"description": ""
+	},
 	
 	"skip_intro": {
 		"message": "Intro überspringen",
@@ -62,6 +66,32 @@
 		"message": "DEL",
 		"description": "Short version of delete"
 	},
+	
+	"group_watch": {
+		"message": "Gruppenüberwachung",
+		"description": ""
+	},
+	"enter_group": {
+		"message": "Geben Sie die ID der Gruppe ein, der Sie beitreten möchten",
+		"description": ""
+	},
+	"join_group": {
+		"message": "Geben Sie die ID der Gruppe ein, der Sie beitreten möchten",
+		"description": ""
+	},
+	"leave_group": {
+		"message": "Gruppe verlassen",
+		"description": ""
+	},
+	"in_group": {
+		"message": "Bei Gruppenüberwachung",
+		"description": ""
+	},
+	"or": {
+		"message": "oder",
+		"description": ""
+	},
+	
 	"_": {
 		"message": "",
 		"description": ""

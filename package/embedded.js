@@ -52,7 +52,7 @@ else {
 			chrome.storage.sync.get("episode", ({ episode }) => {
 				e = episode;
 
-				if (e !== null)  {
+				if (e !== null && 1==0)  {
 					// get intro, outro length from database
 					// info from https://github.com/jonbarrow/open-anime-timestamps
 					// get anime id from title
@@ -108,10 +108,24 @@ else {
 
 	const introLength = parseTime("3:21");
 	const outroLength = parseTime("0:40");
+	
+	const sendmes = (mes) => {
+		try {
+			chrome.runtime.sendMessage(mes);
+		}
+		catch (e) {
+			if (e.name === "Error" && e.message === "Extension context invalidated.") {
+				location.reload();
+			}
+			else {
+				console.log (e.message);
+			}
+		}
+	}
 
 	const nextEp = () => {
-		chrome.runtime.sendMessage({ fullscreen: false });
-		chrome.runtime.sendMessage({closeTab: true});
+		sendmes({ fullscreen: false });
+		sendmes({ closeTab: true });
 	}
 
 	const skipIntro = () => {
@@ -174,7 +188,7 @@ else {
 
 				// next episode button
 				if (outroLength > timeCountDown && timeElapsed > 30) {
-					chrome.runtime.sendMessage({ fullscreen: false });
+					sendmes({ fullscreen: false });
 					if (sO) {
 						nextEp();
 					}
@@ -201,13 +215,15 @@ else {
 		if (v.length > 0) {
 			v[0].focus();
 			v[0].addEventListener("pause", function (e) {
+				sendmes({ player_paused: true });
 				if (aF === true) {
-					chrome.runtime.sendMessage({ fullscreen: false });
+					sendmes({ fullscreen: false });
 				}
 			});
 			v[0].addEventListener("play", function (e) {
+				sendmes({ player_played: true });
 				if (aF === true) {
-					chrome.runtime.sendMessage({ fullscreen: true });
+					sendmes({ fullscreen: true });
 				}
 			});
 			if (document.visibilityState !== "hidden") {
@@ -218,7 +234,7 @@ else {
 				}
 				if(aF === true) {
 					// Make this view fullscreen
-					chrome.runtime.sendMessage({ fullscreen: true });
+					sendmes({ fullscreen: true });
 				}
 			}
 		}
@@ -256,6 +272,15 @@ else {
 		});
 		
 		timer = setInterval(checkTime, interval);
+		
+		chrome.runtime.onMessage.addListener(
+			function(request, sender, sendResponse) {
+				if (request.player) {
+					window.postMessage({ player: request.player }, "*");
+				}
+			}
+		);
+		
 	}
 	window.onbeforeunload = function() {
 		if (chrome.runtime?.id) {
