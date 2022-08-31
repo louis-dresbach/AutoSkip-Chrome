@@ -20,6 +20,11 @@ button {
 	margin: 	0;
 	height: 	2em;
 	width: 		100%;
+	border: 	2px solid #CCC;
+	cursor: 	pointer;
+}
+button:hover {
+	background: #cccccc;
 }
 
 fieldset {
@@ -43,12 +48,17 @@ div {
 	color: white;
 }
 
+table {
+	border-collapse: collapse;
+	margin: .7em auto;
+}
+
 tr:hover {
-	background: #555;
+	background: #cccccc;
 }
 
 td {
-	border: none;
+	border: 1px solid #777777;
 }
 
 .collapsible {

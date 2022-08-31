@@ -192,8 +192,17 @@ const drawgroupwatch = (object) => {
 	if (object.roomid) {
 		gw.innerHTML = "";
 		let p = document.createElement("p");
-		p.innerHTML = chrome.i18n.getMessage("in_group") + "<i>" + object.roomid + "</i>";
+		p.innerHTML = chrome.i18n.getMessage("in_group") + " <i>" + object.roomid + "</i>";
 		gw.appendChild(p);
+		let c = document.createElement("button");
+		c.innerHTML = chrome.i18n.getMessage("copy");
+		c.addEventListener("click", function (e) {
+			e.preventDefault();
+			navigator.clipboard.writeText(object.roomid);
+		});
+		gw.appendChild(c);
+		gw.appendChild(document.createElement("br"));
+		gw.appendChild(document.createElement("hr"));
 		let lg = document.createElement("button");
 		lg.innerHTML = chrome.i18n.getMessage("leave_group");
 		lg.addEventListener("click", function (e) {

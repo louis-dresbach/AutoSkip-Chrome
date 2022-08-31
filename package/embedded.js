@@ -226,7 +226,11 @@ else {
 					sendmes({ fullscreen: true });
 				}
 			});
+			v[0].addEventListener("seeked", function (e) {
+				sendmes({ player_seeked: v[0].currentTime });
+			});
 			if (document.visibilityState !== "hidden") {
+				sendmes({ player_loaded: true, url: window.location.toString() });
 				if(aS === true) {
 					//console.log("Attempting to autostart the video");
 					//send message to injected script to play
@@ -273,14 +277,6 @@ else {
 		
 		timer = setInterval(checkTime, interval);
 		
-		chrome.runtime.onMessage.addListener(
-			function(request, sender, sendResponse) {
-				if (request.player) {
-					window.postMessage({ player: request.player }, "*");
-				}
-			}
-		);
-		
 	}
 	window.onbeforeunload = function() {
 		if (chrome.runtime?.id) {
@@ -304,6 +300,17 @@ else {
 			}
 		}
 	});
+		
+	chrome.runtime.onMessage.addListener(
+		function(request, sender, sendResponse) {
+			if (request.player) {
+				if (request.time)
+					window.postMessage({ player: request.player, time: request.time }, "*");
+				else
+					window.postMessage({ player: request.player }, "*");
+			}
+		}
+	);
 
 	function injectScript (filePath, tag) {
 		let node = document.getElementsByTagName(tag)[0];

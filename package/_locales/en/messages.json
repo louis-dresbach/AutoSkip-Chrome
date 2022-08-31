@@ -11,6 +11,10 @@
 		"message": "Season",
 		"description": ""
 	},
+	"copy": {
+		"message": "Copy to clipboard",
+		"description": ""
+	},
 	
 	"skip_intro": {
 		"message": "Skip Intro",

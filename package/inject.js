@@ -43,11 +43,15 @@ const action = (data) => {
 		case "seek":
 			if (_jw.includes(window.location.hostname)) {
 				if (typeof jwplayer().seek === "function") {
-					window.jwplayer().seek(data.time);
+					let t = jwplayer().getCurrentTime();
+					
+					if (data.time < t - 1 || data.time > t + 1)
+						window.jwplayer().seek(data.time);
 				}
 			}
 			else if (_vjs.includes(window.location.hostname)) {
-				v.currentTime = data.time;
+				if (data.time < v.currentTime - 1 || data.time > v.currentTime + 1)
+					v.currentTime = data.time;
 			}
 			break;
 	}

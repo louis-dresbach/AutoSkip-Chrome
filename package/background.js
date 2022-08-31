@@ -1,17 +1,15 @@
 
-var autoStart = true;
-var skipIntro = true;
-var skipOutro = true;
+let autoStart = true;
+let skipIntro = true;
+let skipOutro = true;
 
-var watchlist = {};
+let watchlist = {};
 
-var prevWindowState;
+let prevWindowState;
 
-var playerData = {};
+let playerData = {};
 
-var groupwatch = {
-	connected : false
-};
+let groupwatch = {};
 
 const sites = [
 	"goload.io",
@@ -21,64 +19,117 @@ const sites = [
 	"vidoza.net"
 ];
 
-const ws = new WebSocket("ws://localhost:8200");
+let ws = null;
+let wsQueue = []; // Queue sending messages in this while we are connected
 
-function heartbeat() {
-	clearTimeout(this.pingTimeout);
-	this.pingTimeout = setTimeout(() => {
-		groupwatch.connected = false;
+const initWs = () => {
+	if (ws !== null) {
+		return;
+	}
+	ws = new WebSocket("wss://k3i.de:8080");
+
+	ws.addEventListener("open", () =>{
 		chrome.storage.sync.set({ groupwatch });
-	}, 30000 + 2000);
-}
-
-ws.addEventListener("open", () =>{
-	groupwatch.connected = true;
-	chrome.storage.sync.set({ groupwatch });
-	heartbeat();
-});
-ws.addEventListener("ping", () =>{
-	heartbeat();
-});
-
-ws.addEventListener('message', function (event) {
-	let d = JSON.parse(event.data);
-	if (d.event) {
-		//console.log(event.data);
-		if (d.event === "error") {
-			console.error(d.message);
+		while (typeof (i = wsQueue.shift()) !== 'undefined') {
+			ws.send(i);
 		}
-		else if (d.event === "EVENT_JOINGROUP" && d.success === true) {
-			groupwatch.roomid = d.idhash;
-			groupwatch.url = d.url;
-			chrome.storage.sync.set({ groupwatch });
-			
-			
-			chrome.tabs.query({ url: groupwatch.url }, (tabs) => {
-				if (tabs.length > 0) {
-					groupwatch.tabid = tabs[0].id;
-					chrome.tabs.update(tabs[0].id, { active: true });
+	});
+	
+	ws.addEventListener('message', function (event) {
+		let d = JSON.parse(event.data);
+		if (d.event) {
+			//console.log(event.data);
+			if (d.event === "error") {
+				console.log(d.message);
+			}
+			else if (d.event === "EVENT_JOINGROUP" && d.success === true) {
+				joingroup(d);
+			}
+			else if (d.event === "EVENT_LEAVEGROUP" && d.success === true) {
+				groupwatch.roomid = null;
+				chrome.storage.sync.set({ groupwatch });
+			}
+			else if (d.event === "EVENT_BROADCAST") {
+				let m = d.message;
+				if (d.message.action) {
+					m = d.message.action;
 				}
-				else {
-					chrome.tabs.create({ url: groupwatch.url }, (tab) => {
-						groupwatch.tabid = tab.id;
-					});
+				if (m === "__player_play") {
+					chrome.tabs.sendMessage(groupwatch.tabid, { player: "play" });
 				}
-			});
-		}
-		else if (d.event === "EVENT_LEAVEGROUP" && d.success === true) {
-			groupwatch.roomid = null;
-			chrome.storage.sync.set({ groupwatch });
-		}
-		else if (d.event === "EVENT_BROADCAST") {
-			if (d.message === "__player_play") {
-				chrome.tabs.sendMessage(groupwatch.tabid, { player: "play" });
+				else if (m === "__player_pause") {
+					chrome.tabs.sendMessage(groupwatch.tabid, { player: "pause" });
+				}
+				else if (m === "__player_seek") {
+					chrome.tabs.sendMessage(groupwatch.tabid, { player: "seek", time: d.message.time });
+				}
+			}
+			else if (d.event === "EVENT_NEWURL") {
+				var old = groupwatch.url;
+				chrome.tabs.query({ url: d.url }, (tabs) => {
+					// if we already have a tab with the new url, close the other one
+					if (tabs.length > 0) {
+						chrome.tabs.query({ url: old }, (ttabs) => {
+							if (ttabs.length > 0) {
+								chrome.tabs.remove(ttabs[0].id);
+							}
+						});
+						groupwatch.tabid = tabs[0].id;
+						chrome.tabs.update(tabs[0].id, { active: true });
+					}
+					else {
+						chrome.tabs.query({ url: old }, (tabs) => {
+							if (tabs.length > 0) {
+								groupwatch.tabid = tabs[0].id;
+								chrome.tabs.update(tabs[0].id, { active: true, url: d.url });
+							}
+							else {
+								chrome.tabs.create({ url: d.url }, (tab) => {
+									groupwatch.tabid = tab.id;
+								});
+							}
+						});
+					}
+				});
+				
+				groupwatch.url = d.url;
+				chrome.storage.sync.set({ groupwatch });
 			}
 		}
+	});
+	ws.addEventListener("close", () => {
+		ws = null;
+		groupwatch = {};
+		chrome.storage.sync.set({ groupwatch });
+	});
+};
+
+chrome.storage.sync.get("groupwatch", ({ groupwatch }) => {
+	if (groupwatch.roomid && groupwatch.url) {
+		websocketmessage ({ action: "JOINGROUP", group: groupwatch.roomid });
 	}
 });
-ws.addEventListener("close", () =>{
-	clearTimeout(this.pingTimeout);
-});
+
+const joingroup = (data) => {
+	initWs();
+
+	groupwatch.roomid = data.idhash;
+	groupwatch.url = data.url;
+	chrome.storage.sync.set({ groupwatch });
+	
+	chrome.tabs.query({ url: groupwatch.url }, (tabs) => {
+		if (tabs.length > 0) {
+			groupwatch.tabid = tabs[0].id;
+			chrome.tabs.update(tabs[0].id, { active: true });
+		}
+		else {
+			chrome.tabs.create({ url: groupwatch.url }, (tab) => {
+				groupwatch.tabid = tab.id;
+			});
+		}
+	});
+}
+
 
 chrome.runtime.onInstalled.addListener((details) => {
 	if (details.reason === chrome.runtime.OnInstalledReason.INSTALL) {
@@ -91,10 +142,15 @@ chrome.runtime.onInstalled.addListener((details) => {
 });
 
 function websocketmessage (message) {
-	if (!groupwatch.connected) {
-		return;
+	initWs();
+	if (ws.readyState === 1) {
+		// Send message if we are connected
+		ws.send(JSON.stringify(message));
 	}
-	ws.send(JSON.stringify(message));
+	else {
+		// Else queue it
+		wsQueue.push(JSON.stringify(message));
+	}
 }
 
 chrome.runtime.onMessage.addListener(
@@ -167,18 +223,32 @@ chrome.runtime.onMessage.addListener(
 		websocketmessage ({ action: "JOINGROUP", group: request.joinGroupWatch });
 	}
 	else if (request.leaveGroupWatch) {
-		websocketmessage ({ action: "LEAVEGROUP" });
+		if (typeof groupwatch.roomid !== undefined && groupwatch.roomid !== null) 
+			websocketmessage ({ action: "LEAVEGROUP" });
 	}
 	else if (request.sendGroupWatch) {
-		websocketmessage ({ action: "SENDGROUP", message: request.sendGroupWatch });
+		if (typeof groupwatch.roomid !== undefined && groupwatch.roomid !== null) 
+			websocketmessage ({ action: "SENDGROUP", message: request.sendGroupWatch });
 	}
 	
+	else if (request.player_loaded) {
+		if (typeof groupwatch.roomid !== undefined && groupwatch.roomid !== null) {
+			if (groupwatch.url !== request.url) {
+				websocketmessage ({ action: "NEWURL", url: request.url });
+			}
+		}
+	}
 	else if (request.player_played) {
-		websocketmessage ({ action: "SENDGROUP", message: "__player_play" });
+		if (typeof groupwatch.roomid !== undefined && groupwatch.roomid !== null) 
+			websocketmessage ({ action: "SENDGROUP", message: "__player_play" });
 	}
-	
 	else if (request.player_paused) {
-		websocketmessage ({ action: "SENDGROUP", message: "__player_pause" });
+		if (typeof groupwatch.roomid !== undefined && groupwatch.roomid !== null) 
+			websocketmessage ({ action: "SENDGROUP", message: "__player_pause" });
+	}
+	else if (request.player_seeked) {
+		if (typeof groupwatch.roomid !== undefined && groupwatch.roomid !== null) 
+			websocketmessage ({ action: "SENDGROUP", message: { action: "__player_seek", time: request.player_seeked }});
 	}
   }
 );

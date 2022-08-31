@@ -1,7 +1,7 @@
 {
 	"name": "AutoSkipper",
 	"description": "Add Netflix-like skip buttons and features to online video players. Currently supports gogoanime and burningseries.",
-	"version": "0.4",
+	"version": "0.5",
 	"manifest_version": 3,
 	"default_locale": "en",
 	"permissions": ["storage", "tabs"], 
