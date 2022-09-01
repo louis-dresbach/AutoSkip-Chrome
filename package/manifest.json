@@ -1,10 +1,10 @@
 {
 	"name": "AutoSkipper",
-	"description": "Add Netflix-like skip buttons and features to online video players. Currently supports gogoanime and burningseries.",
-	"version": "0.5",
+	"description": "Add features to your favorite anime sites!",
+	"version": "0.6",
 	"manifest_version": 3,
 	"default_locale": "en",
-	"permissions": ["storage", "tabs"], 
+	"permissions": ["storage", "tabs", "notifications"], 
 	"icons": {
 		"16": "Icon16px.png",
 		"48": "Icon48px.png",
@@ -28,7 +28,7 @@
 				
 				"*://*.crunchyroll.com/*"
 			],
-			"js": ["content-script.js"]
+			"js": ["constants.js", "content-script.js"]
 		}, {
 			"matches": [
 				"*://*.goload.io/streaming.php?*", 
@@ -39,12 +39,13 @@
 				"*://*.streamtape.com/e/*"
 			],
 			"css": ["embedded.css"],
-			"js": ["embedded.js"],
+			"js": ["constants.js", "embedded.js"],
 			"all_frames": true
 		}
 	],
 	"background": {
-		"service_worker": "background.js"
+		"service_worker": "background.js",
+		"type": "module"
 	},
 	"action": {
 		"default_popup": "popup.html"

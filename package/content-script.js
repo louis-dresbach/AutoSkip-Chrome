@@ -1,23 +1,6 @@
 // Runs on the website that has a link/iframe to the videoplayer
 let title, season, episode;
 
-const gogoanime = [
-	"gogoanime.lu", 
-	"gogoanime.ee",
-	"gogoanime.tel"
-]
-const bs = [
-	"bs.to",
-	"burningseries.co",
-	"burningseries.sx",
-	"burningseries.ac",
-	"burningseries.vc",
-	"burningseries.cx",
-	"burningseries.nz",
-	"burningseries.se",
-	"burningseries.tw"
-];
-
 function capitalize (str) {
 	str = str.toLowerCase();
     str = str.split(" ");
@@ -75,8 +58,7 @@ function readTitle () {
 			watchlist[title] = {
 				"season": 	season,
 				"episode": 	episode,
-				"url": 		window.location.toString(),
-				"domain": 	window.location.hostname
+				"url": 		window.location.toString()
 			};
 			chrome.storage.sync.set({ watchlist });
 		}
@@ -120,4 +102,22 @@ window.onload = function () {
 			}
 		}
 	}
+	
+	const sites = [
+		"goload.io",
+		"videovard.sx",
+		"vupload.com",
+		"streamz.ws",
+		"vidoza.net"
+	];
+	document.querySelectorAll("iframe").forEach((f) => {
+		if (f.src) {
+			let u = new URL(f.src);
+			if (sites.includes(u.hostname)) {
+				chrome.runtime.sendMessage({ setData: true, url: u, value: { title: title, season: season, episode: episode, host: window.location.toString() }});
+				return;
+			}
+		}
+	});
+	
 }

@@ -13,6 +13,8 @@ const _vjs = [ // Website that use VJS or any other HTML5 video
 	"streamtape.com"
 ];
 
+const maxDiff = 2; // max time difference for us to seek
+
 const action = (data) => {
 	let v = document.querySelector("video");
 	if (_vjs.includes(window.location.hostname) && (typeof v === "undefined" || v === null)) {
@@ -21,23 +23,39 @@ const action = (data) => {
 	switch(data.player) {
 		case "play":
 			if (_jw.includes(window.location.hostname)) {
-				if (typeof jwplayer().play === "function")
+				if (typeof jwplayer().play === "function") {
 					window.jwplayer().play();
+					
+					let t = jwplayer().getCurrentTime();
+					if (data.time && (data.time < t - maxDiff || data.time > t + maxDiff))
+						window.jwplayer().seek(data.time);
+				}
 			}
 			else if (_vjs.includes(window.location.hostname)) {
 				v.play().catch((e) => { 
 					v.muted = true; // Try again muted if our first try didn't work
 					v.play().catch((e) => {  });
 				});
+				
+				if (data.time && (data.time < v.currentTime - maxDiff || data.time > v.currentTime + maxDiff))
+					v.currentTime = data.time;
 			}
 			break;
 		case "pause":
 			if (_jw.includes(window.location.hostname)) {
-				if (typeof jwplayer().pause === "function")
+				if (typeof jwplayer().pause === "function") {
 					window.jwplayer().pause();
+					
+					let t = jwplayer().getCurrentTime();
+					if (data.time && (data.time < t - maxDiff || data.time > t + maxDiff))
+						window.jwplayer().seek(data.time);
+				}
 			}
 			else if (_vjs.includes(window.location.hostname)) {
 				v.pause().catch((e) => { console.log(e) });
+				
+				if (data.time && (data.time < v.currentTime - maxDiff || data.time > v.currentTime + maxDiff))
+					v.currentTime = data.time;
 			}
 			break;
 		case "seek":
@@ -45,12 +63,12 @@ const action = (data) => {
 				if (typeof jwplayer().seek === "function") {
 					let t = jwplayer().getCurrentTime();
 					
-					if (data.time < t - 1 || data.time > t + 1)
+					if (data.time && (data.time < t - maxDiff || data.time > t + maxDiff))
 						window.jwplayer().seek(data.time);
 				}
 			}
 			else if (_vjs.includes(window.location.hostname)) {
-				if (data.time < v.currentTime - 1 || data.time > v.currentTime + 1)
+				if (data.time && (data.time < v.currentTime - maxDiff || data.time > v.currentTime + maxDiff))
 					v.currentTime = data.time;
 			}
 			break;

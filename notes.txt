@@ -1,0 +1,7 @@
+ERRORCODES
+
+	10 	Not in room
+	11 	Already in room
+	12 	Room doesn't exist
+	
+	20 	Message invalid

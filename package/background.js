@@ -1,4 +1,3 @@
-
 let autoStart = true;
 let skipIntro = true;
 let skipOutro = true;
@@ -7,7 +6,7 @@ let watchlist = {};
 
 let prevWindowState;
 
-let playerData = {};
+let playerData = new Map();
 
 let groupwatch = {};
 
@@ -22,6 +21,20 @@ const sites = [
 let ws = null;
 let wsQueue = []; // Queue sending messages in this while we are connected
 
+const updateWatchlist = (data) => {
+	if (!data.title || !data.season || !data.episode) 
+		return;
+	
+	chrome.storage.sync.get("watchlist", ({ watchlist }) => {
+		watchlist[data.title] = {
+			"season": 	data.season,
+			"episode": 	data.episode,
+			"url": 		data.host
+		};
+		chrome.storage.sync.set({ watchlist });
+	});
+}
+
 const initWs = () => {
 	if (ws !== null) {
 		return;
@@ -30,6 +43,7 @@ const initWs = () => {
 
 	ws.addEventListener("open", () =>{
 		chrome.storage.sync.set({ groupwatch });
+		let i;
 		while (typeof (i = wsQueue.shift()) !== 'undefined') {
 			ws.send(i);
 		}
@@ -38,14 +52,24 @@ const initWs = () => {
 	ws.addEventListener('message', function (event) {
 		let d = JSON.parse(event.data);
 		if (d.event) {
-			//console.log(event.data);
+			console.log(d);
 			if (d.event === "error") {
-				console.log(d.message);
+				// Just in case we think we are in a group, but the server tells us otherwise
+				if (groupwatch.roomid && (d.code === 10 || d.code === 12)) {
+					if (groupwatch.roomid) {
+						groupwatch = {};
+						chrome.storage.sync.set({ groupwatch });
+					}
+				}
+				else {
+					chrome.notifications.create({ type: "basic", title: "AutoSkip error", message: d.message, iconUrl: "Icon128px.png" });
+				}
 			}
-			else if (d.event === "EVENT_JOINGROUP" && d.success === true) {
+			else if (d.event === "EVENT_JOINGROUP") {
 				joingroup(d);
 			}
-			else if (d.event === "EVENT_LEAVEGROUP" && d.success === true) {
+			else if (d.event === "EVENT_LEAVEGROUP") {
+				chrome.notifications.create({ type: "basic", title: "AutoSkip", message: "Left group " + groupwatch.roomid, iconUrl: "Icon128px.png" });
 				groupwatch.roomid = null;
 				chrome.storage.sync.set({ groupwatch });
 			}
@@ -55,10 +79,10 @@ const initWs = () => {
 					m = d.message.action;
 				}
 				if (m === "__player_play") {
-					chrome.tabs.sendMessage(groupwatch.tabid, { player: "play" });
+					chrome.tabs.sendMessage(groupwatch.tabid, { player: "play", time: d.message.time });
 				}
 				else if (m === "__player_pause") {
-					chrome.tabs.sendMessage(groupwatch.tabid, { player: "pause" });
+					chrome.tabs.sendMessage(groupwatch.tabid, { player: "pause", time: d.message.time });
 				}
 				else if (m === "__player_seek") {
 					chrome.tabs.sendMessage(groupwatch.tabid, { player: "seek", time: d.message.time });
@@ -66,6 +90,10 @@ const initWs = () => {
 			}
 			else if (d.event === "EVENT_NEWURL") {
 				var old = groupwatch.url;
+				if (d.playerData) {
+					playerData.set(d.url, d.playerData);
+					updateWatchlist(d.playerData);
+				}
 				chrome.tabs.query({ url: d.url }, (tabs) => {
 					// if we already have a tab with the new url, close the other one
 					if (tabs.length > 0) {
@@ -78,6 +106,7 @@ const initWs = () => {
 						chrome.tabs.update(tabs[0].id, { active: true });
 					}
 					else {
+						// Otherwise load the new URL in the old tab
 						chrome.tabs.query({ url: old }, (tabs) => {
 							if (tabs.length > 0) {
 								groupwatch.tabid = tabs[0].id;
@@ -97,7 +126,8 @@ const initWs = () => {
 			}
 		}
 	});
-	ws.addEventListener("close", () => {
+	ws.addEventListener("close", (e) => {
+		chrome.notifications.create({ type: "basic", title: "AutoSkip", message: "WebSocket was disconnected: " + e.code, iconUrl: "Icon128px.png" });
 		ws = null;
 		groupwatch = {};
 		chrome.storage.sync.set({ groupwatch });
@@ -105,18 +135,26 @@ const initWs = () => {
 };
 
 chrome.storage.sync.get("groupwatch", ({ groupwatch }) => {
-	if (groupwatch.roomid && groupwatch.url) {
-		websocketmessage ({ action: "JOINGROUP", group: groupwatch.roomid });
+	if (groupwatch.roomid) {
+		let id = groupwatch.roomid;
+		groupwatch.roomid = null;
+		websocketmessage ({ action: "JOINGROUP", group: id });
 	}
 });
 
 const joingroup = (data) => {
 	initWs();
+	
+	chrome.notifications.create({ type: "basic", title: "AutoSkip", message: "Joined group " + data.idhash, iconUrl: "Icon128px.png" });
 
 	groupwatch.roomid = data.idhash;
 	groupwatch.url = data.url;
 	chrome.storage.sync.set({ groupwatch });
 	
+	if (data.playerData) {
+		playerData.set(data.url, data.playerData);
+		updateWatchlist(data.playerData);
+	}
 	chrome.tabs.query({ url: groupwatch.url }, (tabs) => {
 		if (tabs.length > 0) {
 			groupwatch.tabid = tabs[0].id;
@@ -133,11 +171,11 @@ const joingroup = (data) => {
 
 chrome.runtime.onInstalled.addListener((details) => {
 	if (details.reason === chrome.runtime.OnInstalledReason.INSTALL) {
-	  chrome.storage.sync.set({ autoStart });
-	  chrome.storage.sync.set({ skipIntro });
-	  chrome.storage.sync.set({ skipOutro });
-	  chrome.storage.sync.set({ watchlist });
-	  chrome.storage.sync.set({ playerData });
+		chrome.storage.sync.set({ autoStart });
+		chrome.storage.sync.set({ skipIntro });
+		chrome.storage.sync.set({ skipOutro });
+		chrome.storage.sync.set({ watchlist });
+		chrome.storage.sync.set({ playerData });
 	}
 });
 
@@ -151,6 +189,10 @@ function websocketmessage (message) {
 		// Else queue it
 		wsQueue.push(JSON.stringify(message));
 	}
+}
+
+const inGroup = () => {
+	return ("roomid" in groupwatch && groupwatch.roomid !== null);
 }
 
 chrome.runtime.onMessage.addListener(
@@ -173,12 +215,13 @@ chrome.runtime.onMessage.addListener(
 		});
 	}
 	else if (request.closeTab) {
+		console.log(sender.tab);
 		if (sender.tab.openerTabId) {
 			chrome.tabs.sendMessage(sender.tab.openerTabId, {nextEpisode: true});
 			chrome.tabs.update(sender.tab.openerTabId, {active: true});
 		}
-		else {
-			chrome.tabs.query({ url: request.openTab }, (tabs) => {
+		else if(playerData.has(sender.tab.url) && playerData.get(sender.tab.url).host) {
+			chrome.tabs.query({ url: playerData.get(sender.tab.url).host }, (tabs) => {
 				if (tabs.length > 0) {
 					chrome.tabs.sendMessage(tabs[0].id, {nextEpisode: true});
 					chrome.tabs.update(tabs[0].id, {active: true});
@@ -214,7 +257,15 @@ chrome.runtime.onMessage.addListener(
 			if (tabs.length > 0) {
 				let u = new URL(tabs[0].url);
 				if (sites.includes(u.hostname)) {
-					websocketmessage ({ action: "NEWGROUP", url: u.href });
+					if (playerData.has(u.href)) {
+						websocketmessage ({ action: "NEWGROUP", url: u.href, playerData: playerData.get(u.href) });
+					}
+					else {
+						websocketmessage ({ action: "NEWGROUP", url: u.href });
+					}
+				}
+				else {
+					chrome.notifications.create({ type: "basic", title: "AutoSkip error", message: "You can only create a new groupwatch in a supported tab", iconUrl: "Icon128px.png" });
 				}
 			}
 		});
@@ -223,32 +274,38 @@ chrome.runtime.onMessage.addListener(
 		websocketmessage ({ action: "JOINGROUP", group: request.joinGroupWatch });
 	}
 	else if (request.leaveGroupWatch) {
-		if (typeof groupwatch.roomid !== undefined && groupwatch.roomid !== null) 
+		if (inGroup())
 			websocketmessage ({ action: "LEAVEGROUP" });
-	}
-	else if (request.sendGroupWatch) {
-		if (typeof groupwatch.roomid !== undefined && groupwatch.roomid !== null) 
-			websocketmessage ({ action: "SENDGROUP", message: request.sendGroupWatch });
 	}
 	
 	else if (request.player_loaded) {
-		if (typeof groupwatch.roomid !== undefined && groupwatch.roomid !== null) {
+		if (inGroup()) {
 			if (groupwatch.url !== request.url) {
-				websocketmessage ({ action: "NEWURL", url: request.url });
+				if (playerData.has(request.url)) {
+					websocketmessage ({ action: "NEWURL", url: request.url, playerData: playerData.get(request.url) });
+				}
+				else {
+					websocketmessage ({ action: "NEWURL", url: request.url });
+				}
 			}
 		}
 	}
 	else if (request.player_played) {
-		if (typeof groupwatch.roomid !== undefined && groupwatch.roomid !== null) 
-			websocketmessage ({ action: "SENDGROUP", message: "__player_play" });
+		if (inGroup()) 
+			websocketmessage ({ action: "SENDGROUP", message: { action: "__player_play", time: request.player_played }});
 	}
 	else if (request.player_paused) {
-		if (typeof groupwatch.roomid !== undefined && groupwatch.roomid !== null) 
-			websocketmessage ({ action: "SENDGROUP", message: "__player_pause" });
+		if (inGroup())
+			websocketmessage ({ action: "SENDGROUP", message: { action: "__player_pause", time: request.player_paused }});
 	}
 	else if (request.player_seeked) {
-		if (typeof groupwatch.roomid !== undefined && groupwatch.roomid !== null) 
+		if (inGroup())
 			websocketmessage ({ action: "SENDGROUP", message: { action: "__player_seek", time: request.player_seeked }});
+	}
+	
+	else if (request.setData) {
+		//console.log(request);
+		playerData.set(request.url, request.value);
 	}
   }
 );

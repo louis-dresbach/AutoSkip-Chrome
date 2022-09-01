@@ -4,7 +4,6 @@ if(window.self !== window.top) {
 	chrome.runtime.sendMessage({ openTab: window.location.toString() });
 }
 else {
-	const interval = 1000;
 
 	let aS = false;
 	let aF = false;
@@ -19,19 +18,9 @@ else {
 	let ending = -1;
 	let preview = -1;
 
+	const interval = 2000;
 	let vTries = 0;
 	let vMaxTries = 30;
-	
-	
-	const _jw = [ // websites that use JWPlayer
-		"goload.io",
-		"videovard.sx"
-	];
-	const _vjs = [
-		"vupload.com",
-		"streamz.ws",
-		"vidoza.net"
-	];
 
 	chrome.storage.sync.get("autoStart", ({ autoStart }) => {
 		aS = autoStart;
@@ -215,13 +204,22 @@ else {
 		if (v.length > 0) {
 			v[0].focus();
 			v[0].addEventListener("pause", function (e) {
-				sendmes({ player_paused: true });
+				sendmes({ player_paused: v[0].currentTime });
 				if (aF === true) {
 					sendmes({ fullscreen: false });
 				}
 			});
+			v[0].addEventListener("ratechange", function (e) {
+				sendmes({ player_ratechanged: v[0].playbackRate });
+			});
+			v[0].addEventListener("stalled", function (e) {
+				//sendmes({ player_paused: v[0].currentTime });
+			});
+			v[0].addEventListener("waiting", function (e) {
+				//sendmes({ player_paused: v[0].currentTime });
+			});
 			v[0].addEventListener("play", function (e) {
-				sendmes({ player_played: true });
+				sendmes({ player_played: v[0].currentTime });
 				if (aF === true) {
 					sendmes({ fullscreen: true });
 				}

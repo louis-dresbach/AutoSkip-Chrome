@@ -20,8 +20,8 @@ winston.configure({
 			winston.format.colorize(),
 			winston.format.printf(info => `[${info.timestamp}] ${info.level}: ${info.message}`)
 		)}),
-    new winston.transports.File({ filename: 'error.log', level: 'error' }),
-    new winston.transports.File({ filename: 'combined.log' }),
+    new winston.transports.File({ filename: 'logs/error.log', level: 'error' }),
+    new winston.transports.File({ filename: 'logs/combined.log', maxsize: 25000 }),
   ]
 });
 
@@ -37,9 +37,10 @@ let clientIndex = 0;
 
 wss.on("connection", ws => {
     winston.log("info", "New client connection");
-	ws.id = Buffer.from("client--" + clientIndex).toString('base64');
+	ws.id = Buffer.from("cl--" + clientIndex).toString('base64');
 	clientIndex++;
 	winston.log("debug", "Client ID: " + ws.id);
+	ws.isAlive = true;
 	
     ws.on("message", (data) => {
 		let j = JSON.parse(data);
@@ -47,27 +48,35 @@ wss.on("connection", ws => {
 		if (j.action) {
 			switch (j.action) {
 				case "NEWGROUP":
-					const idhash = Buffer.from("groupwatchgroup--"+index).toString('base64');
+					if (ws.channel) {
+						ws.send(JSON.stringify({ "event": "error", "code": 11, "message": "You are already in a room. Please leave this one first!" }));
+						break;
+					}
+					const idhash = Buffer.from("wg--"+index).toString('base64');
+					let pd = j.playerData || {};
 					groups.set(idhash, {
 						id: index,
 						created: Date.now(),
 						lastmessage: Date.now(),
 						url: j.url,
+						
+						playerData: pd,
+						
 						clients: 1
 					});
 					index++;
 					winston.log("info", "Created new watchgroup with hash " + idhash);
-					ws.send(JSON.stringify({ "event": "EVENT_JOINGROUP", "success": true, "message": "Successfully created a new room.", "idhash": idhash, "url": j.url }));
+					ws.send(JSON.stringify({ event: "EVENT_JOINGROUP", message: "Successfully created a new room.", idhash: idhash, url: j.url, playerData: pd }));
 					ws.channel = idhash;
 					break;
 				case "JOINGROUP":
 					if (ws.channel) {
-						ws.send(JSON.stringify({ "event": "error", "success": false, "message": "You are already in a room. Please leave this one first!" }));
+						ws.send(JSON.stringify({ "event": "error", "code": 11, "message": "You are already in a room. Please leave this one first!" }));
 						break;
 					}
 					if (j.group) {
 						if (!groups.has(j.group)) {
-							ws.send(JSON.stringify({ "event": "error", "success": false, "message": "Room " + j.group + " doesn't exist." }));
+							ws.send(JSON.stringify({ "event": "error", "code": 12, "message": "Room " + j.group + " doesn't exist." }));
 						}
 						else {
 							let temp = groups.get(j.group);
@@ -77,7 +86,7 @@ wss.on("connection", ws => {
 							
 							ws.channel = j.group;
 							
-							ws.send(JSON.stringify({ "event": "EVENT_JOINGROUP", "success": true, "message": "Successfully joined room " + j.group + ".", "idhash": j.group, "url": temp.url }));
+							ws.send(JSON.stringify({ "event": "EVENT_JOINGROUP", "message": "Successfully joined room " + j.group + ".", "idhash": j.group, "url": temp.url, playerData: temp.playerData }));
 							winston.log("info", "Client " + ws.id + " joined watchgroup " + j.group);
 							
 							wss.clients.forEach(function each(client) { 
@@ -94,21 +103,21 @@ wss.on("connection", ws => {
 					temp.clients = temp.clients - 1;
 					groups.set(ws.channel, temp);
 					
-					ws.send(JSON.stringify({ "event": "EVENT_LEAVEGROUP", "success": true, "message": "You left your group." }));
+					ws.send(JSON.stringify({ "event": "EVENT_LEAVEGROUP", "message": "You left your group." }));
 					winston.log("info", "Client " + ws.id + " left watchgroup " + ws.channel);
 					
 					ws.channel = null;
 					break;
 				case "SENDGROUP":
 					if (!ws.channel) {
-						ws.send(JSON.stringify({ "event": "error", "success": false, "message": "You haven't joined a room yet." }));
+						ws.send(JSON.stringify({ "event": "error", "code": 10, "message": "You haven't joined a room yet." }));
 					}
 					else {
 						if (!j.message) {
-							ws.send(JSON.stringify({ "success": false, "message": "Message was empty." }));
+							ws.send(JSON.stringify({ "event": "error", "code": 20, "message": "Message was empty." }));
 						}
 						else {
-							winston.log("debug", "Client " + ws.id + " sent a message to their watchgroup (" + ws.channel + "): " + j.message);
+							winston.log("debug", "Client " + ws.id + " sent a message to their watchgroup (" + ws.channel + "): " + JSON.stringify(j.message));
 							wss.clients.forEach(function each(client) { 
 								if(client.channel === ws.channel) {
 									client.send(JSON.stringify({ "event": "EVENT_BROADCAST", "message": j.message }));
@@ -119,21 +128,25 @@ wss.on("connection", ws => {
 					break;
 				case "NEWURL":
 					if (!ws.channel) {
-						ws.send(JSON.stringify({ "event": "error", "success": false, "message": "You haven't joined a room yet." }));
+						ws.send(JSON.stringify({ "event": "error", "code": 10, "message": "You haven't joined a room yet." }));
 					}
 					else {
 						if (!j.url) {
-							ws.send(JSON.stringify({ "success": false, "message": "URL was empty." }));
+							ws.send(JSON.stringify({ "event": "error", "code": 20, "message": "URL was empty." }));
 						}
 						else {
+							let pd = j.playerData || {};
+							
 							let temp = groups.get(ws.channel);
+							temp.url = j.url;
 							temp.lastmessage = Date.now();
+							temp.playerData = pd;
 							groups.set(ws.channel, temp);
 							
-							winston.log("debug", "Client " + ws.id + " changed the URL for their watchgroup (" + ws.channel + "): " + j.message);
+							winston.log("debug", "Client " + ws.id + " changed the URL for their watchgroup (" + ws.channel + ") to " + j.url);
 							wss.clients.forEach(function each(client) { 
 								if(client.channel === ws.channel) {
-									client.send(JSON.stringify({ "event": "EVENT_NEWURL", "url": j.url }));
+									client.send(JSON.stringify({ event: "EVENT_NEWURL", url: j.url, playerData: pd }));
 								}
 							});
 						}
@@ -155,18 +168,22 @@ wss.on("connection", ws => {
 		}
     });
 	
-    ws.on("error", () => {
-        winston.log("error", "An error occurred")
+    ws.on("error", (e) => {
+        winston.log("error", "An error occurred: " + e.code + ": " + e)
     });
 	
     ws.on("pong", () => {
 		ws.isAlive = true;
-		winston.log("debug", "Received a pong from client " + ws.id + ".");
+		winston.log("debug", "Received pong from client " + ws.id + ".");
 	});
 	
     ws.timer = setInterval(() => {
 		ping(ws);
-	}, 15000);
+	}, 30000);
+});
+	
+wss.on("error", (e) => {
+	winston.log("error", "An error occurred: " + e.code + ": " + e)
 });
 
 const ping = (ws) => {
@@ -195,7 +212,7 @@ const clearOldGroups = () => {
 
 setInterval(() => {
 	clearOldGroups();
-}, 3000);
+}, 30000);
 
 server.listen(8080);
 
