@@ -1,3 +1,9 @@
+/* 
+// 
+// Websocket server
+// 
+*/
+
 import { createServer } from 'https';
 import { readFileSync } from 'fs';
 import { WebSocketServer } from 'ws';
@@ -199,20 +205,27 @@ const clearOldGroups = () => {
 	groups.forEach((val, key) => {
 		if (val.lastmessage + diff < Date.now()) {
 			// group hasn't seen activity in a while
+			// disconnect everyone
+			wss.clients.forEach((client) => {
+				if (client.channel === key) {
+					client.channel = null;
+					ws.send(JSON.stringify({ "event": "EVENT_LEAVEGROUP", "message": "Group was deleted due to inactivity." }));
+				}
+			});
 			winston.log("debug", "Inactive group " + key + " was deleted.");
 			groups.delete(key);
-		}
-		if (val.clients <= 0) {
+		}/*
+		if (val.clients.length <= 0) {
 			// group is empty
 			winston.log("debug", "Empty group " + key + " was deleted.");
 			groups.delete(key);
-		}
+		}*/
 	});
 }
 
 setInterval(() => {
 	clearOldGroups();
-}, 30000);
+}, 15 * 60 * 1000);
 
 server.listen(8080);
 

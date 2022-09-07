@@ -1,3 +1,9 @@
+/* 
+// 
+// Script that runs in the small popup
+// 
+*/
+
 let inputSkipIntro = document.getElementById("inputSkipIntro");
 let inputSkipOutro = document.getElementById("inputSkipOutro");
 let inputAutoStart = document.getElementById("inputAutoStart");
@@ -62,16 +68,16 @@ const drawWatchlist = (watchlist) => {
 
 
 chrome.storage.sync.get("autoStart", ({ autoStart }) => {
-  inputAutoStart.checked = autoStart;
+	inputAutoStart.checked = autoStart;
 });
 chrome.storage.sync.get("autoFullscreen", ({ autoFullscreen }) => {
-  inputAutoFullscreen.checked = autoFullscreen;
+	inputAutoFullscreen.checked = autoFullscreen;
 });
 chrome.storage.sync.get("skipIntro", ({ skipIntro }) => {
-  inputSkipIntro.checked = skipIntro;
+	inputSkipIntro.checked = skipIntro;
 });
 chrome.storage.sync.get("skipOutro", ({ skipOutro }) => {
-  inputSkipOutro.checked = skipOutro;
+	inputSkipOutro.checked = skipOutro;
 });
 chrome.storage.sync.get("watchlist", ({ watchlist }) => {
 	drawWatchlist(watchlist);

@@ -1,3 +1,9 @@
+/* 
+// 
+// Background process
+// 
+*/
+
 let autoStart = true;
 let skipIntro = true;
 let skipOutro = true;
@@ -202,7 +208,7 @@ chrome.runtime.onMessage.addListener(
 		chrome.tabs.query({ url: request.openTab }, (tabs) => {
 			if (tabs.length > 0) {
 				if (typeof sender.tab !== "undefined" && typeof sender.tab.id !== "undefined")
-					chrome.tabs.update(tabs[0].id, { active: true, openerTabId: sender.tab.id });
+					chrome.tabs.update(tabs[0].id, { active: true, openerTabId: sender.tab.id || null });
 				else
 					chrome.tabs.update(tabs[0].id, { active: true });
 			}
@@ -215,7 +221,7 @@ chrome.runtime.onMessage.addListener(
 		});
 	}
 	else if (request.closeTab) {
-		console.log(sender.tab);
+		// console.log(sender.tab);
 		if (sender.tab.openerTabId) {
 			chrome.tabs.sendMessage(sender.tab.openerTabId, {nextEpisode: true});
 			chrome.tabs.update(sender.tab.openerTabId, {active: true});

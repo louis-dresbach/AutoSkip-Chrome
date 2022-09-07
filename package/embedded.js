@@ -1,10 +1,14 @@
+/* 
+// 
 // Runs in the tab with the player
-if(window.self !== window.top) {
+// 
+*/
+
+if (window.self !== window.top) {
 	// If we are in an iframe, open a new tab with current page
 	chrome.runtime.sendMessage({ openTab: window.location.toString() });
 }
 else {
-
 	let aS = false;
 	let aF = false;
 	let sI = false;
@@ -29,19 +33,15 @@ else {
 		aF = autoFullscreen;
 	});
 	chrome.storage.sync.get("skipIntro", ({ skipIntro }) => {
-	  sI = skipIntro;
+		sI = skipIntro;
 	});
 	chrome.storage.sync.get("skipOutro", ({ skipOutro }) => {
-	  sO = skipOutro;
-	});
+		sO = skipOutro;
+	});/*
 	chrome.storage.sync.get("title", ({ title }) => {
-		t = title;
-		
-		if (t !== null) {
+		if (title !== null) {
 			chrome.storage.sync.get("episode", ({ episode }) => {
-				e = episode;
-
-				if (e !== null && 1==0)  {
+				if (episode !== null && 1==0)  {
 					// get intro, outro length from database
 					// info from https://github.com/jonbarrow/open-anime-timestamps
 					// get anime id from title
@@ -54,19 +54,22 @@ else {
 						
 						for (let tit of titles) {
 							for (let name of tit.getElementsByTagName("title")) {
-								if (name.childNodes[0].nodeValue.toUpperCase() === t.toUpperCase()) {
+								if (name.childNodes[0].nodeValue.toUpperCase() === title.toUpperCase()) {
 									// get ep
 									let num = tit.getAttribute("aid");
 									fetch(chrome.runtime.getURL("timestamps.json"))
 									.then((response) => response.json())
-									.then((res) => {
-										for (let ep of res[num]) {
-											if (ep["episode_number"] === Number(e)) {
-												//alert(JSON.stringify(ep));
+									.then((ress) => {
+										for (let ep of ress[num]) {
+											if (Number(ep["episode_number"]) === Number(episode)) {
+												recap = ep["recap_start"];
+												opening = ep["opening_start"];
+												ending = ep["ending_start"];
+												preview = ep["preview_start"];
 												break;
 											}
 										}
-										});
+									});
 									break;
 								}
 							}
@@ -75,28 +78,13 @@ else {
 				}
 			});
 		}
-	});
+	});*/
 
 	const d = document.createElement("div");
 	const si = document.createElement("div");
 
-	const parseTime = (input) => {
-		let ret = 0;
-		let s = input.split(":");
-		if(s.length == 3) {
-			ret += parseInt(s[0]) * 60 * 60;
-			ret += parseInt(s[1]) * 60;
-			ret += parseInt(s[2]);
-		}
-		else if(s.length == 2) {
-			ret += parseInt(s[0]) * 60;
-			ret += parseInt(s[1]);
-		}
-		return ret;
-	};
-
-	const introLength = parseTime("3:21");
-	const outroLength = parseTime("0:40");
+	let introLength = parseTime("3:21");
+	let outroLength = parseTime("0:40");
 	
 	const sendmes = (mes) => {
 		try {
@@ -118,7 +106,9 @@ else {
 	}
 
 	const skipIntro = () => {
-		window.postMessage({ player: "seek", time: introLength }, "*");
+		if (introLength > -1) {
+			window.postMessage({ player: "seek", time: introLength }, "*");
+		}
 	}
 
 
@@ -176,7 +166,7 @@ else {
 				}
 
 				// next episode button
-				if (outroLength > timeCountDown && timeElapsed > 30) {
+				if (outroLength > -1 && outroLength > timeCountDown && timeElapsed > 30) {
 					sendmes({ fullscreen: false });
 					if (sO) {
 						nextEp();
@@ -211,13 +201,13 @@ else {
 			});
 			v[0].addEventListener("ratechange", function (e) {
 				sendmes({ player_ratechanged: v[0].playbackRate });
-			});
+			});/*
 			v[0].addEventListener("stalled", function (e) {
 				//sendmes({ player_paused: v[0].currentTime });
 			});
 			v[0].addEventListener("waiting", function (e) {
 				//sendmes({ player_paused: v[0].currentTime });
-			});
+			});*/
 			v[0].addEventListener("play", function (e) {
 				sendmes({ player_played: v[0].currentTime });
 				if (aF === true) {
@@ -309,14 +299,6 @@ else {
 			}
 		}
 	);
-
-	function injectScript (filePath, tag) {
-		let node = document.getElementsByTagName(tag)[0];
-		let script = document.createElement("script");
-		script.setAttribute("type", "text/javascript");
-		script.setAttribute("src", filePath);
-		node.appendChild(script);
-	}
 
 	injectScript(chrome.runtime.getURL("inject.js"), "body");
 }

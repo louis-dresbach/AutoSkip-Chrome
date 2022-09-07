@@ -1,8 +1,14 @@
+/* 
+// 
 // This gets injected into the page
+// 
+*/
+
 let queue = [];
 
 const _jw = [ // websites that use JWPlayer
 	"goload.io",
+	"gogohd.net",
 	"videovard.sx"
 ];
 

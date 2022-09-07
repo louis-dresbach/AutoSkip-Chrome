@@ -1,16 +1,9 @@
+/* 
+// 
 // Runs on the website that has a link/iframe to the videoplayer
+// 
+*/
 let title, season, episode;
-
-function capitalize (str) {
-	str = str.toLowerCase();
-    str = str.split(" ");
-
-    for (var i = 0; i < str.length; i++) {
-        str[i] = str[i][0].toUpperCase() + str[i].substr(1);
-    }
-
-    return str.join(" ");
-}
 
 function readTitle () {
 	if (gogoanime.includes(window.location.hostname)) {
@@ -103,17 +96,10 @@ window.onload = function () {
 		}
 	}
 	
-	const sites = [
-		"goload.io",
-		"videovard.sx",
-		"vupload.com",
-		"streamz.ws",
-		"vidoza.net"
-	];
 	document.querySelectorAll("iframe").forEach((f) => {
 		if (f.src) {
 			let u = new URL(f.src);
-			if (sites.includes(u.hostname)) {
+			if (_jw.includes(u.hostname) || _vjs.includes(u.hostname)) {
 				chrome.runtime.sendMessage({ setData: true, url: u, value: { title: title, season: season, episode: episode, host: window.location.toString() }});
 				return;
 			}
