@@ -238,7 +238,7 @@ chrome.runtime.onMessage.addListener(
 	}
 	else if (request.fullscreen === true) {
 		// make window fullscreen
-		chrome.windows.getCurrent().then((window) => {
+		chrome.windows.get(sender.tab.windowId, (window) => {
 			if (window.state !== "fullscreen") {
 				chrome.windows.update(window.id, { state: "fullscreen" });
 				prevWindowState = window.state;
@@ -247,7 +247,7 @@ chrome.runtime.onMessage.addListener(
 	}
 	else if (request.fullscreen === false) {
 		// get out of fullscreen
-		chrome.windows.getCurrent().then((window) => {
+		chrome.windows.get(sender.tab.windowId, (window) => {
 			if (window.state === "fullscreen") {
 				let newState = "normal";
 				if (prevWindowState) {
