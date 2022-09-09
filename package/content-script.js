@@ -81,29 +81,47 @@ window.onload = function () {
 		let hosts = [/*"streamzz"*/, "vupload", "videovard", "vidoza", "streamtape"]; // our preferred hosts that work with this plugins
 		let tabs = document.querySelector(".hoster-tabs");
 		
-		// Default host is in our list
-		if (!hosts.includes(tabs.querySelector("li.active").innerText.trim().toLowerCase())) {
-			// Select the first host we find
-			for (let tab of tabs.getElementsByTagName("li")) {
-				if (hosts.includes(tab.innerText.trim().toLowerCase())) {
-					let a = tab.getElementsByTagName("a");
-					if (a.length === 1) {
-						a[0].click();
-						break;
+		if (tabs) {
+			// Default host is in our list
+			if (!hosts.includes(tabs.querySelector("li.active").innerText.trim().toLowerCase())) {
+				// Select the first host we find
+				for (let tab of tabs.getElementsByTagName("li")) {
+					if (hosts.includes(tab.innerText.trim().toLowerCase())) {
+						let a = tab.getElementsByTagName("a");
+						if (a.length === 1) {
+							a[0].click();
+							break;
+						}
 					}
 				}
 			}
 		}
 	}
 	
+	let theFrame = null;
+	
 	document.querySelectorAll("iframe").forEach((f) => {
 		if (f.src) {
 			let u = new URL(f.src);
 			if (_jw.includes(u.hostname) || _vjs.includes(u.hostname)) {
 				chrome.runtime.sendMessage({ setData: true, url: u, value: { title: title, season: season, episode: episode, host: window.location.toString() }});
+				theFrame = f;
 				return;
 			}
 		}
 	});
 	
+	if (theFrame !== null) {
+		document.addEventListener("keydown", (event) => {
+			if (event.isComposing || event.keyCode === 229) {
+				return;
+			}
+			
+			if (event.code === "Space" && !(document.activeElement instanceof HTMLInputElement)) {
+				readTitle ();
+				chrome.runtime.sendMessage({ openTab: theFrame.src });
+				event.preventDefault();
+			}
+		});
+	}
 }

@@ -1,3 +1,5 @@
+const _DEBUG = false;
+
 
 const gogoanime = [ // GogoAnime domains
 	"gogoanime.lu", 

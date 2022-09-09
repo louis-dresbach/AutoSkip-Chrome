@@ -15,12 +15,9 @@ else {
 	let sO = false;
 
 	let t = "";
-	let e = -1;
+	let aid = -1;
 
-	let recap = -1;
-	let opening = -1;
-	let ending = -1;
-	let preview = -1;
+	let timestamps = {};
 
 	const interval = 2000;
 	let vTries = 0;
@@ -37,54 +34,42 @@ else {
 	});
 	chrome.storage.sync.get("skipOutro", ({ skipOutro }) => {
 		sO = skipOutro;
-	});/*
+	});
 	chrome.storage.sync.get("title", ({ title }) => {
 		if (title !== null) {
-			chrome.storage.sync.get("episode", ({ episode }) => {
-				if (episode !== null && 1==0)  {
-					// get intro, outro length from database
-					// info from https://github.com/jonbarrow/open-anime-timestamps
-					// get anime id from title
-					fetch(chrome.runtime.getURL("anime-titles.xml"))
-					.then((response) => response.text())
-					.then((res) => {
-						parser = new DOMParser();
-						let animeTitles = parser.parseFromString(res, "text/xml");
-						let titles = animeTitles.getElementsByTagName("anime");
-						
-						for (let tit of titles) {
-							for (let name of tit.getElementsByTagName("title")) {
-								if (name.childNodes[0].nodeValue.toUpperCase() === title.toUpperCase()) {
-									// get ep
-									let num = tit.getAttribute("aid");
-									fetch(chrome.runtime.getURL("timestamps.json"))
-									.then((response) => response.json())
-									.then((ress) => {
-										for (let ep of ress[num]) {
-											if (Number(ep["episode_number"]) === Number(episode)) {
-												recap = ep["recap_start"];
-												opening = ep["opening_start"];
-												ending = ep["ending_start"];
-												preview = ep["preview_start"];
-												break;
-											}
-										}
-									});
-									break;
+			t = title;
+			// get intro, outro length from database
+			// info from https://github.com/jonbarrow/open-anime-timestamps
+			// get anime id from title
+			fetch(chrome.runtime.getURL("anime-titles.xml"))
+			.then((response) => response.text())
+			.then((res) => {
+				parser = new DOMParser();
+				let animeTitles = parser.parseFromString(res, "text/xml");
+				let titles = animeTitles.getElementsByTagName("anime");
+				
+				for (let tit of titles) {
+					for (let name of tit.getElementsByTagName("title")) {
+						if (name.childNodes[0].nodeValue.split("-").join("").toUpperCase() === title.toUpperCase()) {
+							aid = tit.getAttribute("aid");
+							fetch(chrome.runtime.getURL("timestamps.json"))
+							.then((response) => response.json())
+							.then((ress) => {
+								timestamps = ress[aid];
+								if (!timestamps["intro"] && _DEBUG) {
+									alert("Add timestamps for " + title + "\r\nAID: " + aid);
 								}
-							}
+							});
+							break;
 						}
-					});
+					}
 				}
 			});
 		}
-	});*/
+	});
 
 	const d = document.createElement("div");
 	const si = document.createElement("div");
-
-	let introLength = parseTime("3:21");
-	let outroLength = parseTime("0:40");
 	
 	const sendmes = (mes) => {
 		try {
@@ -106,8 +91,8 @@ else {
 	}
 
 	const skipIntro = () => {
-		if (introLength > -1) {
-			window.postMessage({ player: "seek", time: introLength }, "*");
+		if (timestamps["intro"]) {
+			window.postMessage({ player: "seek", time: timestamps["intro"]["start"] + timestamps["intro"]["length"] - 1 }, "*");
 		}
 	}
 
@@ -151,9 +136,9 @@ else {
 			}
 			
 			
-			if (timeDuration > 1) {
+			if (timeDuration > 1 && timestamps["intro"]) {
 				// skip intro
-				if (timeElapsed < introLength - 5) {
+				if (timestamps["intro"]["start"] > -1 && timeElapsed > timestamps["intro"]["start"] && timeElapsed < timestamps["intro"]["start"] + timestamps["intro"]["length"] - 5) {
 					if (sI) {
 						skipIntro();
 					}
@@ -166,7 +151,7 @@ else {
 				}
 
 				// next episode button
-				if (outroLength > -1 && outroLength > timeCountDown && timeElapsed > 30) {
+				if (timestamps["outro"]["length"] > -1 && timestamps["outro"]["length"] > timeCountDown && timeElapsed > 30) {
 					sendmes({ fullscreen: false });
 					if (sO) {
 						nextEp();
@@ -220,7 +205,6 @@ else {
 			if (document.visibilityState !== "hidden") {
 				sendmes({ player_loaded: true, url: window.location.toString() });
 				if(aS === true) {
-					//console.log("Attempting to autostart the video");
 					//send message to injected script to play
 					window.postMessage({ player: "play" }, "*");
 				}
@@ -253,12 +237,19 @@ else {
 		document.body.appendChild(si);
 		
 		document.body.addEventListener('keydown', function (e) {
-			switch (e.key) {
-				case "s":
+			switch (e.code) {
+				case "KeyS":
 					skipIntro();
 					break;
-				case "n":
+				case "KeyN":
 					nextEp();
+					break;
+				case "KeyD":
+					if (_DEBUG) {
+						alert(`${t} [${aid}]
+${JSON.stringify(timestamps)}
+`); 
+					}
 					break;
 			}
 		});
