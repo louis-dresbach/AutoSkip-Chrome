@@ -214,7 +214,7 @@ chrome.runtime.onMessage.addListener(
 			}
 			else {
 				if (sender.tab)
-					chrome.tabs.create({ url: request.openTab, index: sender.tab.index+1, openerTabId: sender.tab.id });
+					chrome.tabs.create({ url: request.openTab, index: sender.tab.index + 1, openerTabId: sender.tab.id });
 				else
 					chrome.tabs.create({ url: request.openTab });
 			}
@@ -315,3 +315,37 @@ chrome.runtime.onMessage.addListener(
 	}
   }
 );
+
+chrome.tabs.onActivated.addListener((info) => {
+	let title, season, episode;
+	
+	chrome.tabs.get(info.tabId, (tab) => {
+		let u = null;
+		if (tab.status === "loading") {
+			if (tab.pendingUrl && tab.pendingUrl !== "") {
+				u = tab.pendingUrl;
+			}
+		}
+		else if (tab.status && tab.status === "complete") {
+			if (tab.url !== "") {
+				u = tab.url;
+			}
+		}
+		
+		title = null;
+		season = null;
+		episode = null;
+		
+		if (u !== null) {
+			if (playerData.has(u)) {
+				title = playerData.get(u).title;
+				season = playerData.get(u).season;
+				episode = playerData.get(u).episode;
+			}
+		}
+		
+		chrome.storage.sync.set({ title });
+		chrome.storage.sync.set({ season });
+		chrome.storage.sync.set({ episode });
+	});
+});

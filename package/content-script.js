@@ -42,10 +42,6 @@ function readTitle () {
 		}
 	}
 
-	chrome.storage.sync.set({ title });
-	chrome.storage.sync.set({ season });
-	chrome.storage.sync.set({ episode });
-
 	chrome.storage.sync.get("watchlist", ({ watchlist }) => {
 		if (title && episode) {
 			watchlist[title] = {
