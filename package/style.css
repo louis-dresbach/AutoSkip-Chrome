@@ -2,7 +2,8 @@ html {
 	background: rgb(0, 10, 25);
 	font-family: Helvetica, Arial;
 	font-size: 	20px;
-	min-width: 	15em;
+	min-width: 	14em;
+	overflow: 	auto;
 }
 input[type=checkbox] {
 	height: 	1em;
@@ -100,7 +101,7 @@ td {
 	padding: 0 .5em;
 	max-height: 0;
 	overflow: hidden;
-	transition: max-height 0.2s ease-out;
+	transition: all 0.2s ease-in-out;
 	background-color: rgb(242, 242, 242);
 	color: black;
 	border-bottom-right-radius: .5em;

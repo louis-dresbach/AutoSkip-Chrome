@@ -171,18 +171,18 @@ if (document.location.href.toString().includes("?lalala")) {
 }
 else {
 	document.querySelector("#popup").addEventListener("click", (e) => {
-		window.open(window.location.toString() + "?lalala", 'popUpWindow','height=700, width=400, resizable=no, scrollbars=no, toolbar=no, menubar=no, location=no, directories=no, status=yes');
+		window.open(window.location.toString() + "?lalala", 'popUpWindow','height=520, width=320, resizable=no, scrollbars=no, toolbar=no, menubar=no, location=no, directories=no, status=yes');
 		window.close();
 	});
 }
-var coll = document.getElementsByClassName("collapsible");
 
+var coll = document.getElementsByClassName("collapsible");
 for (let i = 0; i < coll.length; i++) {
 	coll[i].addEventListener("click", function(e) {
 		e.preventDefault();
 		this.classList.toggle("active");
 		var content = this.nextElementSibling;
-		if (content.style.maxHeight){
+		if (content.style.maxHeight) {
 			content.style.maxHeight = null;
 		} 
 		else {

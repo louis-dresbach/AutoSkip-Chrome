@@ -18,6 +18,7 @@ let groupwatch = {};
 
 const sites = [
 	"goload.io",
+	"gogohd.net",
 	"videovard.sx",
 	"vupload.com",
 	"streamz.ws",
@@ -218,6 +219,8 @@ chrome.runtime.onMessage.addListener(
 				else
 					chrome.tabs.create({ url: request.openTab });
 			}
+			
+			updateCurrentFromURL(request.openTab);
 		});
 	}
 	else if (request.closeTab) {
@@ -316,36 +319,35 @@ chrome.runtime.onMessage.addListener(
   }
 );
 
-chrome.tabs.onActivated.addListener((info) => {
-	let title, season, episode;
+const updateCurrentFromURL = (url) => {
+	let title 	= null;
+	let season 	= null;
+	let episode = null;
 	
+	if (url !== null) {
+		if (playerData.has(url)) {
+			title = playerData.get(url).title;
+			season = playerData.get(url).season;
+			episode = playerData.get(url).episode;
+		}
+	}
+	
+	chrome.storage.sync.set({ title });
+	chrome.storage.sync.set({ season });
+	chrome.storage.sync.set({ episode });
+};
+
+chrome.tabs.onActivated.addListener((info) => {
 	chrome.tabs.get(info.tabId, (tab) => {
-		let u = null;
 		if (tab.status === "loading") {
 			if (tab.pendingUrl && tab.pendingUrl !== "") {
-				u = tab.pendingUrl;
+				updateCurrentFromURL(tab.pendingUrl);
 			}
 		}
 		else if (tab.status && tab.status === "complete") {
 			if (tab.url !== "") {
-				u = tab.url;
+				updateCurrentFromURL(tab.url);
 			}
 		}
-		
-		title = null;
-		season = null;
-		episode = null;
-		
-		if (u !== null) {
-			if (playerData.has(u)) {
-				title = playerData.get(u).title;
-				season = playerData.get(u).season;
-				episode = playerData.get(u).episode;
-			}
-		}
-		
-		chrome.storage.sync.set({ title });
-		chrome.storage.sync.set({ season });
-		chrome.storage.sync.set({ episode });
 	});
 });
