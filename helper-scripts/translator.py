@@ -1,4 +1,6 @@
-# Translate our english messages to other languages
+#
+# Translate our english messages to other languages using DeepL
+# 
 import deepl, os, re
 
 print ("Automatically translating messages.json files using DeepL")
@@ -6,7 +8,7 @@ print ("Automatically translating messages.json files using DeepL")
 key = "9d88a7a1-2310-d066-f115-bf9a9b376e23:fx"
 translator = deepl.Translator(key)
 
-languages = ["es", "de"];
+languages = ["es", "de", "fr"];
 
 def translate(match):
 	text = match.group(2)
