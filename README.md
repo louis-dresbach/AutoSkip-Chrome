@@ -17,14 +17,17 @@ https://chrome.google.com/webstore/detail/autoskipper/ijplmgcfmdccpekemgkeajnjkp
 ## Supported websites
 ### Hosts
 Currently supports (with their subdomains/alternative domains):
-- [BurningSeries](bs.to)
-- [GogoAnime](gogoanime.ee)
+- [BurningSeries](https://bs.to)
+- [GogoAnime](https://gogoanime.ee)
+
+Partially supported (only updates your watchlist but doesn't autostart/skip intro/etc.):
+- [Crunchyroll](https://crunchyroll.com)
 
 ### Player-Sites
 Animes hosted on the aforementioned sites usually play using an external player. This plugin supports the following of those:
-- goload.io
-- gogohd.net
-- videovard.sx
-- vupload.com
-- streamz.ws
-- vidoza.net
+- https://goload.io
+- https://gogohd.net
+- https://videovard.sx
+- https://vupload.com
+- https://streamz.ws
+- https://vidoza.net
