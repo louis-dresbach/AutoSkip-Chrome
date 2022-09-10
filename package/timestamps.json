@@ -1,105 +1,361 @@
 {
     "1": {
-		"all": {
-			"opening": {
-				"start": 0,
-				"length": 150
-			},
-			"outro": {
-				"length": 120
-			}
-		}
-	},
+        "all": {
+            "opening": {
+                "start": 0,
+                "length": 150
+            },
+            "outro": {
+                "length": 120
+            }
+        }
+    },
     "2": {
-		"all": {
-			"opening": {
-				"start": 0,
-				"length": 70
-			},
-			"outro": {
-				"length": 120
-			}
-		}
-	},
-	
+        "all": {
+            "opening": {
+                "start": 0,
+                "length": 70
+            },
+            "outro": {
+                "length": 120
+            }
+        }
+    },
     "69": {
-		"episodes 1-206": {
-			"opening": {
-				"start": 0,
-				"length": 110
-			},
-			"outro": {
-				"length": 40
-			}
-		},
-		"episodes 207-263": {
-			"opening": {
-				"start": 0,
-				"length": 147
-			},
-			"outro": {
-				"length": 40
-			}
-		},
-		"episodes 284-397": {
-			"opening": {
-				"start": 0,
-				"length": 147
-			},
-			"outro": {
-				"length": 40
-			}
-		},
-		"episodes 200-516": {
-			"opening": {
-				"start": 0,
-				"length": 212
-			},
-			"outro": {
-				"length": 40
-			}
-		},
-		"episodes 517-1025": {
-			"opening": {
-				"start": 0,
-				"length": 165
-			},
-			"outro": {
-				"length": 40
-			}
-		}
-	},
+        "episodes 1-30": {
+            "opening": {
+                "start": 14,
+                "length": 109
+            },
+            "ending": {
+                "length": 70
+            }
+        },
+        "episodes 31-46": {
+            "opening": {
+                "start": 14,
+                "length": 109
+            },
+            "ending": {
+                "length": 71
+            }
+        },
+        "episodes 47-60": {
+            "opening": {
+                "start": 14,
+                "length": 110
+            },
+            "ending": {
+                "length": 71
+            }
+        },
+        "episodes 61-62": {
+            "opening": {
+                "start": 14,
+                "length": 110
+            }
+        },
+        "episodes 63-73": {
+            "opening": {
+                "start": 14,
+                "length": 110
+            },
+            "ending": {
+                "length": 69
+            }
+        },
+        "episodes 74-81": {
+            "opening": {
+                "start": 14,
+                "length": 110
+            },
+            "ending": {
+                "length": 71
+            }
+        },
+        "episodes 82-94": {
+            "opening": {
+                "start": 14,
+                "length": 110
+            },
+            "ending": {
+                "length": 72
+            }
+        },
+        "episodes 95-106": {
+            "opening": {
+                "start": 14,
+                "length": 110
+            },
+            "ending": {
+                "length": 70
+            }
+        },
+        "episodes 107-115": {
+            "opening": {
+                "start": 14,
+                "length": 110
+            },
+            "ending": {
+                "length": 71
+            }
+        },
+        "episodes 116-118": {
+            "opening": {
+                "start": 14,
+                "length": 109
+            },
+            "ending": {
+                "length": 71
+            }
+        },
+        "episodes 119-126": {
+            "opening": {
+                "start": 14,
+                "length": 109
+            },
+            "ending": {
+                "length": 70
+            }
+        },
+        "episodes 127-128": {
+            "opening": {
+                "start": 14,
+                "length": 109
+            },
+            "ending": {
+                "length": 192
+            }
+        },
+        "episodes 129-132": {
+            "opening": {
+                "start": 14,
+                "length": 109
+            },
+            "ending": {
+                "length": 70
+            }
+        },
+        "episodes 133-168": {
+            "opening": {
+                "start": 14,
+                "length": 109
+            },
+            "ending": {
+                "length": 71
+            }
+        },
+        "episodes 169-181": {
+            "opening": {
+                "start": 14,
+                "length": 110
+            },
+            "ending": {
+                "length": 71
+            }
+        },
+        "episodes 182-195": {
+            "opening": {
+                "start": 14,
+                "length": 110
+            },
+            "ending": {
+                "length": 72
+            }
+        },
+        "episodes 196-206": {
+            "opening": {
+                "start": 14,
+                "length": 110
+            },
+            "ending": {
+                "length": 70
+            }
+        },
+        "episodes 207-245": {
+            "opening": {
+                "start": 14,
+                "length": 109
+            },
+            "ending": {
+                "length": 71
+            }
+        },
+        "episodes 246-255": {
+            "opening": {
+                "start": 14,
+                "length": 109
+            },
+            "ending": {
+                "length": 70
+            }
+        },
+        "episodes 256-263": {
+            "opening": {
+                "start": 14,
+                "length": 109
+            },
+            "ending": {
+                "length": 72
+            }
+        },
+        "episodes 264-278": {
+            "opening": {
+                "start": 14,
+                "length": 110
+            },
+            "ending": {
+                "length": 72
+            }
+        },
+        "episodes 279-283": {
+            "opening": {
+                "start": 14,
+                "length": 109
+            }
+        },
+        "episodes 284-394": {
+            "opening": {
+                "start": 14,
+                "length": 149
+            },
+            "intro": {
+                "start": 149,
+                "length": 36
+            }
+        },
+        "episodes 395-396": {
+            "opening": {
+                "start": 14,
+                "length": 150
+            },
+            "intro": {
+                "start": 150,
+                "length": 36
+            }
+        },
+        "episodes 397-425": {
+            "opening": {
+                "start": 14,
+                "length": 150
+            },
+            "intro": {
+                "start": 150,
+                "length": 47
+            }
+        },
+        "episodes 426-458": {
+            "opening": {
+                "start": 14,
+                "length": 145
+            },
+            "intro": {
+                "start": 145,
+                "length": 47
+            }
+        },
+        "episodes 459-516": {
+            "opening": {
+                "start": 14,
+                "length": 150
+            },
+            "intro": {
+                "start": 150,
+                "length": 47
+            }
+        },
+        "episodes 517-522": {
+            "opening": {
+                "start": 14,
+                "length": 150
+            }
+        },
+        "episodes 523-752": {
+            "opening": {
+                "start": 14,
+                "length": 150
+            },
+            "intro": {
+                "start": 150,
+                "length": 40
+            }
+        },
+        "episodes 753-803": {
+            "opening": {
+                "start": 14,
+                "length": 150
+            },
+            "intro": {
+                "start": 150,
+                "length": 62
+            }
+        },
+        "episodes 804-878": {
+            "opening": {
+                "start": 14,
+                "length": 150
+            }
+        },
+        "episodes 879-890": {
+            "opening": {
+                "start": 14,
+                "length": 150
+            },
+            "intro": {
+                "start": 150,
+                "length": 51
+            }
+        },
+        "episodes 891-891": {
+            "opening": {
+                "start": 14,
+                "length": 150
+            }
+        },
+        "episodes 892-999": {
+            "opening": {
+                "start": 14,
+                "length": 120
+            }
+        },
+        "episodes 1000-1000": {
+            "opening": {
+                "start": 14,
+                "length": 109
+            }
+        }
+    },
     "10901": {
-		"all": {
-			"opening": {
-				"start": 90,
-				"length": 90
-			},
-			"outro": {
-				"length": 130
-			}
-		}
-	},
+        "all": {
+            "opening": {
+                "start": 90,
+                "length": 90
+            },
+            "outro": {
+                "length": 130
+            }
+        }
+    },
     "12661": {
-		"all": {
-			"opening": {
-				"start": -1,
-				"length": 90
-			},
-			"outro": {
-				"length": 120
-			}
-		}
-	},
+        "all": {
+            "opening": {
+                "start": -1,
+                "length": 90
+            },
+            "outro": {
+                "length": 120
+            }
+        }
+    },
     "16947": {
-		"all": {
-			"opening": {
-				"start": 0,
-				"length": 90
-			},
-			"outro": {
-				"length": 120
-			}
-		}
-	}
+        "all": {
+            "opening": {
+                "start": 0,
+                "length": 90
+            },
+            "outro": {
+                "length": 120
+            }
+        }
+    }
 }
