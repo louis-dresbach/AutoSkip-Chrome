@@ -64,7 +64,6 @@ else {
 										chrome.storage.sync.get("episode", ({ episode }) => {
 											for (let k of Object.keys(ress[aid])) {
 												let rese = /episodes (\d*)-(\d*)/g.exec(k);
-												let ress = /seasons (\d*)-(\d*)/g.exec(k);
 												if (rese.length === 3) {
 													if (Number(rese[1]) <= Number(episode) && Number(episode) <= Number(rese[2])) {
 														alert();
@@ -72,7 +71,16 @@ else {
 														break;
 													}
 												}
-												else if (ress.length === 3) {
+												let resee = /episode (\d*)/g.exec(k);
+												if (resee.length === 3) {
+													if (Number(resee[1]) == Number(episode)) {
+														alert();
+														timestamps = ress[aid][k];
+														break;
+													}
+												}
+												let ress = /seasons (\d*)-(\d*)/g.exec(k);
+												if (ress.length === 3) {
 													if (Number(rese[1]) <= Number(season) && Number(season) <= Number(rese[2])) {
 														alert();
 														timestamps = ress[aid][k];
