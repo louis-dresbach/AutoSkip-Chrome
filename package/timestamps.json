@@ -1,57 +1,105 @@
 {
     "1": {
-		"intro": {
-			"start": 0,
-			"length": 150
-		},
-		"outro": {
-			"length": 120
+		"all": {
+			"opening": {
+				"start": 0,
+				"length": 150
+			},
+			"outro": {
+				"length": 120
+			}
 		}
 	},
     "2": {
-		"intro": {
-			"start": 0,
-			"length": 70
-		},
-		"outro": {
-			"length": 120
+		"all": {
+			"opening": {
+				"start": 0,
+				"length": 70
+			},
+			"outro": {
+				"length": 120
+			}
 		}
 	},
 	
     "69": {
-		"intro": {
-			"start": 0,
-			"length": 212
+		"episodes 1-206": {
+			"opening": {
+				"start": 0,
+				"length": 110
+			},
+			"outro": {
+				"length": 40
+			}
 		},
-		"outro": {
-			"length": 40
+		"episodes 207-263": {
+			"opening": {
+				"start": 0,
+				"length": 147
+			},
+			"outro": {
+				"length": 40
+			}
+		},
+		"episodes 284-397": {
+			"opening": {
+				"start": 0,
+				"length": 147
+			},
+			"outro": {
+				"length": 40
+			}
+		},
+		"episodes 200-516": {
+			"opening": {
+				"start": 0,
+				"length": 212
+			},
+			"outro": {
+				"length": 40
+			}
+		},
+		"episodes 517-1025": {
+			"opening": {
+				"start": 0,
+				"length": 165
+			},
+			"outro": {
+				"length": 40
+			}
 		}
 	},
     "10901": {
-		"intro": {
-			"start": 90,
-			"length": 90
-		},
-		"outro": {
-			"length": 130
+		"all": {
+			"opening": {
+				"start": 90,
+				"length": 90
+			},
+			"outro": {
+				"length": 130
+			}
 		}
 	},
     "12661": {
-		"intro": {
-			"start": -1,
-			"length": 90
-		},
-		"outro": {
-			"length": 120
+		"all": {
+			"opening": {
+				"start": -1,
+				"length": 90
+			},
+			"outro": {
+				"length": 120
+			}
 		}
 	},
     "16947": {
-		"intro": {
-			"start": 0,
-			"length": 90
-		},
-		"outro": {
-			"length": 120
+		"all": {
+			"opening": {
+				"start": 0,
+				"length": 90
+			},
+			"outro": {
+				"length": 120
+			}
 		}
 	}
 }

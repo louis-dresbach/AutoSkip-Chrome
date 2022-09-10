@@ -52,6 +52,10 @@ function readTitle () {
 			chrome.storage.sync.set({ watchlist });
 		}
 	});
+	
+	chrome.storage.sync.set({ title });
+	chrome.storage.sync.set({ season });
+	chrome.storage.sync.set({ episode });
 }
 
 chrome.runtime.onMessage.addListener(

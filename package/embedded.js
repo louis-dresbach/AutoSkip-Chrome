@@ -55,8 +55,36 @@ else {
 							fetch(chrome.runtime.getURL("timestamps.json"))
 							.then((response) => response.json())
 							.then((ress) => {
-								timestamps = ress[aid];
-								if (!timestamps["intro"] && _DEBUG) {
+								// This means all episodes have the same timestamps
+								if ("all" in ress[aid]) {
+									timestamps = ress[aid]["all"];
+								}
+								else {
+									chrome.storage.sync.get("season", ({ season }) => {
+										chrome.storage.sync.get("episode", ({ episode }) => {
+											for (let k of Object.keys(ress[aid])) {
+												let rese = /episodes (\d*)-(\d*)/g.exec(k);
+												let ress = /seasons (\d*)-(\d*)/g.exec(k);
+												if (rese.length === 3) {
+													if (Number(rese[1]) <= Number(episode) && Number(episode) <= Number(rese[2])) {
+														alert();
+														timestamps = ress[aid][k];
+														break;
+													}
+												}
+												else if (ress.length === 3) {
+													if (Number(rese[1]) <= Number(season) && Number(season) <= Number(rese[2])) {
+														alert();
+														timestamps = ress[aid][k];
+														break;
+													}
+												}
+											}
+										});
+									});
+								}
+								
+								if (!timestamps["opening"] && _DEBUG) {
 									alert("Add timestamps for " + title + "\r\nAID: " + aid);
 								}
 							});
@@ -91,8 +119,8 @@ else {
 	}
 
 	const skipIntro = () => {
-		if (timestamps["intro"]) {
-			window.postMessage({ player: "seek", time: timestamps["intro"]["start"] + timestamps["intro"]["length"] - 1 }, "*");
+		if (timestamps["opening"]) {
+			window.postMessage({ player: "seek", time: timestamps["opening"]["start"] + timestamps["opening"]["length"] - 1 }, "*");
 		}
 	}
 
@@ -136,9 +164,9 @@ else {
 			}
 			
 			
-			if (timeDuration > 1 && timestamps["intro"]) {
+			if (timeDuration > 1 && timestamps["opening"]) {
 				// skip intro
-				if (timestamps["intro"]["start"] > -1 && timeElapsed > timestamps["intro"]["start"] && timeElapsed < timestamps["intro"]["start"] + timestamps["intro"]["length"] - 5) {
+				if (timestamps["opening"]["start"] > -1 && timeElapsed > timestamps["opening"]["start"] && timeElapsed < timestamps["opening"]["start"] + timestamps["opening"]["length"] - 5) {
 					if (sI) {
 						skipIntro();
 					}
