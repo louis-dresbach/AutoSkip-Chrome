@@ -1,6 +1,7 @@
 {
 	"name": "AutoSkipper",
 	"description": "Add features to your favorite anime sites!",
+	"author": "Louis Dresbach",
 	"version": "0.7",
 	"manifest_version": 3,
 	"default_locale": "en",
@@ -26,7 +27,7 @@
 				"*://*.burningseries.tw/serie/*/*", 
 				"*://*.burningseries.vc/serie/*/*",
 				
-				"*://*.crunchyroll.com/*"
+				"*://*.crunchyroll.com/*/*/*"
 			],
 			"js": ["constants.js", "content-script.js"]
 		}, {
