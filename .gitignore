@@ -2,3 +2,4 @@ package.zip
 zipped/
 *.pem
 desktop.ini
+helper-scripts/parseResults.json
