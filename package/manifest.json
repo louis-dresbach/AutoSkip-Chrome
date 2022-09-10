@@ -1,7 +1,7 @@
 {
 	"name": "AutoSkipper",
 	"description": "Add features to your favorite anime sites!",
-	"version": "0.6",
+	"version": "0.7",
 	"manifest_version": 3,
 	"default_locale": "en",
 	"permissions": ["storage", "tabs", "notifications"], 
