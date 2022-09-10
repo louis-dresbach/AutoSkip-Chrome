@@ -55,6 +55,10 @@ else {
 							fetch(chrome.runtime.getURL("timestamps.json"))
 							.then((response) => response.json())
 							.then((ress) => {
+								if (!ress[aid] && _DEBUG) {
+									alert("Add timestamps for " + title + "\r\nAID: " + aid);
+									return;
+								}
 								// This means all episodes have the same timestamps
 								if ("all" in ress[aid]) {
 									timestamps = ress[aid]["all"];
@@ -66,34 +70,34 @@ else {
 												let rese = /episodes (\d*)-(\d*)/g.exec(k);
 												if (rese.length === 3) {
 													if (Number(rese[1]) <= Number(episode) && Number(episode) <= Number(rese[2])) {
-														alert();
 														timestamps = ress[aid][k];
 														break;
 													}
 												}
-												let resee = /episode (\d*)/g.exec(k);
-												if (resee.length === 3) {
-													if (Number(resee[1]) == Number(episode)) {
-														alert();
-														timestamps = ress[aid][k];
-														break;
+												else {
+													let resee = /episode (\d*)/g.exec(k);
+													if (resee.length === 3) {
+														if (Number(resee[1]) == Number(episode)) {
+															timestamps = ress[aid][k];
+															break;
+														}
 													}
-												}
-												let ress = /seasons (\d*)-(\d*)/g.exec(k);
-												if (ress.length === 3) {
-													if (Number(rese[1]) <= Number(season) && Number(season) <= Number(rese[2])) {
-														alert();
-														timestamps = ress[aid][k];
-														break;
+													else {
+														let ress = /seasons (\d*)-(\d*)/g.exec(k);
+														if (ress.length === 3) {
+															if (Number(rese[1]) <= Number(season) && Number(season) <= Number(rese[2])) {
+																timestamps = ress[aid][k];
+																break;
+															}
+														}
 													}
 												}
 											}
+											if (!timestamps["opening"] && _DEBUG) {
+												alert("Add timestamps for " + title + "\r\nAID: " + aid);
+											}
 										});
 									});
-								}
-								
-								if (!timestamps["opening"] && _DEBUG) {
-									alert("Add timestamps for " + title + "\r\nAID: " + aid);
 								}
 							});
 							break;
@@ -128,7 +132,10 @@ else {
 
 	const skipIntro = () => {
 		if (timestamps["opening"]) {
-			window.postMessage({ player: "seek", time: timestamps["opening"]["start"] + timestamps["opening"]["length"] - 1 }, "*");
+			let time = timestamps["opening"]["start"] + timestamps["opening"]["length"] - 1;
+			if (timestamps["intro"])
+				time += timestamps["intro"]["length"];
+			window.postMessage({ player: "seek", time: time }, "*");
 		}
 	}
 
@@ -187,17 +194,19 @@ else {
 				}
 
 				// next episode button
-				if (timestamps["outro"]["length"] > -1 && timestamps["outro"]["length"] > timeCountDown && timeElapsed > 30) {
-					sendmes({ fullscreen: false });
-					if (sO) {
-						nextEp();
+				if (timestamps["outro"]) {
+					if (timestamps["outro"]["length"] > -1 && timestamps["outro"]["length"] > timeCountDown && timeElapsed > 30) {
+						sendmes({ fullscreen: false });
+						if (sO) {
+							nextEp();
+						}
+						else {
+							d.style.display = "block";
+						}
 					}
 					else {
-						d.style.display = "block";
+						d.style.display = "none";
 					}
-				}
-				else {
-					d.style.display = "none";
 				}
 			}
 			if (timeCountDown > 0 && timeCountDown < 5) {
