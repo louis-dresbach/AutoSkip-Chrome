@@ -66,6 +66,18 @@ const drawWatchlist = (watchlist) => {
 	}
 }
 
+const exportWatchlist = async () => {
+	chrome.storage.sync.get("watchlist", ({ watchlist }) => {
+		var bb = new Blob([JSON.stringify(watchlist, null, 4)], { type: 'text/plain' });
+		var a = document.createElement('a');
+		a.download = 'watchlist.json';
+		a.href = window.URL.createObjectURL(bb);
+		a.click();
+	});
+}
+document.getElementById("exportbutton").addEventListener("click", () => { 
+	exportWatchlist()
+});
 
 chrome.storage.sync.get("autoStart", ({ autoStart }) => {
 	inputAutoStart.checked = autoStart;
