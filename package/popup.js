@@ -66,17 +66,39 @@ const drawWatchlist = (watchlist) => {
 	}
 }
 
-const exportWatchlist = async () => {
+const exportWatchlist = () => {
 	chrome.storage.sync.get("watchlist", ({ watchlist }) => {
 		var bb = new Blob([JSON.stringify(watchlist, null, 4)], { type: 'text/plain' });
 		var a = document.createElement('a');
 		a.download = 'watchlist.json';
 		a.href = window.URL.createObjectURL(bb);
 		a.click();
+		a.remove();
 	});
 }
 document.getElementById("exportbutton").addEventListener("click", () => { 
 	exportWatchlist()
+});
+
+const importWatchlist = () => {
+	var f = document.createElement("input");
+	f.type = "file";
+	f.addEventListener("change", () => { 
+		if (f.files.length > 0) {
+			var fr = new FileReader();
+			fr.onload = () => {
+				var watchlist = JSON.parse(fr.result);
+				chrome.storage.sync.set({ watchlist });
+			}
+
+			fr.readAsText(f.files[0]);
+		}
+	});
+	f.click();
+	f.remove();
+}
+document.getElementById("importbutton").addEventListener("click", () => { 
+	importWatchlist()
 });
 
 chrome.storage.sync.get("autoStart", ({ autoStart }) => {

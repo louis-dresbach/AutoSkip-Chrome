@@ -19,6 +19,7 @@ input[type=text] {
 }
 button {
 	margin: 	0;
+	margin-bottom: 4px;
 	height: 	2em;
 	width: 		100%;
 	border: 	2px solid #CCC;
