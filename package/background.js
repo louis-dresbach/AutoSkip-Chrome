@@ -142,7 +142,7 @@ const initWs = () => {
 };
 
 chrome.storage.sync.get("groupwatch", ({ groupwatch }) => {
-	if (groupwatch.roomid) {
+	if (groupwatch && groupwatch.roomid) {
 		let id = groupwatch.roomid;
 		groupwatch.roomid = null;
 		websocketmessage ({ action: "JOINGROUP", group: id });
@@ -183,6 +183,7 @@ chrome.runtime.onInstalled.addListener((details) => {
 		chrome.storage.sync.set({ skipOutro });
 		chrome.storage.sync.set({ watchlist });
 		chrome.storage.sync.set({ playerData });
+		chrome.storage.sync.set({ groupwatch });
 	}
 });
 
