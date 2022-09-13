@@ -226,17 +226,17 @@ chrome.runtime.onMessage.addListener(
 	}
 	else if (request.closeTab) {
 		// console.log(sender.tab);
-		if (sender.tab.openerTabId) {
-			chrome.tabs.sendMessage(sender.tab.openerTabId, {nextEpisode: true});
-			chrome.tabs.update(sender.tab.openerTabId, {active: true});
-		}
-		else if(playerData.has(sender.tab.url) && playerData.get(sender.tab.url).host) {
+		if(playerData.has(sender.tab.url) && playerData.get(sender.tab.url).host) {
 			chrome.tabs.query({ url: playerData.get(sender.tab.url).host }, (tabs) => {
 				if (tabs.length > 0) {
 					chrome.tabs.sendMessage(tabs[0].id, {nextEpisode: true});
 					chrome.tabs.update(tabs[0].id, {active: true});
 				}
 			});
+		}
+		else if (sender.tab.openerTabId) {
+			chrome.tabs.sendMessage(sender.tab.openerTabId, {nextEpisode: true});
+			chrome.tabs.update(sender.tab.openerTabId, {active: true});
 		}
 		chrome.tabs.remove(sender.tab.id);
 	}

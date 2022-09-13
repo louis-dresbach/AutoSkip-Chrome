@@ -29,6 +29,9 @@
             },
             "ending": {
                 "length": 70
+            },
+            "preview": {
+                "length": 40
             }
         },
         "episodes 31-46": {
@@ -38,6 +41,9 @@
             },
             "ending": {
                 "length": 71
+            },
+            "preview": {
+                "length": 40
             }
         },
         "episodes 47-60": {
@@ -47,12 +53,18 @@
             },
             "ending": {
                 "length": 71
+            },
+            "preview": {
+                "length": 40
             }
         },
         "episodes 61-62": {
             "opening": {
                 "start": 14,
                 "length": 110
+            },
+            "preview": {
+                "length": 40
             }
         },
         "episodes 63-73": {
@@ -62,6 +74,9 @@
             },
             "ending": {
                 "length": 69
+            },
+            "preview": {
+                "length": 40
             }
         },
         "episodes 74-81": {
@@ -71,6 +86,9 @@
             },
             "ending": {
                 "length": 71
+            },
+            "preview": {
+                "length": 40
             }
         },
         "episodes 82-94": {
@@ -80,6 +98,9 @@
             },
             "ending": {
                 "length": 72
+            },
+            "preview": {
+                "length": 40
             }
         },
         "episodes 95-106": {
@@ -89,6 +110,9 @@
             },
             "ending": {
                 "length": 70
+            },
+            "preview": {
+                "length": 40
             }
         },
         "episodes 107-115": {
@@ -98,6 +122,9 @@
             },
             "ending": {
                 "length": 71
+            },
+            "preview": {
+                "length": 40
             }
         },
         "episodes 116-118": {
@@ -107,6 +134,9 @@
             },
             "ending": {
                 "length": 71
+            },
+            "preview": {
+                "length": 40
             }
         },
         "episodes 119-126": {
@@ -116,6 +146,9 @@
             },
             "ending": {
                 "length": 70
+            },
+            "preview": {
+                "length": 40
             }
         },
         "episodes 127-128": {
@@ -125,6 +158,9 @@
             },
             "ending": {
                 "length": 192
+            },
+            "preview": {
+                "length": 40
             }
         },
         "episodes 129-132": {
@@ -134,6 +170,9 @@
             },
             "ending": {
                 "length": 70
+            },
+            "preview": {
+                "length": 40
             }
         },
         "episodes 133-168": {
@@ -143,6 +182,9 @@
             },
             "ending": {
                 "length": 71
+            },
+            "preview": {
+                "length": 40
             }
         },
         "episodes 169-181": {
@@ -152,6 +194,9 @@
             },
             "ending": {
                 "length": 71
+            },
+            "preview": {
+                "length": 40
             }
         },
         "episodes 182-195": {
@@ -161,6 +206,9 @@
             },
             "ending": {
                 "length": 72
+            },
+            "preview": {
+                "length": 40
             }
         },
         "episodes 196-206": {
@@ -170,6 +218,9 @@
             },
             "ending": {
                 "length": 70
+            },
+            "preview": {
+                "length": 40
             }
         },
         "episodes 207-245": {
@@ -179,6 +230,9 @@
             },
             "ending": {
                 "length": 71
+            },
+            "preview": {
+                "length": 40
             }
         },
         "episodes 246-255": {
@@ -188,6 +242,9 @@
             },
             "ending": {
                 "length": 70
+            },
+            "preview": {
+                "length": 40
             }
         },
         "episodes 256-263": {
@@ -197,6 +254,9 @@
             },
             "ending": {
                 "length": 72
+            },
+            "preview": {
+                "length": 40
             }
         },
         "episodes 264-278": {
@@ -206,12 +266,18 @@
             },
             "ending": {
                 "length": 72
+            },
+            "preview": {
+                "length": 40
             }
         },
         "episodes 279-283": {
             "opening": {
                 "start": 14,
                 "length": 109
+            },
+            "preview": {
+                "length": 40
             }
         },
         "episodes 284-394": {
@@ -222,6 +288,9 @@
             "intro": {
                 "start": 149,
                 "length": 36
+            },
+            "preview": {
+                "length": 40
             }
         },
         "episodes 395-396": {
@@ -232,6 +301,9 @@
             "intro": {
                 "start": 150,
                 "length": 36
+            },
+            "preview": {
+                "length": 40
             }
         },
         "episodes 397-425": {
@@ -242,6 +314,9 @@
             "intro": {
                 "start": 150,
                 "length": 47
+            },
+            "preview": {
+                "length": 40
             }
         },
         "episodes 426-458": {
@@ -252,6 +327,9 @@
             "intro": {
                 "start": 145,
                 "length": 47
+            },
+            "preview": {
+                "length": 40
             }
         },
         "episodes 459-516": {
@@ -262,12 +340,18 @@
             "intro": {
                 "start": 150,
                 "length": 47
+            },
+            "preview": {
+                "length": 40
             }
         },
         "episodes 517-522": {
             "opening": {
                 "start": 14,
                 "length": 150
+            },
+            "preview": {
+                "length": 40
             }
         },
         "episodes 523-752": {
@@ -277,6 +361,9 @@
             },
             "intro": {
                 "start": 150,
+                "length": 40
+            },
+            "preview": {
                 "length": 40
             }
         },
@@ -288,12 +375,18 @@
             "intro": {
                 "start": 150,
                 "length": 62
+            },
+            "preview": {
+                "length": 40
             }
         },
         "episodes 804-878": {
             "opening": {
                 "start": 14,
                 "length": 150
+            },
+            "preview": {
+                "length": 40
             }
         },
         "episodes 879-890": {
@@ -304,24 +397,45 @@
             "intro": {
                 "start": 150,
                 "length": 51
+            },
+            "preview": {
+                "length": 40
             }
         },
         "episodes 891-891": {
             "opening": {
                 "start": 14,
                 "length": 150
+            },
+            "preview": {
+                "length": 40
             }
         },
         "episodes 892-999": {
             "opening": {
                 "start": 14,
                 "length": 120
+            },
+            "preview": {
+                "length": 40
             }
         },
         "episodes 1000-1000": {
             "opening": {
                 "start": 14,
                 "length": 109
+            },
+            "preview": {
+                "length": 40
+            }
+        },
+        "episodes 1001-1100": {
+            "opening": {
+                "start": 14,
+                "length": 120
+            },
+            "preview": {
+                "length": 40
             }
         }
     },

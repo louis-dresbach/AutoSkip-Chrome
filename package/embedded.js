@@ -194,8 +194,14 @@ else {
 				}
 
 				// next episode button
-				if (timestamps["outro"]) {
-					if (timestamps["outro"]["length"] > -1 && timestamps["outro"]["length"] > timeCountDown && timeElapsed > 30) {
+				if (timestamps["outro"] || timestamps["preview"]) {
+					let lengthToSkip = 0;
+					if (timestamps["outro"] && timestamps["outro"]["length"] > -1)
+						lengthToSkip += timestamps["outro"]["length"];
+					if (timestamps["preview"] && timestamps["preview"]["length"] > -1)
+						lengthToSkip += timestamps["preview"]["length"];
+					
+					if (lengthToSkip > 0 && lengthToSkip > timeCountDown && timeElapsed > 30) {
 						sendmes({ fullscreen: false });
 						if (sO) {
 							nextEp();

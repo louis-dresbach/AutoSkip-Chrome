@@ -58,19 +58,23 @@ function readTitle () {
 	chrome.storage.sync.set({ episode });
 }
 
+const nextEpisode = () => {
+	// Click link to next episode
+	if (gogoanime.includes(window.location.hostname)) {
+		document.querySelector(".anime_video_body_episodes_r a").click();
+	}
+	else if (bs.includes(window.location.hostname)) {
+		let a = document.querySelector("#episodes li.active").nextElementSibling.getElementsByTagName("a");
+		if (a.length === 1) {
+			a[0].click();
+		}
+	}
+}
+
 chrome.runtime.onMessage.addListener(
   function(request, sender, sendResponse) {
     if (request.nextEpisode) {
-		// Click link to next episode
-		if (gogoanime.includes(window.location.hostname)) {
-			document.querySelector(".anime_video_body_episodes_r a").click();
-		}
-		else if (bs.includes(window.location.hostname)) {
-			let a = document.querySelector("#episodes li.active").nextElementSibling.getElementsByTagName("a");
-			if (a.length === 1) {
-				a[0].click();
-			}
-		}
+		nextEpisode();
 	}
   }
 );
@@ -117,10 +121,16 @@ window.onload = function () {
 				return;
 			}
 			
-			if (event.code === "Space" && !(document.activeElement instanceof HTMLInputElement)) {
-				readTitle ();
-				chrome.runtime.sendMessage({ openTab: theFrame.src });
-				event.preventDefault();
+			if (!(document.activeElement instanceof HTMLInputElement)) {
+				if (event.code === "Space") {
+					readTitle ();
+					chrome.runtime.sendMessage({ openTab: theFrame.src });
+					event.preventDefault();
+				}
+				else if (event.code === "KeyN") {
+					nextEpisode();
+					event.preventDefault();
+				}
 			}
 		});
 	}
