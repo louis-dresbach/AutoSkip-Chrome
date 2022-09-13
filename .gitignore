@@ -3,3 +3,4 @@ zipped/
 *.pem
 desktop.ini
 helper-scripts/parseResults.json
+.env
