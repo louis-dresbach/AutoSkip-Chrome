@@ -1,63 +1,63 @@
 {
 	"title": {
-		"message": "Titel",
+		"message": "Titolo",
 		"description": ""
 	},
 	"episode": {
-		"message": "Episode",
+		"message": "Episodio",
 		"description": ""
 	},
 	"season": {
-		"message": "Saison",
+		"message": "Stagione",
 		"description": ""
 	},
 	"copy": {
-		"message": "In die Zwischenablage kopieren",
+		"message": "Copia negli appunti",
 		"description": ""
 	},
 	
 	"skip_intro": {
-		"message": "Intro überspringen",
+		"message": "Salta l'introduzione",
 		"description": "Button."
 	},
 	"skip_recap": {
-		"message": "Rekapitulieren",
+		"message": "Salta il Recap",
 		"description": "Button."
 	},
 	"next_episode": {
-		"message": "Nächste Episode",
+		"message": "Prossimo episodio",
 		"description": "Button."
 	},
 	"currently_playing": {
-		"message": "Derzeit spielend",
+		"message": "Attualmente in gioco",
 		"description": "Text."
 	},
 	"your_watchlist": {
-		"message": "Deine Beobachtungsliste",
+		"message": "La tua lista di controllo",
 		"description": "Text."
 	},
 	"always_skip_intro": {
-		"message": "Intro immer überspringen",
+		"message": "Salta sempre l'introduzione",
 		"description": "Checkbox."
 	},
 	"always_skip_outro": {
-		"message": "Outro immer auslassen",
+		"message": "Salta sempre l'outro",
 		"description": "Checkbox."
 	},
 	"toggle_fullscreen": {
-		"message": "Vollbild umschalten",
+		"message": "Attiva lo schermo intero",
 		"description": "Checkbox."
 	},
 	"autostart": {
-		"message": "Autostart Video",
+		"message": "Video dell'avvio automatico",
 		"description": "Checkbox."
 	},
 	"when_off": {
-		"message": "Wenn sie ausgeschaltet ist, wird eine Schaltfläche angezeigt.",
+		"message": "Quando è spento, viene visualizzato un pulsante.",
 		"description": "Small text."
 	},
 	"delete_confirm": {
-		"message": "Willst du $title$ wirklich aus deiner Beobachtungsliste entfernen?",
+		"message": "Vuoi davvero rimuovere $titolo$ dalla tua watchlist?",
 		"description": "Short version of delete",
 		"placeholders": {
 			"title": {
@@ -72,40 +72,40 @@
 	},
 	
 	"group_watch": {
-		"message": "Gruppe beobachten",
+		"message": "Guarda il gruppo",
 		"description": ""
 	},
 	"enter_group": {
-		"message": "Gib die ID der Gruppe ein, der du beitreten möchtest",
+		"message": "Inserisci l'ID del gruppo a cui vuoi aderire",
 		"description": ""
 	},
 	"join_group": {
-		"message": "Gib die ID der Gruppe ein, der du beitreten möchtest",
+		"message": "Inserisci l'ID del gruppo a cui vuoi aderire",
 		"description": ""
 	},
 	"leave_group": {
-		"message": "Gruppe verlassen",
+		"message": "Lascia il gruppo",
 		"description": ""
 	},
 	"in_group": {
-		"message": "Bei Groupwatch",
+		"message": "In groupwatch",
 		"description": ""
 	},
 	"or": {
-		"message": "oder",
+		"message": "o",
 		"description": ""
 	},
 	
 	"save_file": {
-		"message": "In einer Datei speichern",
+		"message": "Salva in un file",
 		"description": ""
 	},
 	"load_file": {
-		"message": "Aus Datei laden",
+		"message": "Carica da file",
 		"description": ""
 	},
 	"create_group": {
-		"message": "Neue Gruppe erstellen",
+		"message": "Crea un nuovo gruppo",
 		"description": ""
 	},
 	

@@ -8,56 +8,56 @@
 		"description": ""
 	},
 	"season": {
-		"message": "Saison",
+		"message": "Sæson",
 		"description": ""
 	},
 	"copy": {
-		"message": "In die Zwischenablage kopieren",
+		"message": "Kopier til udklipsholder",
 		"description": ""
 	},
 	
 	"skip_intro": {
-		"message": "Intro überspringen",
+		"message": "Spring intro over",
 		"description": "Button."
 	},
 	"skip_recap": {
-		"message": "Rekapitulieren",
+		"message": "Spring over",
 		"description": "Button."
 	},
 	"next_episode": {
-		"message": "Nächste Episode",
+		"message": "Næste afsnit",
 		"description": "Button."
 	},
 	"currently_playing": {
-		"message": "Derzeit spielend",
+		"message": "Spiller i øjeblikket",
 		"description": "Text."
 	},
 	"your_watchlist": {
-		"message": "Deine Beobachtungsliste",
+		"message": "Din observationsliste",
 		"description": "Text."
 	},
 	"always_skip_intro": {
-		"message": "Intro immer überspringen",
+		"message": "Spring altid over introen",
 		"description": "Checkbox."
 	},
 	"always_skip_outro": {
-		"message": "Outro immer auslassen",
+		"message": "Spring altid outro over",
 		"description": "Checkbox."
 	},
 	"toggle_fullscreen": {
-		"message": "Vollbild umschalten",
+		"message": "Skift til fuld skærm",
 		"description": "Checkbox."
 	},
 	"autostart": {
-		"message": "Autostart Video",
+		"message": "Autostart-video",
 		"description": "Checkbox."
 	},
 	"when_off": {
-		"message": "Wenn sie ausgeschaltet ist, wird eine Schaltfläche angezeigt.",
+		"message": "Når den er slukket, vises en knap.",
 		"description": "Small text."
 	},
 	"delete_confirm": {
-		"message": "Willst du $title$ wirklich aus deiner Beobachtungsliste entfernen?",
+		"message": "Ønsker du virkelig at fjerne $title$ fra din observationsliste?",
 		"description": "Short version of delete",
 		"placeholders": {
 			"title": {
@@ -72,40 +72,40 @@
 	},
 	
 	"group_watch": {
-		"message": "Gruppe beobachten",
+		"message": "Gruppevagt",
 		"description": ""
 	},
 	"enter_group": {
-		"message": "Gib die ID der Gruppe ein, der du beitreten möchtest",
+		"message": "Indtast det gruppe-ID, du ønsker at tilmelde dig",
 		"description": ""
 	},
 	"join_group": {
-		"message": "Gib die ID der Gruppe ein, der du beitreten möchtest",
+		"message": "Indtast det gruppe-ID, du ønsker at tilmelde dig",
 		"description": ""
 	},
 	"leave_group": {
-		"message": "Gruppe verlassen",
+		"message": "Forlade gruppen",
 		"description": ""
 	},
 	"in_group": {
-		"message": "Bei Groupwatch",
+		"message": "I gruppevagt",
 		"description": ""
 	},
 	"or": {
-		"message": "oder",
+		"message": "eller",
 		"description": ""
 	},
 	
 	"save_file": {
-		"message": "In einer Datei speichern",
+		"message": "Gem til en fil",
 		"description": ""
 	},
 	"load_file": {
-		"message": "Aus Datei laden",
+		"message": "Indlæs fra fil",
 		"description": ""
 	},
 	"create_group": {
-		"message": "Neue Gruppe erstellen",
+		"message": "Opret en ny gruppe",
 		"description": ""
 	},
 	

@@ -1,63 +1,63 @@
 {
 	"title": {
-		"message": "Titel",
+		"message": "Nosaukums",
 		"description": ""
 	},
 	"episode": {
-		"message": "Episode",
+		"message": "Epizode",
 		"description": ""
 	},
 	"season": {
-		"message": "Saison",
+		"message": "Sezona",
 		"description": ""
 	},
 	"copy": {
-		"message": "In die Zwischenablage kopieren",
+		"message": "Kopēt uz starpliktuvi",
 		"description": ""
 	},
 	
 	"skip_intro": {
-		"message": "Intro überspringen",
+		"message": "Izlaist ievadu",
 		"description": "Button."
 	},
 	"skip_recap": {
-		"message": "Rekapitulieren",
+		"message": "Izlaist kopsavilkumu",
 		"description": "Button."
 	},
 	"next_episode": {
-		"message": "Nächste Episode",
+		"message": "Nākamā epizode",
 		"description": "Button."
 	},
 	"currently_playing": {
-		"message": "Derzeit spielend",
+		"message": "Pašlaik spēlē",
 		"description": "Text."
 	},
 	"your_watchlist": {
-		"message": "Deine Beobachtungsliste",
+		"message": "Jūsu skatāmo objektu saraksts",
 		"description": "Text."
 	},
 	"always_skip_intro": {
-		"message": "Intro immer überspringen",
+		"message": "Vienmēr izlaist intro",
 		"description": "Checkbox."
 	},
 	"always_skip_outro": {
-		"message": "Outro immer auslassen",
+		"message": "Vienmēr izlaist outro",
 		"description": "Checkbox."
 	},
 	"toggle_fullscreen": {
-		"message": "Vollbild umschalten",
+		"message": "Pārslēgt pilnekrāna ekrānu",
 		"description": "Checkbox."
 	},
 	"autostart": {
-		"message": "Autostart Video",
+		"message": "Automātiskās palaišanas video",
 		"description": "Checkbox."
 	},
 	"when_off": {
-		"message": "Wenn sie ausgeschaltet ist, wird eine Schaltfläche angezeigt.",
+		"message": "Ja tas ir izslēgts, tiek parādīta poga.",
 		"description": "Small text."
 	},
 	"delete_confirm": {
-		"message": "Willst du $title$ wirklich aus deiner Beobachtungsliste entfernen?",
+		"message": "Vai tiešām vēlaties no skatāmo objektu saraksta izņemt $title$?",
 		"description": "Short version of delete",
 		"placeholders": {
 			"title": {
@@ -72,40 +72,40 @@
 	},
 	
 	"group_watch": {
-		"message": "Gruppe beobachten",
+		"message": "Grupas skatīšanās",
 		"description": ""
 	},
 	"enter_group": {
-		"message": "Gib die ID der Gruppe ein, der du beitreten möchtest",
+		"message": "Ievadiet grupas ID, kurai vēlaties pievienoties",
 		"description": ""
 	},
 	"join_group": {
-		"message": "Gib die ID der Gruppe ein, der du beitreten möchtest",
+		"message": "Ievadiet grupas ID, kurai vēlaties pievienoties",
 		"description": ""
 	},
 	"leave_group": {
-		"message": "Gruppe verlassen",
+		"message": "Atstāj grupu",
 		"description": ""
 	},
 	"in_group": {
-		"message": "Bei Groupwatch",
+		"message": "In Groupwatch",
 		"description": ""
 	},
 	"or": {
-		"message": "oder",
+		"message": "vai",
 		"description": ""
 	},
 	
 	"save_file": {
-		"message": "In einer Datei speichern",
+		"message": "Saglabāt failā",
 		"description": ""
 	},
 	"load_file": {
-		"message": "Aus Datei laden",
+		"message": "Ielādēt no faila",
 		"description": ""
 	},
 	"create_group": {
-		"message": "Neue Gruppe erstellen",
+		"message": "Izveidot jaunu grupu",
 		"description": ""
 	},
 	

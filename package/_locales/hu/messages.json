@@ -1,63 +1,63 @@
 {
 	"title": {
-		"message": "Titel",
+		"message": "Cím",
 		"description": ""
 	},
 	"episode": {
-		"message": "Episode",
+		"message": "Epizód",
 		"description": ""
 	},
 	"season": {
-		"message": "Saison",
+		"message": "Szezon",
 		"description": ""
 	},
 	"copy": {
-		"message": "In die Zwischenablage kopieren",
+		"message": "Másolás a vágólapra",
 		"description": ""
 	},
 	
 	"skip_intro": {
-		"message": "Intro überspringen",
+		"message": "Skip Intro",
 		"description": "Button."
 	},
 	"skip_recap": {
-		"message": "Rekapitulieren",
+		"message": "Ugrás visszaemlékezés",
 		"description": "Button."
 	},
 	"next_episode": {
-		"message": "Nächste Episode",
+		"message": "Következő epizód",
 		"description": "Button."
 	},
 	"currently_playing": {
-		"message": "Derzeit spielend",
+		"message": "Jelenleg játszik",
 		"description": "Text."
 	},
 	"your_watchlist": {
-		"message": "Deine Beobachtungsliste",
+		"message": "Az Ön figyelőlistája",
 		"description": "Text."
 	},
 	"always_skip_intro": {
-		"message": "Intro immer überspringen",
+		"message": "Mindig kihagyja az intrót",
 		"description": "Checkbox."
 	},
 	"always_skip_outro": {
-		"message": "Outro immer auslassen",
+		"message": "Mindig kihagyja az outro-t",
 		"description": "Checkbox."
 	},
 	"toggle_fullscreen": {
-		"message": "Vollbild umschalten",
+		"message": "Teljes képernyő átkapcsolása",
 		"description": "Checkbox."
 	},
 	"autostart": {
-		"message": "Autostart Video",
+		"message": "Autostart videó",
 		"description": "Checkbox."
 	},
 	"when_off": {
-		"message": "Wenn sie ausgeschaltet ist, wird eine Schaltfläche angezeigt.",
+		"message": "Kikapcsolt állapotban egy gomb jelenik meg.",
 		"description": "Small text."
 	},
 	"delete_confirm": {
-		"message": "Willst du $title$ wirklich aus deiner Beobachtungsliste entfernen?",
+		"message": "Tényleg el akarja távolítani a $title$-t a figyelőlistájáról?",
 		"description": "Short version of delete",
 		"placeholders": {
 			"title": {
@@ -72,40 +72,40 @@
 	},
 	
 	"group_watch": {
-		"message": "Gruppe beobachten",
+		"message": "Csoportos megfigyelés",
 		"description": ""
 	},
 	"enter_group": {
-		"message": "Gib die ID der Gruppe ein, der du beitreten möchtest",
+		"message": "Adja meg a csoport azonosítóját, amelyhez csatlakozni kíván",
 		"description": ""
 	},
 	"join_group": {
-		"message": "Gib die ID der Gruppe ein, der du beitreten möchtest",
+		"message": "Adja meg a csoport azonosítóját, amelyhez csatlakozni kíván",
 		"description": ""
 	},
 	"leave_group": {
-		"message": "Gruppe verlassen",
+		"message": "Hagyja el a csoportot",
 		"description": ""
 	},
 	"in_group": {
-		"message": "Bei Groupwatch",
+		"message": "A csoportfigyelésben",
 		"description": ""
 	},
 	"or": {
-		"message": "oder",
+		"message": "vagy",
 		"description": ""
 	},
 	
 	"save_file": {
-		"message": "In einer Datei speichern",
+		"message": "Mentés fájlba",
 		"description": ""
 	},
 	"load_file": {
-		"message": "Aus Datei laden",
+		"message": "Betöltés fájlból",
 		"description": ""
 	},
 	"create_group": {
-		"message": "Neue Gruppe erstellen",
+		"message": "Új csoport létrehozása",
 		"description": ""
 	},
 	

@@ -1,63 +1,63 @@
 {
 	"title": {
-		"message": "Titel",
+		"message": "Pealkiri",
 		"description": ""
 	},
 	"episode": {
-		"message": "Episode",
+		"message": "Episood",
 		"description": ""
 	},
 	"season": {
-		"message": "Saison",
+		"message": "Hooaeg",
 		"description": ""
 	},
 	"copy": {
-		"message": "In die Zwischenablage kopieren",
+		"message": "Kopeeri lõikelauale",
 		"description": ""
 	},
 	
 	"skip_intro": {
-		"message": "Intro überspringen",
+		"message": "Jäta intro vahele",
 		"description": "Button."
 	},
 	"skip_recap": {
-		"message": "Rekapitulieren",
+		"message": "Hüppa kokkuvõte",
 		"description": "Button."
 	},
 	"next_episode": {
-		"message": "Nächste Episode",
+		"message": "Järgmine episood",
 		"description": "Button."
 	},
 	"currently_playing": {
-		"message": "Derzeit spielend",
+		"message": "Praegu mängib",
 		"description": "Text."
 	},
 	"your_watchlist": {
-		"message": "Deine Beobachtungsliste",
+		"message": "Teie jälgimisnimekiri",
 		"description": "Text."
 	},
 	"always_skip_intro": {
-		"message": "Intro immer überspringen",
+		"message": "Jäta alati intro vahele",
 		"description": "Checkbox."
 	},
 	"always_skip_outro": {
-		"message": "Outro immer auslassen",
+		"message": "Jätke alati outro vahele",
 		"description": "Checkbox."
 	},
 	"toggle_fullscreen": {
-		"message": "Vollbild umschalten",
+		"message": "Täisekraani lülitamine",
 		"description": "Checkbox."
 	},
 	"autostart": {
-		"message": "Autostart Video",
+		"message": "Autostart video",
 		"description": "Checkbox."
 	},
 	"when_off": {
-		"message": "Wenn sie ausgeschaltet ist, wird eine Schaltfläche angezeigt.",
+		"message": "Kui see on välja lülitatud, kuvatakse nuppu.",
 		"description": "Small text."
 	},
 	"delete_confirm": {
-		"message": "Willst du $title$ wirklich aus deiner Beobachtungsliste entfernen?",
+		"message": "Kas sa tõesti tahad $title$ oma jälgimisnimekirjast eemaldada?",
 		"description": "Short version of delete",
 		"placeholders": {
 			"title": {
@@ -72,40 +72,40 @@
 	},
 	
 	"group_watch": {
-		"message": "Gruppe beobachten",
+		"message": "Grupi vaatlus",
 		"description": ""
 	},
 	"enter_group": {
-		"message": "Gib die ID der Gruppe ein, der du beitreten möchtest",
+		"message": "Sisestage grupi ID, millega soovite liituda",
 		"description": ""
 	},
 	"join_group": {
-		"message": "Gib die ID der Gruppe ein, der du beitreten möchtest",
+		"message": "Sisestage grupi ID, millega soovite liituda",
 		"description": ""
 	},
 	"leave_group": {
-		"message": "Gruppe verlassen",
+		"message": "Jäta grupp",
 		"description": ""
 	},
 	"in_group": {
-		"message": "Bei Groupwatch",
+		"message": "Groupwatchis",
 		"description": ""
 	},
 	"or": {
-		"message": "oder",
+		"message": "või",
 		"description": ""
 	},
 	
 	"save_file": {
-		"message": "In einer Datei speichern",
+		"message": "Salvesta faili",
 		"description": ""
 	},
 	"load_file": {
-		"message": "Aus Datei laden",
+		"message": "Laadige failist",
 		"description": ""
 	},
 	"create_group": {
-		"message": "Neue Gruppe erstellen",
+		"message": "Uue grupi loomine",
 		"description": ""
 	},
 	

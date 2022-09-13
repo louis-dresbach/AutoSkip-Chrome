@@ -1,0 +1,116 @@
+{
+	"title": {
+		"message": "Τίτλος",
+		"description": ""
+	},
+	"episode": {
+		"message": "Επεισόδιο",
+		"description": ""
+	},
+	"season": {
+		"message": "Περίοδος",
+		"description": ""
+	},
+	"copy": {
+		"message": "Αντιγραφή στο πρόχειρο",
+		"description": ""
+	},
+	
+	"skip_intro": {
+		"message": "Skip Intro",
+		"description": "Button."
+	},
+	"skip_recap": {
+		"message": "Skip Recap",
+		"description": "Button."
+	},
+	"next_episode": {
+		"message": "Επόμενο επεισόδιο",
+		"description": "Button."
+	},
+	"currently_playing": {
+		"message": "Παίζει αυτή τη στιγμή",
+		"description": "Text."
+	},
+	"your_watchlist": {
+		"message": "Η λίστα παρακολούθησής σας",
+		"description": "Text."
+	},
+	"always_skip_intro": {
+		"message": "Πάντα παραλείπετε την εισαγωγή",
+		"description": "Checkbox."
+	},
+	"always_skip_outro": {
+		"message": "Πάντα παραλείπετε το outro",
+		"description": "Checkbox."
+	},
+	"toggle_fullscreen": {
+		"message": "Εναλλαγή πλήρους οθόνης",
+		"description": "Checkbox."
+	},
+	"autostart": {
+		"message": "Βίντεο αυτόματης εκκίνησης",
+		"description": "Checkbox."
+	},
+	"when_off": {
+		"message": "Όταν είναι απενεργοποιημένο, θα εμφανιστεί ένα κουμπί.",
+		"description": "Small text."
+	},
+	"delete_confirm": {
+		"message": "Θέλετε πραγματικά να αφαιρέσετε το $title$ από τη λίστα παρακολούθησης;",
+		"description": "Short version of delete",
+		"placeholders": {
+			"title": {
+				"content": "$1",
+				"example": "One Piece"
+			}
+		}
+	},
+	"delete_short": {
+		"message": "DEL",
+		"description": "Short version of delete"
+	},
+	
+	"group_watch": {
+		"message": "Παρακολούθηση ομάδας",
+		"description": ""
+	},
+	"enter_group": {
+		"message": "Εισάγετε το αναγνωριστικό της ομάδας στην οποία θέλετε να συμμετάσχετε",
+		"description": ""
+	},
+	"join_group": {
+		"message": "Εισάγετε το αναγνωριστικό της ομάδας στην οποία θέλετε να συμμετάσχετε",
+		"description": ""
+	},
+	"leave_group": {
+		"message": "Αφήστε την ομάδα",
+		"description": ""
+	},
+	"in_group": {
+		"message": "Σε groupwatch",
+		"description": ""
+	},
+	"or": {
+		"message": "ή",
+		"description": ""
+	},
+	
+	"save_file": {
+		"message": "Αποθήκευση σε αρχείο",
+		"description": ""
+	},
+	"load_file": {
+		"message": "Φόρτωση από αρχείο",
+		"description": ""
+	},
+	"create_group": {
+		"message": "Δημιουργία νέας ομάδας",
+		"description": ""
+	},
+	
+	"_": {
+		"message": "",
+		"description": ""
+	}
+}

@@ -11,13 +11,17 @@
 		"message": "Temporada",
 		"description": ""
 	},
+	"copy": {
+		"message": "Copiar al portapapeles",
+		"description": ""
+	},
 	
 	"skip_intro": {
 		"message": "Saltar la introducción",
 		"description": "Button."
 	},
 	"skip_recap": {
-		"message": "Saltar Recapitulación",
+		"message": "Omitir el recuento",
 		"description": "Button."
 	},
 	"next_episode": {
@@ -29,19 +33,19 @@
 		"description": "Text."
 	},
 	"your_watchlist": {
-		"message": "Su lista de vigilancia",
+		"message": "Tu lista de vigilancia",
 		"description": "Text."
 	},
 	"always_skip_intro": {
-		"message": "Omitir siempre la introducción",
+		"message": "Salta siempre la introducción",
 		"description": "Checkbox."
 	},
 	"always_skip_outro": {
-		"message": "Omitir siempre el outro",
+		"message": "Omite siempre el outro",
 		"description": "Checkbox."
 	},
 	"toggle_fullscreen": {
-		"message": "Alternar la pantalla completa",
+		"message": "Activar la pantalla completa",
 		"description": "Checkbox."
 	},
 	"autostart": {
@@ -53,7 +57,7 @@
 		"description": "Small text."
 	},
 	"delete_confirm": {
-		"message": "¿Realmente quieres eliminar $title$ de tu lista de vigilancia?",
+		"message": "¿Realmente quieres eliminar $título$ de tu lista de vigilancia?",
 		"description": "Short version of delete",
 		"placeholders": {
 			"title": {
@@ -72,23 +76,36 @@
 		"description": ""
 	},
 	"enter_group": {
-		"message": "Introduzca el ID del grupo al que desea unirse",
+		"message": "Introduce el ID del grupo al que quieres unirte",
 		"description": ""
 	},
 	"join_group": {
-		"message": "Introduzca el ID del grupo al que desea unirse",
+		"message": "Introduce el ID del grupo al que quieres unirte",
 		"description": ""
 	},
 	"leave_group": {
-		"message": "Dejar el grupo",
+		"message": "Deja el grupo",
 		"description": ""
 	},
 	"in_group": {
-		"message": "En groupwatch",
+		"message": "En la vigilancia del grupo",
 		"description": ""
 	},
 	"or": {
 		"message": "o",
+		"description": ""
+	},
+	
+	"save_file": {
+		"message": "Guardar en un archivo",
+		"description": ""
+	},
+	"load_file": {
+		"message": "Cargar desde un archivo",
+		"description": ""
+	},
+	"create_group": {
+		"message": "Crear un nuevo grupo",
 		"description": ""
 	},
 	

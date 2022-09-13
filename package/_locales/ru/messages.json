@@ -1,0 +1,116 @@
+{
+	"title": {
+		"message": "Название",
+		"description": ""
+	},
+	"episode": {
+		"message": "Эпизод",
+		"description": ""
+	},
+	"season": {
+		"message": "Сезон",
+		"description": ""
+	},
+	"copy": {
+		"message": "Копирование в буфер обмена",
+		"description": ""
+	},
+	
+	"skip_intro": {
+		"message": "Skip Intro",
+		"description": "Button."
+	},
+	"skip_recap": {
+		"message": "Skip Recap",
+		"description": "Button."
+	},
+	"next_episode": {
+		"message": "Следующий эпизод",
+		"description": "Button."
+	},
+	"currently_playing": {
+		"message": "В настоящее время играет",
+		"description": "Text."
+	},
+	"your_watchlist": {
+		"message": "Твой список наблюдения",
+		"description": "Text."
+	},
+	"always_skip_intro": {
+		"message": "Всегда пропускай интро",
+		"description": "Checkbox."
+	},
+	"always_skip_outro": {
+		"message": "Всегда пропускай аутро",
+		"description": "Checkbox."
+	},
+	"toggle_fullscreen": {
+		"message": "Отключить полный экран",
+		"description": "Checkbox."
+	},
+	"autostart": {
+		"message": "Видео с автозапуском",
+		"description": "Checkbox."
+	},
+	"when_off": {
+		"message": "В выключенном состоянии кнопка будет отображаться на дисплее.",
+		"description": "Small text."
+	},
+	"delete_confirm": {
+		"message": "Ты действительно хочешь удалить $title$ из своего списка наблюдения?",
+		"description": "Short version of delete",
+		"placeholders": {
+			"title": {
+				"content": "$1",
+				"example": "One Piece"
+			}
+		}
+	},
+	"delete_short": {
+		"message": "DEL",
+		"description": "Short version of delete"
+	},
+	
+	"group_watch": {
+		"message": "Групповой дозор",
+		"description": ""
+	},
+	"enter_group": {
+		"message": "Введите идентификатор группы, к которой вы хотите присоединиться",
+		"description": ""
+	},
+	"join_group": {
+		"message": "Введите идентификатор группы, к которой вы хотите присоединиться",
+		"description": ""
+	},
+	"leave_group": {
+		"message": "Оставь группу",
+		"description": ""
+	},
+	"in_group": {
+		"message": "В групповом наблюдении",
+		"description": ""
+	},
+	"or": {
+		"message": "или",
+		"description": ""
+	},
+	
+	"save_file": {
+		"message": "Сохранить в файл",
+		"description": ""
+	},
+	"load_file": {
+		"message": "Загрузка из файла",
+		"description": ""
+	},
+	"create_group": {
+		"message": "Создайте новую группу",
+		"description": ""
+	},
+	
+	"_": {
+		"message": "",
+		"description": ""
+	}
+}

@@ -230,7 +230,7 @@ const drawgroupwatch = (object) => {
 	if (!object || !object.roomid) {
 		gw.innerHTML = "";
 		let ng = document.createElement("button");
-		ng.innerHTML = "Create new group";
+		ng.innerHTML = chrome.i18n.getMessage("create_group");
 		ng.addEventListener("click", function (e) {
 			e.preventDefault();
 			chrome.runtime.sendMessage({ createGroupWatch: true });

@@ -96,6 +96,19 @@
 		"description": ""
 	},
 	
+	"save_file": {
+		"message": "Save to a file",
+		"description": ""
+	},
+	"load_file": {
+		"message": "Load from file",
+		"description": ""
+	},
+	"create_group": {
+		"message": "Create new group",
+		"description": ""
+	},
+	
 	"_": {
 		"message": "",
 		"description": ""

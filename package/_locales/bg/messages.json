@@ -1,0 +1,116 @@
+{
+	"title": {
+		"message": "Заглавие",
+		"description": ""
+	},
+	"episode": {
+		"message": "Епизод",
+		"description": ""
+	},
+	"season": {
+		"message": "Сезон",
+		"description": ""
+	},
+	"copy": {
+		"message": "Копиране в клипборда",
+		"description": ""
+	},
+	
+	"skip_intro": {
+		"message": "Пропускане на интрото",
+		"description": "Button."
+	},
+	"skip_recap": {
+		"message": "Пропускане на рекапитулация",
+		"description": "Button."
+	},
+	"next_episode": {
+		"message": "Следващ епизод",
+		"description": "Button."
+	},
+	"currently_playing": {
+		"message": "В момента играете",
+		"description": "Text."
+	},
+	"your_watchlist": {
+		"message": "Вашият списък за наблюдение",
+		"description": "Text."
+	},
+	"always_skip_intro": {
+		"message": "Винаги пропускайте интрото",
+		"description": "Checkbox."
+	},
+	"always_skip_outro": {
+		"message": "Винаги пропускайте аутрото",
+		"description": "Checkbox."
+	},
+	"toggle_fullscreen": {
+		"message": "Превключване на цял екран",
+		"description": "Checkbox."
+	},
+	"autostart": {
+		"message": "Видеоклип за автоматично стартиране",
+		"description": "Checkbox."
+	},
+	"when_off": {
+		"message": "Когато е изключен, на дисплея ще се появи бутон.",
+		"description": "Small text."
+	},
+	"delete_confirm": {
+		"message": "Наистина ли искате да премахнете $заглавие$ от списъка си за наблюдение?",
+		"description": "Short version of delete",
+		"placeholders": {
+			"title": {
+				"content": "$1",
+				"example": "One Piece"
+			}
+		}
+	},
+	"delete_short": {
+		"message": "DEL",
+		"description": "Short version of delete"
+	},
+	
+	"group_watch": {
+		"message": "Групово наблюдение",
+		"description": ""
+	},
+	"enter_group": {
+		"message": "Въведете ID на групата, към която искате да се присъедините",
+		"description": ""
+	},
+	"join_group": {
+		"message": "Въведете ID на групата, към която искате да се присъедините",
+		"description": ""
+	},
+	"leave_group": {
+		"message": "Група за напускане",
+		"description": ""
+	},
+	"in_group": {
+		"message": "В groupwatch",
+		"description": ""
+	},
+	"or": {
+		"message": "или",
+		"description": ""
+	},
+	
+	"save_file": {
+		"message": "Записване във файл",
+		"description": ""
+	},
+	"load_file": {
+		"message": "Зареждане от файл",
+		"description": ""
+	},
+	"create_group": {
+		"message": "Създаване на нова група",
+		"description": ""
+	},
+	
+	"_": {
+		"message": "",
+		"description": ""
+	}
+}

@@ -1,0 +1,116 @@
+{
+	"title": {
+		"message": "Назва",
+		"description": ""
+	},
+	"episode": {
+		"message": "Епізод",
+		"description": ""
+	},
+	"season": {
+		"message": "Сезон",
+		"description": ""
+	},
+	"copy": {
+		"message": "Скопіювати в буфер обміну",
+		"description": ""
+	},
+	
+	"skip_intro": {
+		"message": "Пропустити вступ",
+		"description": "Button."
+	},
+	"skip_recap": {
+		"message": "Пропустити Підсумки",
+		"description": "Button."
+	},
+	"next_episode": {
+		"message": "Наступний епізод",
+		"description": "Button."
+	},
+	"currently_playing": {
+		"message": "Зараз відтворюється",
+		"description": "Text."
+	},
+	"your_watchlist": {
+		"message": "Ваш список спостереження",
+		"description": "Text."
+	},
+	"always_skip_intro": {
+		"message": "Завжди пропускайте вступ",
+		"description": "Checkbox."
+	},
+	"always_skip_outro": {
+		"message": "Завжди пропускайте вихідні дані",
+		"description": "Checkbox."
+	},
+	"toggle_fullscreen": {
+		"message": "Переключити на весь екран",
+		"description": "Checkbox."
+	},
+	"autostart": {
+		"message": "Відео з автозапуском",
+		"description": "Checkbox."
+	},
+	"when_off": {
+		"message": "У вимкненому стані відображатиметься кнопка .",
+		"description": "Small text."
+	},
+	"delete_confirm": {
+		"message": "Ви дійсно хочете видалити $title$ зі свого списку спостереження?",
+		"description": "Short version of delete",
+		"placeholders": {
+			"title": {
+				"content": "$1",
+				"example": "One Piece"
+			}
+		}
+	},
+	"delete_short": {
+		"message": "DEL",
+		"description": "Short version of delete"
+	},
+	
+	"group_watch": {
+		"message": "Групповий дозор",
+		"description": ""
+	},
+	"enter_group": {
+		"message": "Введіть ідентифікатор групи, до якої ви бажаєте приєднатися",
+		"description": ""
+	},
+	"join_group": {
+		"message": "Введіть ідентифікатор групи, до якої ви бажаєте приєднатися",
+		"description": ""
+	},
+	"leave_group": {
+		"message": "Відпускна група",
+		"description": ""
+	},
+	"in_group": {
+		"message": "У груповому спостереженні",
+		"description": ""
+	},
+	"or": {
+		"message": "або",
+		"description": ""
+	},
+	
+	"save_file": {
+		"message": "Зберегти у файл",
+		"description": ""
+	},
+	"load_file": {
+		"message": "Завантажити з файлу",
+		"description": ""
+	},
+	"create_group": {
+		"message": "Створити нову групу",
+		"description": ""
+	},
+	
+	"_": {
+		"message": "",
+		"description": ""
+	}
+}
