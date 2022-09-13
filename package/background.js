@@ -17,12 +17,16 @@ let playerData = new Map();
 let groupwatch = {};
 
 const sites = [
-	"goload.io",
+	"goload.io",//gogoanime sites
 	"gogohd.net",
-	"videovard.sx",
+	
+	"videovard.sx",//bs sites
 	"vupload.com",
 	"streamz.ws",
-	"vidoza.net"
+	"vidoza.net",
+	
+	"myplayer.sbs",//animedao sites
+	"aniplay.sbs"
 ];
 
 let ws = null;

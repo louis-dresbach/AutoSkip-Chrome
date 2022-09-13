@@ -23,7 +23,8 @@ const bs = [ // BurningSeries domains
 const _jw = [ // websites that use JWPlayer
 	"goload.io",
 	"gogohd.net",
-	"videovard.sx"
+	"videovard.sx",
+	"myplayer.sbs"
 ];
 const _vjs = [ // websites where we access everything through the HTML5 video element
 	"vupload.com",

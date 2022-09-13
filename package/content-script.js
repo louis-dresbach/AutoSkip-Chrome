@@ -41,6 +41,22 @@ function readTitle () {
 			episode = parseInt(res[2]);
 		}
 	}
+	else if (window.location.hostname === "9anime.id") {
+		let res = /watch\/([^\/.]*).[^\/]*\/ep-([^-]*)/g.exec(window.location.pathname);
+		if (res && res.length === 3) {
+			title = capitalize(res[1].split("-").join(" "));
+			season = -1;
+			episode = parseInt(res[2]);
+		}
+	}
+	else if (window.location.hostname === "animedao.lol") {
+		let res = /watch\/([^\/]*)-episode-([^-]*)/g.exec(window.location.pathname);
+		if (res && res.length === 3) {
+			title = capitalize(res[1].split("-").join(" "));
+			season = -1;
+			episode = parseInt(res[2]);
+		}
+	}
 
 	chrome.storage.sync.get("watchlist", ({ watchlist }) => {
 		if (title && episode) {

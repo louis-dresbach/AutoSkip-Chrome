@@ -2,7 +2,7 @@
 	"name": "AutoSkipper",
 	"description": "Add features to your favorite anime sites!",
 	"author": "Louis Dresbach",
-	"version": "0.7",
+	"version": "0.9",
 	"manifest_version": 3,
 	"default_locale": "en",
 	"permissions": ["storage", "tabs", "notifications"], 
@@ -27,18 +27,26 @@
 				"*://*.burningseries.tw/serie/*/*", 
 				"*://*.burningseries.vc/serie/*/*",
 				
-				"*://*.crunchyroll.com/*/*/*"
+				"*://*.crunchyroll.com/*/*/*",
+				
+				"*://9anime.id/watch/*/*",
+				
+				"*://animedao.lol/watch/*-episode-*"
 			],
 			"js": ["constants.js", "content-script.js"]
 		}, {
 			"matches": [
 				"*://*.goload.io/streaming.php?*", 
 				"*://*.gogohd.net/streaming.php?*", 
+				
 				"*://*.vupload.com/v/*", 
 				"*://*.streamz.ws/wdu?*", 
 				"*://*.videovard.sx/e/*",
 				"*://*.vidoza.net/embed-*",
-				"*://*.streamtape.com/e/*"
+				"*://*.streamtape.com/e/*",
+				
+				"*://mplayer.sbs/default.php?id=*",
+				"*://aniplay.sbs/stream/*"
 			],
 			"css": ["embedded.css"],
 			"js": ["constants.js", "embedded.js"],
