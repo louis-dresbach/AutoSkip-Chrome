@@ -189,6 +189,19 @@ chrome.runtime.onInstalled.addListener((details) => {
 		chrome.storage.sync.set({ playerData });
 		chrome.storage.sync.set({ groupwatch });
 	}
+	else {
+		// reload all open tabs
+		const mani = chrome.runtime.getManifest();
+		for (let i=0; i<mani["content_scripts"].length; i++) {
+			chrome.tabs.query({url:mani["content_scripts"][i]["matches"]}, (tabs) => {
+				if (tabs.length > 0) {
+					for (const t of tabs) {
+						chrome.tabs.reload(t.id);
+					}
+				}
+			});
+		}
+	}
 });
 
 function websocketmessage (message) {
