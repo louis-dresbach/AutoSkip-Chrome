@@ -24,6 +24,10 @@
 		"message": "スキップレポート",
 		"description": "Button."
 	},
+	"skip_preview": {
+		"message": "プレビューをスキップする",
+		"description": "Button."
+	},
 	"next_episode": {
 		"message": "次回予告",
 		"description": "Button."
@@ -38,6 +42,14 @@
 	},
 	"always_skip_intro": {
 		"message": "常にイントロをスキップ",
+		"description": "Checkbox."
+	},
+	"always_skip_recap": {
+		"message": "常にリキャップをスキップ",
+		"description": "Checkbox."
+	},
+	"always_skip_preview": {
+		"message": "常にプレビューをスキップ",
 		"description": "Checkbox."
 	},
 	"always_skip_outro": {

@@ -24,6 +24,10 @@
 		"message": "Spring over",
 		"description": "Button."
 	},
+	"skip_preview": {
+		"message": "Spring udskrift",
+		"description": "Button."
+	},
 	"next_episode": {
 		"message": "Næste afsnit",
 		"description": "Button."
@@ -38,6 +42,14 @@
 	},
 	"always_skip_intro": {
 		"message": "Spring altid over introen",
+		"description": "Checkbox."
+	},
+	"always_skip_recap": {
+		"message": "Altid springe over en opsummering",
+		"description": "Checkbox."
+	},
+	"always_skip_preview": {
+		"message": "Altid springe over forhåndsvisning",
 		"description": "Checkbox."
 	},
 	"always_skip_outro": {

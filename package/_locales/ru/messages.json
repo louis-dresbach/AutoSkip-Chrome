@@ -24,6 +24,10 @@
 		"message": "Skip Recap",
 		"description": "Button."
 	},
+	"skip_preview": {
+		"message": "Предварительный просмотр скипа",
+		"description": "Button."
+	},
 	"next_episode": {
 		"message": "Следующий эпизод",
 		"description": "Button."
@@ -38,6 +42,14 @@
 	},
 	"always_skip_intro": {
 		"message": "Всегда пропускай интро",
+		"description": "Checkbox."
+	},
+	"always_skip_recap": {
+		"message": "Всегда пропускайте рекап",
+		"description": "Checkbox."
+	},
+	"always_skip_preview": {
+		"message": "Всегда пропускай предварительный просмотр",
 		"description": "Checkbox."
 	},
 	"always_skip_outro": {

@@ -24,6 +24,10 @@
 		"message": "Ugrás visszaemlékezés",
 		"description": "Button."
 	},
+	"skip_preview": {
+		"message": "Előnézet kihagyása",
+		"description": "Button."
+	},
 	"next_episode": {
 		"message": "Következő epizód",
 		"description": "Button."
@@ -38,6 +42,14 @@
 	},
 	"always_skip_intro": {
 		"message": "Mindig kihagyja az intrót",
+		"description": "Checkbox."
+	},
+	"always_skip_recap": {
+		"message": "Mindig kihagyja az összefoglalót",
+		"description": "Checkbox."
+	},
+	"always_skip_preview": {
+		"message": "Mindig kihagyja az előnézetet",
 		"description": "Checkbox."
 	},
 	"always_skip_outro": {

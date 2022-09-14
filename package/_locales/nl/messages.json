@@ -12,7 +12,7 @@
 		"description": ""
 	},
 	"copy": {
-		"message": "Kopieer naar klembord",
+		"message": "Kopiëren naar klembord",
 		"description": ""
 	},
 	
@@ -24,8 +24,12 @@
 		"message": "Recapitulatie overslaan",
 		"description": "Button."
 	},
+	"skip_preview": {
+		"message": "Voorbeeld overslaan",
+		"description": "Button."
+	},
 	"next_episode": {
-		"message": "Volgende Aflevering",
+		"message": "Volgende aflevering",
 		"description": "Button."
 	},
 	"currently_playing": {
@@ -33,19 +37,27 @@
 		"description": "Text."
 	},
 	"your_watchlist": {
-		"message": "Je wachtlijst",
+		"message": "Je volglijst",
 		"description": "Text."
 	},
 	"always_skip_intro": {
 		"message": "Sla intro altijd over",
 		"description": "Checkbox."
 	},
+	"always_skip_recap": {
+		"message": "Sla altijd recapitulatie over",
+		"description": "Checkbox."
+	},
+	"always_skip_preview": {
+		"message": "Sla altijd een voorbeeld over",
+		"description": "Checkbox."
+	},
 	"always_skip_outro": {
-		"message": "Sla het outro altijd over",
+		"message": "Sla outro altijd over",
 		"description": "Checkbox."
 	},
 	"toggle_fullscreen": {
-		"message": "Toggle Fullscreen",
+		"message": "Toggle Volledig scherm",
 		"description": "Checkbox."
 	},
 	"autostart": {
@@ -53,11 +65,11 @@
 		"description": "Checkbox."
 	},
 	"when_off": {
-		"message": "Als het uit staat, verschijnt er een knop.",
+		"message": "In uitgeschakelde toestand verschijnt een knop.",
 		"description": "Small text."
 	},
 	"delete_confirm": {
-		"message": "Wil je echt $title$ uit je watchlist verwijderen?",
+		"message": "Wil je echt $title$ uit je volglijst verwijderen?",
 		"description": "Short version of delete",
 		"placeholders": {
 			"title": {
@@ -72,19 +84,19 @@
 	},
 	
 	"group_watch": {
-		"message": "Groepswacht",
+		"message": "Groepscontrole",
 		"description": ""
 	},
 	"enter_group": {
-		"message": "Voer groep ID in waartoe je wilt toetreden",
+		"message": "Voer het groeps-ID in waar je lid van wilt worden",
 		"description": ""
 	},
 	"join_group": {
-		"message": "Voer groep ID in waartoe je wilt toetreden",
+		"message": "Voer het groeps-ID in waar je lid van wilt worden",
 		"description": ""
 	},
 	"leave_group": {
-		"message": "Verlaat groep",
+		"message": "Groep verlaten",
 		"description": ""
 	},
 	"in_group": {
@@ -105,7 +117,7 @@
 		"description": ""
 	},
 	"create_group": {
-		"message": "Maak een nieuwe groep",
+		"message": "Nieuwe groep maken",
 		"description": ""
 	},
 	

@@ -24,6 +24,10 @@
 		"message": "跳过回顾",
 		"description": "Button."
 	},
+	"skip_preview": {
+		"message": "跳过预览",
+		"description": "Button."
+	},
 	"next_episode": {
 		"message": "下一集",
 		"description": "Button."
@@ -38,6 +42,14 @@
 	},
 	"always_skip_intro": {
 		"message": "总是跳过介绍",
+		"description": "Checkbox."
+	},
+	"always_skip_recap": {
+		"message": "总是跳过复述",
+		"description": "Checkbox."
+	},
+	"always_skip_preview": {
+		"message": "始终跳过预览",
 		"description": "Checkbox."
 	},
 	"always_skip_outro": {

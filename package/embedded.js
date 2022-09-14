@@ -12,6 +12,8 @@ else {
 	let aS = false;
 	let aF = false;
 	let sI = false;
+	let sR = false;
+	let sP = false;
 	let sO = false;
 
 	let t = "";
@@ -31,6 +33,12 @@ else {
 	});
 	chrome.storage.sync.get("skipIntro", ({ skipIntro }) => {
 		sI = skipIntro;
+	});
+	chrome.storage.sync.get("skipRecap", ({ skipRecap }) => {
+		sR = skipRecap;
+	});
+	chrome.storage.sync.get("skipPreview", ({ skipPreview }) => {
+		sP = skipPreview;
 	});
 	chrome.storage.sync.get("skipOutro", ({ skipOutro }) => {
 		sO = skipOutro;
@@ -55,7 +63,7 @@ else {
 							fetch(chrome.runtime.getURL("timestamps.json"))
 							.then((response) => response.json())
 							.then((ress) => {
-								if (!ress[aid] && _DEBUG) {
+								if (!(aid in ress) && _DEBUG) {
 									alert("Add timestamps for " + title + "\r\nAID: " + aid);
 									return;
 								}
@@ -66,18 +74,14 @@ else {
 								else {
 									chrome.storage.sync.get("season", ({ season }) => {
 										chrome.storage.sync.get("episode", ({ episode }) => {
-											for (let k of Object.keys(ress[aid])) {
-												let rese = /episodes (\d*)-(\d*)/g.exec(k);
-												if (rese.length === 3) {
-													if (Number(rese[1]) <= Number(episode) && Number(episode) <= Number(rese[2])) {
-														timestamps = ress[aid][k];
-														break;
-													}
-												}
-												else {
-													let resee = /episode (\d*)/g.exec(k);
-													if (resee.length === 3) {
-														if (Number(resee[1]) == Number(episode)) {
+											if (("episode " + episode) in ress[aid]) {
+												timestamps = ress[aid]["episode " + episode];
+											}
+											else {
+												for (let k of Object.keys(ress[aid])) {
+													let rese = /episodes (\d*)-(\d*)/g.exec(k);
+													if (rese.length === 3) {
+														if (Number(rese[1]) <= Number(episode) && Number(episode) <= Number(rese[2])) {
 															timestamps = ress[aid][k];
 															break;
 														}
@@ -93,9 +97,6 @@ else {
 													}
 												}
 											}
-											if (!timestamps["opening"] && _DEBUG) {
-												alert("Add timestamps for " + title + "\r\nAID: " + aid);
-											}
 										});
 									});
 								}
@@ -108,8 +109,10 @@ else {
 		}
 	});
 
-	const d = document.createElement("div");
-	const si = document.createElement("div");
+	const buttonNextEpisode = document.createElement("div");
+	const buttonSkipIntro = document.createElement("div");
+	const buttonSkipRecap = document.createElement("div");
+	const buttonSkipPreview = document.createElement("div");
 	
 	const sendmes = (mes) => {
 		try {
@@ -131,11 +134,23 @@ else {
 	}
 
 	const skipIntro = () => {
-		if (timestamps["opening"]) {
+		if ("opening" in timestamps) {
 			let time = timestamps["opening"]["start"] + timestamps["opening"]["length"] - 1;
 			if (timestamps["intro"])
 				time += timestamps["intro"]["length"];
 			window.postMessage({ player: "seek", time: time }, "*");
+		}
+	}
+
+	const skipRecap = () => {
+		if ("recap" in timestamps) {
+			window.postMessage({ player: "seek", time: timestamps["recap"]["start"] + timestamps["recap"]["length"] - 1 }, "*");
+		}
+	}
+
+	const skipPreview = () => {
+		if ("preview" in timestamps) {
+			window.postMessage({ player: "seek", time: timestamps["preview"]["start"] + timestamps["preview"]["length"] - 1 }, "*");
 		}
 	}
 
@@ -179,39 +194,62 @@ else {
 			}
 			
 			
-			if (timeDuration > 1 && timestamps["opening"]) {
+			if (timeDuration > 1) {
 				// skip intro
-				if (timestamps["opening"]["start"] > -1 && timeElapsed > timestamps["opening"]["start"] && timeElapsed < timestamps["opening"]["start"] + timestamps["opening"]["length"] - 5) {
+				if ("opening" in timestamps && timestamps["opening"]["start"] > -1 && 
+					timeElapsed > timestamps["opening"]["start"] && timeElapsed < timestamps["opening"]["start"] + timestamps["opening"]["length"] - 2) {
 					if (sI) {
 						skipIntro();
 					}
 					else {
-						si.style.display = "block";
+						buttonSkipIntro.style.display = "block";
 					}
 				}
 				else {
-					si.style.display = "none";
+					buttonSkipIntro.style.display = "none";
+				}
+				
+				// skip recap
+				if ("recap" in timestamps && timestamps["recap"]["start"] > -1 && 
+					timeElapsed > timestamps["recap"]["start"] && timeElapsed < timestamps["recap"]["start"] + timestamps["recap"]["length"] - 2) {
+					if (sR) {
+						skipRecap();
+					}
+					else {
+						buttonSkipRecap.style.display = "block";
+					}
+				}
+				else {
+					buttonSkipRecap.style.display = "none";
+				}
+				
+				// skip preview
+				if ("preview" in timestamps && timestamps["preview"]["start"] > -1 && 
+					timeElapsed > timestamps["preview"]["start"] && timeElapsed < timestamps["preview"]["start"] + timestamps["preview"]["length"] - 2) {
+					if (sP) {
+						skipPreview();
+					}
+					else {
+						buttonSkipPreview.style.display = "block";
+					}
+				}
+				else {
+					buttonSkipPreview.style.display = "none";
 				}
 
 				// next episode button
-				if (timestamps["outro"] || timestamps["preview"]) {
-					let lengthToSkip = 0;
-					if (timestamps["outro"] && timestamps["outro"]["length"] > -1)
-						lengthToSkip += timestamps["outro"]["length"];
-					if (timestamps["preview"] && timestamps["preview"]["length"] > -1)
-						lengthToSkip += timestamps["preview"]["length"];
-					
-					if (lengthToSkip > 0 && lengthToSkip > timeCountDown && timeElapsed > 30) {
+				if ("outro" in timestamps && timestamps["outro"]["length"] > -1) {
+					if (timestamps["outro"]["length"] > 0 && timestamps["outro"]["length"] > timeCountDown && timeElapsed > 30) {
 						sendmes({ fullscreen: false });
 						if (sO) {
 							nextEp();
 						}
 						else {
-							d.style.display = "block";
+							buttonNextEpisode.style.display = "block";
 						}
 					}
 					else {
-						d.style.display = "none";
+						buttonNextEpisode.style.display = "none";
 					}
 				}
 			}
@@ -275,22 +313,34 @@ else {
 	window.onload = function () {
 		findV();
 		
-		d.style.display = "none";
-		d.className += "autoskipper_button";
-		d.innerHTML = "► " + chrome.i18n.getMessage("next_episode");
-		d.addEventListener("click", () => { nextEp(); });
-		document.body.appendChild(d);
+		buttonNextEpisode.style.display = "none";
+		buttonNextEpisode.className += "autoskipper_button";
+		buttonNextEpisode.innerHTML = "► " + chrome.i18n.getMessage("next_episode");
+		buttonNextEpisode.addEventListener("click", () => { nextEp(); });
+		document.body.appendChild(buttonNextEpisode);
 		
-		si.style.display = "none";
-		si.className += "autoskipper_button";
-		si.innerHTML = "►► " + chrome.i18n.getMessage("skip_intro");
-		si.addEventListener("click", () => { skipIntro(); });
-		document.body.appendChild(si);
+		buttonSkipIntro.style.display = "none";
+		buttonSkipIntro.className += "autoskipper_button";
+		buttonSkipIntro.innerHTML = "►► " + chrome.i18n.getMessage("skip_intro");
+		buttonSkipIntro.addEventListener("click", () => { skipIntro(); });
+		document.body.appendChild(buttonSkipIntro);
+		
+		buttonSkipRecap.style.display = "none";
+		buttonSkipRecap.className += "autoskipper_button";
+		buttonSkipRecap.innerHTML = "►► " + chrome.i18n.getMessage("skip_recap");
+		buttonSkipRecap.addEventListener("click", () => { skipRecap(); });
+		document.body.appendChild(buttonSkipRecap);
+		
+		buttonSkipPreview.style.display = "none";
+		buttonSkipPreview.className += "autoskipper_button";
+		buttonSkipPreview.innerHTML = "►► " + chrome.i18n.getMessage("skip_preview");
+		buttonSkipPreview.addEventListener("click", () => { skipPreview(); });
+		document.body.appendChild(buttonSkipPreview);
 		
 		document.body.addEventListener('keydown', function (e) {
 			switch (e.code) {
 				case "KeyS":
-					skipIntro();
+					//skipIntro();
 					break;
 				case "KeyN":
 					nextEp();
@@ -324,6 +374,12 @@ ${JSON.stringify(timestamps)}
 			}
 			if ("skipIntro" in changes) {
 				sI = changes.skipIntro.newValue;
+			}
+			if ("skipRecap" in changes) {
+				sR = changes.skipRecap.newValue;
+			}
+			if ("skipPreview" in changes) {
+				sP = changes.skipPreview.newValue;
 			}
 			if ("skipOutro" in changes) {
 				sO = changes.skipOutro.newValue;

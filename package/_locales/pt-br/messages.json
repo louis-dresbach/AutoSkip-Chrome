@@ -24,6 +24,10 @@
 		"message": "Pular Recapitulação",
 		"description": "Button."
 	},
+	"skip_preview": {
+		"message": "Saltar Pré-visualização",
+		"description": "Button."
+	},
 	"next_episode": {
 		"message": "Próximo Episódio",
 		"description": "Button."
@@ -38,6 +42,14 @@
 	},
 	"always_skip_intro": {
 		"message": "Pular sempre a introdução",
+		"description": "Checkbox."
+	},
+	"always_skip_recap": {
+		"message": "Sempre pular recapitulação",
+		"description": "Checkbox."
+	},
+	"always_skip_preview": {
+		"message": "Pular sempre a visualização",
 		"description": "Checkbox."
 	},
 	"always_skip_outro": {

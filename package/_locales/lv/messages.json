@@ -24,6 +24,10 @@
 		"message": "Izlaist kopsavilkumu",
 		"description": "Button."
 	},
+	"skip_preview": {
+		"message": "Izlaist priekšskatījumu",
+		"description": "Button."
+	},
 	"next_episode": {
 		"message": "Nākamā epizode",
 		"description": "Button."
@@ -38,6 +42,14 @@
 	},
 	"always_skip_intro": {
 		"message": "Vienmēr izlaist intro",
+		"description": "Checkbox."
+	},
+	"always_skip_recap": {
+		"message": "Vienmēr izlaidiet kopsavilkumu",
+		"description": "Checkbox."
+	},
+	"always_skip_preview": {
+		"message": "Vienmēr izlaist priekšskatījumu",
 		"description": "Checkbox."
 	},
 	"always_skip_outro": {

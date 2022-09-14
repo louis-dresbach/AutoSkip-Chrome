@@ -24,6 +24,10 @@
 		"message": "Özeti Atla",
 		"description": "Button."
 	},
+	"skip_preview": {
+		"message": "Önizlemeyi Atla",
+		"description": "Button."
+	},
 	"next_episode": {
 		"message": "Sonraki Bölüm",
 		"description": "Button."
@@ -38,6 +42,14 @@
 	},
 	"always_skip_intro": {
 		"message": "Her zaman girişi atla",
+		"description": "Checkbox."
+	},
+	"always_skip_recap": {
+		"message": "Her zaman özeti atla",
+		"description": "Checkbox."
+	},
+	"always_skip_preview": {
+		"message": "Her zaman önizlemeyi atla",
 		"description": "Checkbox."
 	},
 	"always_skip_outro": {

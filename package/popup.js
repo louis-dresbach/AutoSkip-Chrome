@@ -5,6 +5,8 @@
 */
 
 let inputSkipIntro = document.getElementById("inputSkipIntro");
+let inputSkipRecap = document.getElementById("inputSkipRecap");
+let inputSkipPreview = document.getElementById("inputSkipPreview");
 let inputSkipOutro = document.getElementById("inputSkipOutro");
 let inputAutoStart = document.getElementById("inputAutoStart");
 let inputAutoFullscreen = document.getElementById("inputAutoFullscreen");
@@ -110,6 +112,12 @@ chrome.storage.sync.get("autoFullscreen", ({ autoFullscreen }) => {
 chrome.storage.sync.get("skipIntro", ({ skipIntro }) => {
 	inputSkipIntro.checked = skipIntro;
 });
+chrome.storage.sync.get("skipRecap", ({ skipRecap }) => {
+	inputSkipRecap.checked = skipRecap;
+});
+chrome.storage.sync.get("skipPreview", ({ skipPreview }) => {
+	inputSkipPreview.checked = skipPreview;
+});
 chrome.storage.sync.get("skipOutro", ({ skipOutro }) => {
 	inputSkipOutro.checked = skipOutro;
 });
@@ -128,6 +136,14 @@ inputAutoFullscreen.addEventListener("change", () => {
 inputSkipIntro.addEventListener("change", () => {
 	let skipIntro = inputSkipIntro.checked;
 	chrome.storage.sync.set({ skipIntro });
+});
+inputSkipRecap.addEventListener("change", () => {
+	let skipRecap = inputSkipRecap.checked;
+	chrome.storage.sync.set({ skipRecap });
+});
+inputSkipPreview.addEventListener("change", () => {
+	let skipPreview = inputSkipPreview.checked;
+	chrome.storage.sync.set({ skipPreview });
 });
 inputSkipOutro.addEventListener("change", () => {
 	let skipOutro = inputSkipOutro.checked;
@@ -187,6 +203,12 @@ chrome.storage.onChanged.addListener((changes, area) => {
 		}
 		if ("skipIntro" in changes) {
 			inputSkipIntro.checked = changes.skipIntro.newValue;
+		}
+		if ("skipRecap" in changes) {
+			inputSkipRecap.checked = changes.skipRecap.newValue;
+		}
+		if ("skipPreview" in changes) {
+			inputSkipPreview.checked = changes.skipPreview.newValue;
 		}
 		if ("skipOutro" in changes) {
 			inputSkipOutro.checked = changes.skipOutro.newValue;

@@ -24,6 +24,10 @@
 		"message": "Praleisti Apibendrinimas",
 		"description": "Button."
 	},
+	"skip_preview": {
+		"message": "Praleisti peržiūrą",
+		"description": "Button."
+	},
 	"next_episode": {
 		"message": "Kitas epizodas",
 		"description": "Button."
@@ -38,6 +42,14 @@
 	},
 	"always_skip_intro": {
 		"message": "Visada praleiskite įžangą",
+		"description": "Checkbox."
+	},
+	"always_skip_recap": {
+		"message": "Visada praleiskite apibendrinimą",
+		"description": "Checkbox."
+	},
+	"always_skip_preview": {
+		"message": "Visada praleiskite peržiūrą",
 		"description": "Checkbox."
 	},
 	"always_skip_outro": {

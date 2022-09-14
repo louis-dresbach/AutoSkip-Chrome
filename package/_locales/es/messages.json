@@ -24,6 +24,10 @@
 		"message": "Omitir el recuento",
 		"description": "Button."
 	},
+	"skip_preview": {
+		"message": "Saltar la vista previa",
+		"description": "Button."
+	},
 	"next_episode": {
 		"message": "Próximo episodio",
 		"description": "Button."
@@ -38,6 +42,14 @@
 	},
 	"always_skip_intro": {
 		"message": "Salta siempre la introducción",
+		"description": "Checkbox."
+	},
+	"always_skip_recap": {
+		"message": "Omite siempre la recapitulación",
+		"description": "Checkbox."
+	},
+	"always_skip_preview": {
+		"message": "Saltar siempre la vista previa",
 		"description": "Checkbox."
 	},
 	"always_skip_outro": {

@@ -24,6 +24,10 @@
 		"message": "Skip Recap",
 		"description": "Button."
 	},
+	"skip_preview": {
+		"message": "Skip Preview",
+		"description": "Button."
+	},
 	"next_episode": {
 		"message": "Prochain épisode",
 		"description": "Button."
@@ -38,6 +42,14 @@
 	},
 	"always_skip_intro": {
 		"message": "Toujours sauter l'intro",
+		"description": "Checkbox."
+	},
+	"always_skip_recap": {
+		"message": "Toujours sauter la récapitulation",
+		"description": "Checkbox."
+	},
+	"always_skip_preview": {
+		"message": "Toujours sauter l'aperçu",
 		"description": "Checkbox."
 	},
 	"always_skip_outro": {

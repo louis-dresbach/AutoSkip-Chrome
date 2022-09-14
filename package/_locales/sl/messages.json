@@ -24,6 +24,10 @@
 		"message": "Preskoči povzetek",
 		"description": "Button."
 	},
+	"skip_preview": {
+		"message": "Preskoči predogled",
+		"description": "Button."
+	},
 	"next_episode": {
 		"message": "Naslednja epizoda",
 		"description": "Button."
@@ -38,6 +42,14 @@
 	},
 	"always_skip_intro": {
 		"message": "Vedno preskočite uvod",
+		"description": "Checkbox."
+	},
+	"always_skip_recap": {
+		"message": "Vedno preskočite povzetek",
+		"description": "Checkbox."
+	},
+	"always_skip_preview": {
+		"message": "Vedno preskočite predogled",
 		"description": "Checkbox."
 	},
 	"always_skip_outro": {

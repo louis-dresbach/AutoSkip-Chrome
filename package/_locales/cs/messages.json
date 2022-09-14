@@ -24,6 +24,10 @@
 		"message": "Přeskočit rekapitulaci",
 		"description": "Button."
 	},
+	"skip_preview": {
+		"message": "Přeskočit náhled",
+		"description": "Button."
+	},
 	"next_episode": {
 		"message": "Další díl",
 		"description": "Button."
@@ -38,6 +42,14 @@
 	},
 	"always_skip_intro": {
 		"message": "Vždy přeskočte intro",
+		"description": "Checkbox."
+	},
+	"always_skip_recap": {
+		"message": "Vždy přeskočte rekapitulaci",
+		"description": "Checkbox."
+	},
+	"always_skip_preview": {
+		"message": "Vždy přeskočit náhled",
 		"description": "Checkbox."
 	},
 	"always_skip_outro": {

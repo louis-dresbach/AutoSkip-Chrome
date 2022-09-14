@@ -24,6 +24,10 @@
 		"message": "Lewati Rekap",
 		"description": "Button."
 	},
+	"skip_preview": {
+		"message": "Lewati Pratinjau",
+		"description": "Button."
+	},
 	"next_episode": {
 		"message": "Episode Berikutnya",
 		"description": "Button."
@@ -38,6 +42,14 @@
 	},
 	"always_skip_intro": {
 		"message": "Selalu lewati intro",
+		"description": "Checkbox."
+	},
+	"always_skip_recap": {
+		"message": "Selalu lewati rekap",
+		"description": "Checkbox."
+	},
+	"always_skip_preview": {
+		"message": "Selalu lewati pratinjau",
 		"description": "Checkbox."
 	},
 	"always_skip_outro": {

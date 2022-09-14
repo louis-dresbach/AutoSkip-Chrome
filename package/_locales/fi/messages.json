@@ -24,6 +24,10 @@
 		"message": "Hyppää yhteenveto",
 		"description": "Button."
 	},
+	"skip_preview": {
+		"message": "Ohita esikatselu",
+		"description": "Button."
+	},
 	"next_episode": {
 		"message": "Seuraava jakso",
 		"description": "Button."
@@ -38,6 +42,14 @@
 	},
 	"always_skip_intro": {
 		"message": "Ohita aina intro",
+		"description": "Checkbox."
+	},
+	"always_skip_recap": {
+		"message": "Ohita aina yhteenveto",
+		"description": "Checkbox."
+	},
+	"always_skip_preview": {
+		"message": "Ohita aina esikatselu",
 		"description": "Checkbox."
 	},
 	"always_skip_outro": {

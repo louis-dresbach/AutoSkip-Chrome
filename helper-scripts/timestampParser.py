@@ -97,11 +97,34 @@ def main():
 						
 						th = Theme(x.group(1), x.group(1), length)
 						endings.append(th)
+						
+	print ("\t\tFinished")
 	
-	# OnePiece always shows 40 seconds of preview at the endswith
+	# Get end of recap from https://animebingeguide.wordpress.com/2018/02/11/one-piece/
+	# site loads a google doc @ https://docs.google.com/spreadsheets/d/e/2PACX-1vTjsFgiQ9QooJSy2o31hQcTLQhrydFfJFBOZIUlMtyU1dI07IHWXCl2sUMgwwhF0K5BiBjg-GEcARez/pubhtml
+	# recaps always start immediately after intro
+	print ("\tParsing Google Doc for end of recap times")
+	recaps = []
+	page = requests.get("https://docs.google.com/spreadsheets/d/e/2PACX-1vTjsFgiQ9QooJSy2o31hQcTLQhrydFfJFBOZIUlMtyU1dI07IHWXCl2sUMgwwhF0K5BiBjg-GEcARez/pubhtml")
+	soup = BeautifulSoup(page.content, "html.parser")
+
+	tbody = soup.find("tbody")
+	rows = tbody.find_all("tr")
+
+	for row in rows:
+		if len(row.contents) == 6:
+			if row.contents[1].string.isnumeric():
+				if re.compile("\d*:\d*:\d*").match(row.contents[2].string):
+					end = parseTime(row.contents[2].string) - 1
+					th = Theme(row.contents[0].string, row.contents[0].string, end)
+					recaps.append(th)
+
+	print ("\t\tFinished")
+	
+	# OnePiece always shows 40 seconds of preview at the end
 	previews = [Theme(1, 1100, 40)]
 
-	result["69"] = combine(intros, openings, endings, previews)
+	result["69"] = combine(intros, openings, endings, previews, recaps)
 	print ("\tFinished OnePiece");
 
 
@@ -133,7 +156,7 @@ def getLength(url):
 	res = soup.find(string="Dauer:").parent.parent.next_sibling.string
 	return parseTime(res)
 	
-def combine(intros, openings, endings, previews):
+def combine(intros, openings, endings, previews, recaps):
 	ret = {}
 	maxEp = 0
 	
@@ -145,19 +168,19 @@ def combine(intros, openings, endings, previews):
 		maxEp = max(maxEp, o.episodeUntil)
 	
 	for x in range(1, maxEp):
-		e = createEpisode(x, intros, openings, endings, previews)
-		if e != prevValue:
+		e = createEpisode(x, intros, openings, endings, previews, recaps)
+		if e != prevValue or x == maxEp:
 			if zoneBeginning != 0:
-				ret["episodes " + str(zoneBeginning) + "-" + str(x - 1)] = prevValue
+				key = "episode " + str(zoneBeginning)
+				if zoneBeginning != x - 1:
+					key = "episodes " + str(zoneBeginning) + "-" + str(x - 1)
+				ret[key] = prevValue
 			zoneBeginning = x
 		prevValue = e
 		
-		if x == maxEp:
-			ret["episodes " + str(zoneBeginning) + "-" + str(x - 1)] = prevValue
-		
 	return ret
 	
-def createEpisode(episode, intros, openings, endings, previews):
+def createEpisode(episode, intros, openings, endings, previews, recaps):
 	ret = {}
 	
 	ep = int(episode)
@@ -171,7 +194,7 @@ def createEpisode(episode, intros, openings, endings, previews):
 			for i in intros:
 				if i.episodeFrom <= ep and i.episodeUntil >= ep:
 					ret["intro"] = {
-						"start": o.length,
+						"start": o.start + o.length,
 						"length": i.length
 					}
 					break
@@ -187,6 +210,16 @@ def createEpisode(episode, intros, openings, endings, previews):
 		if p.episodeFrom <= ep and p.episodeUntil >= ep:
 			ret["preview"] = {
 				"length": p.length
+			}
+			
+	for r in recaps:
+		if r.episodeFrom <= ep and r.episodeUntil >= ep:
+			start = ret["opening"]["start"] + ret["opening"]["length"]
+			if ("intro" in ret):
+				start = ret["intro"]["start"] + ret["intro"]["length"]
+			ret["recap"] = {
+				"start": start,
+				"length": r.length - start
 			}
 	
 	return ret

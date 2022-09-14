@@ -24,6 +24,10 @@
 		"message": "Hoppa över en sammanfattning",
 		"description": "Button."
 	},
+	"skip_preview": {
+		"message": "Hoppa över förhandsgranskning",
+		"description": "Button."
+	},
 	"next_episode": {
 		"message": "Nästa avsnitt",
 		"description": "Button."
@@ -38,6 +42,14 @@
 	},
 	"always_skip_intro": {
 		"message": "Hoppa alltid över intro",
+		"description": "Checkbox."
+	},
+	"always_skip_recap": {
+		"message": "Hoppa alltid över sammanfattningen",
+		"description": "Checkbox."
+	},
+	"always_skip_preview": {
+		"message": "Hoppa alltid över förhandsgranskningen",
 		"description": "Checkbox."
 	},
 	"always_skip_outro": {

@@ -24,6 +24,10 @@
 		"message": "Salta il Recap",
 		"description": "Button."
 	},
+	"skip_preview": {
+		"message": "Anteprima del salto",
+		"description": "Button."
+	},
 	"next_episode": {
 		"message": "Prossimo episodio",
 		"description": "Button."
@@ -38,6 +42,14 @@
 	},
 	"always_skip_intro": {
 		"message": "Salta sempre l'introduzione",
+		"description": "Checkbox."
+	},
+	"always_skip_recap": {
+		"message": "Salta sempre il riepilogo",
+		"description": "Checkbox."
+	},
+	"always_skip_preview": {
+		"message": "Salta sempre l'anteprima",
 		"description": "Checkbox."
 	},
 	"always_skip_outro": {

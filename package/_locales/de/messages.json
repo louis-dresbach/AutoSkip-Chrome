@@ -24,6 +24,10 @@
 		"message": "Rekapitulieren",
 		"description": "Button."
 	},
+	"skip_preview": {
+		"message": "Vorschau überspringen",
+		"description": "Button."
+	},
 	"next_episode": {
 		"message": "Nächste Episode",
 		"description": "Button."
@@ -38,6 +42,14 @@
 	},
 	"always_skip_intro": {
 		"message": "Intro immer überspringen",
+		"description": "Checkbox."
+	},
+	"always_skip_recap": {
+		"message": "Rekapitulation immer überspringen",
+		"description": "Checkbox."
+	},
+	"always_skip_preview": {
+		"message": "Immer die Vorschau überspringen",
 		"description": "Checkbox."
 	},
 	"always_skip_outro": {

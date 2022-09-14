@@ -24,6 +24,10 @@
 		"message": "Пропускане на рекапитулация",
 		"description": "Button."
 	},
+	"skip_preview": {
+		"message": "Пропускане на преглед",
+		"description": "Button."
+	},
 	"next_episode": {
 		"message": "Следващ епизод",
 		"description": "Button."
@@ -38,6 +42,14 @@
 	},
 	"always_skip_intro": {
 		"message": "Винаги пропускайте интрото",
+		"description": "Checkbox."
+	},
+	"always_skip_recap": {
+		"message": "Винаги пропускайте рекапитулация",
+		"description": "Checkbox."
+	},
+	"always_skip_preview": {
+		"message": "Винаги прескачайте предварителния преглед",
 		"description": "Checkbox."
 	},
 	"always_skip_outro": {

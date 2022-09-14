@@ -24,6 +24,10 @@
 		"message": "Skip Recap",
 		"description": "Button."
 	},
+	"skip_preview": {
+		"message": "Παραλείψτε την προεπισκόπηση",
+		"description": "Button."
+	},
 	"next_episode": {
 		"message": "Επόμενο επεισόδιο",
 		"description": "Button."
@@ -38,6 +42,14 @@
 	},
 	"always_skip_intro": {
 		"message": "Πάντα παραλείπετε την εισαγωγή",
+		"description": "Checkbox."
+	},
+	"always_skip_recap": {
+		"message": "Πάντα να παραλείπετε την ανακεφαλαίωση",
+		"description": "Checkbox."
+	},
+	"always_skip_preview": {
+		"message": "Πάντα παραλείπετε την προεπισκόπηση",
 		"description": "Checkbox."
 	},
 	"always_skip_outro": {

@@ -24,6 +24,10 @@
 		"message": "Treci peste recapitulare",
 		"description": "Button."
 	},
+	"skip_preview": {
+		"message": "Treci peste Previzualizare",
+		"description": "Button."
+	},
 	"next_episode": {
 		"message": "Episodul următor",
 		"description": "Button."
@@ -38,6 +42,14 @@
 	},
 	"always_skip_intro": {
 		"message": "Întotdeauna săriți peste intro",
+		"description": "Checkbox."
+	},
+	"always_skip_recap": {
+		"message": "Treci întotdeauna peste recapitulare",
+		"description": "Checkbox."
+	},
+	"always_skip_preview": {
+		"message": "Treceți întotdeauna peste previzualizare",
 		"description": "Checkbox."
 	},
 	"always_skip_outro": {

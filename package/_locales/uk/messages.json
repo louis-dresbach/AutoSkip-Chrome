@@ -24,6 +24,10 @@
 		"message": "Пропустити Підсумки",
 		"description": "Button."
 	},
+	"skip_preview": {
+		"message": "Пропустити попередній перегляд",
+		"description": "Button."
+	},
 	"next_episode": {
 		"message": "Наступний епізод",
 		"description": "Button."
@@ -38,6 +42,14 @@
 	},
 	"always_skip_intro": {
 		"message": "Завжди пропускайте вступ",
+		"description": "Checkbox."
+	},
+	"always_skip_recap": {
+		"message": "Завжди пропускати підведення підсумків",
+		"description": "Checkbox."
+	},
+	"always_skip_preview": {
+		"message": "Завжди пропускати попередній перегляд",
 		"description": "Checkbox."
 	},
 	"always_skip_outro": {
