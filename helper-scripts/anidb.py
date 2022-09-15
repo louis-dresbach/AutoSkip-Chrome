@@ -6,7 +6,6 @@ import gzip
 import os
 import os.path
 import time
-import args
 
 ANIME_XML_URL = "http://anidb.net/api/anime-titles.xml.gz"
 ANIME_XML_PATH = "../package/anime-titles.xml"
