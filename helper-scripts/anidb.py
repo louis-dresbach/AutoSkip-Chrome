@@ -9,7 +9,7 @@ import time
 import args
 
 ANIME_XML_URL = "http://anidb.net/api/anime-titles.xml.gz"
-ANIME_XML_PATH = "./anime-titles.xml"
+ANIME_XML_PATH = "../package/anime-titles.xml"
 
 def update_title_cache():
 	if can_download_titles():
