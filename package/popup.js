@@ -6,8 +6,8 @@
 
 let inputSkipIntro = document.getElementById("inputSkipIntro");
 let inputSkipRecap = document.getElementById("inputSkipRecap");
-let inputSkipPreview = document.getElementById("inputSkipPreview");
 let inputSkipOutro = document.getElementById("inputSkipOutro");
+let inputSkipFiller = document.getElementById("inputSkipFiller");
 let inputAutoStart = document.getElementById("inputAutoStart");
 let inputAutoFullscreen = document.getElementById("inputAutoFullscreen");
 
@@ -115,11 +115,11 @@ chrome.storage.sync.get("skipIntro", ({ skipIntro }) => {
 chrome.storage.sync.get("skipRecap", ({ skipRecap }) => {
 	inputSkipRecap.checked = skipRecap;
 });
-chrome.storage.sync.get("skipPreview", ({ skipPreview }) => {
-	inputSkipPreview.checked = skipPreview;
-});
 chrome.storage.sync.get("skipOutro", ({ skipOutro }) => {
 	inputSkipOutro.checked = skipOutro;
+});
+chrome.storage.sync.get("skipFiller", ({ skipFiller }) => {
+	inputSkipFiller.checked = skipFiller;
 });
 chrome.storage.sync.get("watchlist", ({ watchlist }) => {
 	drawWatchlist(watchlist);
@@ -141,13 +141,13 @@ inputSkipRecap.addEventListener("change", () => {
 	let skipRecap = inputSkipRecap.checked;
 	chrome.storage.sync.set({ skipRecap });
 });
-inputSkipPreview.addEventListener("change", () => {
-	let skipPreview = inputSkipPreview.checked;
-	chrome.storage.sync.set({ skipPreview });
-});
 inputSkipOutro.addEventListener("change", () => {
 	let skipOutro = inputSkipOutro.checked;
 	chrome.storage.sync.set({ skipOutro });
+});
+inputSkipFiller.addEventListener("change", () => {
+	let skipFiller = inputSkipFiller.checked;
+	chrome.storage.sync.set({ skipFiller });
 });
 
 
@@ -207,11 +207,11 @@ chrome.storage.onChanged.addListener((changes, area) => {
 		if ("skipRecap" in changes) {
 			inputSkipRecap.checked = changes.skipRecap.newValue;
 		}
-		if ("skipPreview" in changes) {
-			inputSkipPreview.checked = changes.skipPreview.newValue;
-		}
 		if ("skipOutro" in changes) {
 			inputSkipOutro.checked = changes.skipOutro.newValue;
+		}
+		if ("skipFiller" in changes) {
+			inputSkipFiller.checked = changes.skipFiller.newValue;
 		}
 		if ("watchlist" in changes) {
 			drawWatchlist(changes.watchlist.newValue);

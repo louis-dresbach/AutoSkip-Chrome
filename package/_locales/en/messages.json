@@ -56,6 +56,10 @@
 		"message": "Always skip outro",
 		"description": "Checkbox."
 	},
+	"skip_filler": {
+		"message": "Skip filler episodes",
+		"description": "Checkbox."
+	},
 	"toggle_fullscreen": {
 		"message": "Toggle Fullscreen",
 		"description": "Checkbox."

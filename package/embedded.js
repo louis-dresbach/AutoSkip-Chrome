@@ -13,8 +13,8 @@ else {
 	let aF = false;
 	let sI = false;
 	let sR = false;
-	let sP = false;
 	let sO = false;
+	let sF = false;
 
 	let t = "";
 	let aid = -1;
@@ -37,11 +37,11 @@ else {
 	chrome.storage.sync.get("skipRecap", ({ skipRecap }) => {
 		sR = skipRecap;
 	});
-	chrome.storage.sync.get("skipPreview", ({ skipPreview }) => {
-		sP = skipPreview;
-	});
 	chrome.storage.sync.get("skipOutro", ({ skipOutro }) => {
 		sO = skipOutro;
+	});
+	chrome.storage.sync.get("skipFiller", ({ skipFiller }) => {
+		sF = skipFiller;
 	});
 	chrome.storage.sync.get("title", ({ title }) => {
 		if (title !== null) {
@@ -74,26 +74,28 @@ else {
 								else {
 									chrome.storage.sync.get("season", ({ season }) => {
 										chrome.storage.sync.get("episode", ({ episode }) => {
-											if (("episode " + episode) in ress[aid]) {
-												timestamps = ress[aid]["episode " + episode];
-											}
-											else {
-												for (let k of Object.keys(ress[aid])) {
-													let rese = /episodes (\d*)-(\d*)/g.exec(k);
-													if (rese.length === 3) {
-														if (Number(rese[1]) <= Number(episode) && Number(episode) <= Number(rese[2])) {
-															timestamps = ress[aid][k];
-															break;
-														}
-													}
-													else {
-														let ress = /seasons (\d*)-(\d*)/g.exec(k);
-														if (ress.length === 3) {
-															if (Number(rese[1]) <= Number(season) && Number(season) <= Number(rese[2])) {
-																timestamps = ress[aid][k];
+											if (aid in ress) {
+												if (("episode " + episode) in ress[aid]) {
+													timestamps = ress[aid]["episode " + episode];
+												}
+												else {
+													for (let [k,v] of Object.entries(ress[aid])) {
+														const rese = /episodes (\d*)-(\d*)/g.exec(k);
+														if (rese && rese.length === 3) {
+															if (Number(rese[1]) <= Number(episode) && Number(episode) <= Number(rese[2])) {
+																timestamps = v;
 																break;
 															}
-														}
+														}/*
+														else {
+															const ress = /seasons (\d*)-(\d*)/g.exec(k);
+															if (ress.length === 3) {
+																if (Number(rese[1]) <= Number(season) && Number(season) <= Number(rese[2])) {
+																	timestamps = ress[aid][k];
+																	break;
+																}
+															}
+														}*/
 													}
 												}
 											}
@@ -135,7 +137,7 @@ else {
 
 	const skipIntro = () => {
 		if ("opening" in timestamps) {
-			let time = timestamps["opening"]["start"] + timestamps["opening"]["length"] - 1;
+			let time = timestamps["opening"]["start"] + timestamps["opening"]["length"];
 			if (timestamps["intro"])
 				time += timestamps["intro"]["length"];
 			window.postMessage({ player: "seek", time: time }, "*");
@@ -144,13 +146,13 @@ else {
 
 	const skipRecap = () => {
 		if ("recap" in timestamps) {
-			window.postMessage({ player: "seek", time: timestamps["recap"]["start"] + timestamps["recap"]["length"] - 1 }, "*");
+			window.postMessage({ player: "seek", time: timestamps["recap"]["start"] + timestamps["recap"]["length"] }, "*");
 		}
 	}
 
 	const skipPreview = () => {
 		if ("preview" in timestamps) {
-			window.postMessage({ player: "seek", time: timestamps["preview"]["start"] + timestamps["preview"]["length"] - 1 }, "*");
+			window.postMessage({ player: "seek", time: timestamps["preview"]["start"] + timestamps["preview"]["length"] }, "*");
 		}
 	}
 
@@ -158,6 +160,10 @@ else {
 	const checkTime = () => {
 		if (document.visibilityState !== "hidden") {
 			let timeElapsed, timeCountDown, timeDuration;
+												
+			if ("filler" in timestamps && timestamps["filler"] === true && sF === true) {
+				nextEpisode();
+			}
 			
 			if (_jw.includes(window.location.hostname)) {
 				const te = document.querySelector(".jw-text-elapsed");
@@ -197,7 +203,7 @@ else {
 			if (timeDuration > 1) {
 				// skip intro
 				if ("opening" in timestamps && timestamps["opening"]["start"] > -1 && 
-					timeElapsed > timestamps["opening"]["start"] && timeElapsed < timestamps["opening"]["start"] + timestamps["opening"]["length"] - 2) {
+					timeElapsed >= timestamps["opening"]["start"] && timeElapsed <= timestamps["opening"]["start"] + timestamps["opening"]["length"] - 2) {
 					if (sI) {
 						skipIntro();
 					}
@@ -211,7 +217,7 @@ else {
 				
 				// skip recap
 				if ("recap" in timestamps && timestamps["recap"]["start"] > -1 && 
-					timeElapsed > timestamps["recap"]["start"] && timeElapsed < timestamps["recap"]["start"] + timestamps["recap"]["length"] - 2) {
+					timeElapsed >= timestamps["recap"]["start"] && timeElapsed <= timestamps["recap"]["start"] + timestamps["recap"]["length"] - 2) {
 					if (sR) {
 						skipRecap();
 					}
@@ -222,24 +228,18 @@ else {
 				else {
 					buttonSkipRecap.style.display = "none";
 				}
-				
-				// skip preview
-				if ("preview" in timestamps && timestamps["preview"]["start"] > -1 && 
-					timeElapsed > timestamps["preview"]["start"] && timeElapsed < timestamps["preview"]["start"] + timestamps["preview"]["length"] - 2) {
-					if (sP) {
-						skipPreview();
-					}
-					else {
-						buttonSkipPreview.style.display = "block";
-					}
-				}
-				else {
-					buttonSkipPreview.style.display = "none";
-				}
 
 				// next episode button
-				if ("outro" in timestamps && timestamps["outro"]["length"] > -1) {
-					if (timestamps["outro"]["length"] > 0 && timestamps["outro"]["length"] > timeCountDown && timeElapsed > 30) {
+				if ("outro" in timestamps || "preview" in timestamps) {
+					let len = 0;
+					
+					if ("outro" in timestamps)
+						len += timestamps["outro"]["length"];
+					
+					if ("preview" in timestamps)
+						len += timestamps["preview"]["length"];
+					
+					if (len > timeCountDown && timeElapsed > 30) {
 						sendmes({ fullscreen: false });
 						if (sO) {
 							nextEp();
@@ -378,11 +378,11 @@ ${JSON.stringify(timestamps)}
 			if ("skipRecap" in changes) {
 				sR = changes.skipRecap.newValue;
 			}
-			if ("skipPreview" in changes) {
-				sP = changes.skipPreview.newValue;
-			}
 			if ("skipOutro" in changes) {
 				sO = changes.skipOutro.newValue;
+			}
+			if ("skipFiller" in changes) {
+				sF = changes.skipFiller.newValue;
 			}
 		}
 	});

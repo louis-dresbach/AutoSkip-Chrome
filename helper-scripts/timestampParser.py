@@ -105,6 +105,7 @@ def main():
 	# recaps always start immediately after intro
 	print ("\tParsing Google Doc for end of recap times")
 	recaps = []
+	fillers = []
 	page = requests.get("https://docs.google.com/spreadsheets/d/e/2PACX-1vTjsFgiQ9QooJSy2o31hQcTLQhrydFfJFBOZIUlMtyU1dI07IHWXCl2sUMgwwhF0K5BiBjg-GEcARez/pubhtml")
 	soup = BeautifulSoup(page.content, "html.parser")
 
@@ -115,16 +116,19 @@ def main():
 		if len(row.contents) == 6:
 			if row.contents[1].string.isnumeric():
 				if re.compile("\d*:\d*:\d*").match(row.contents[2].string):
-					end = parseTime(row.contents[2].string) - 1
-					th = Theme(row.contents[0].string, row.contents[0].string, end)
+					end = parseTime(row.contents[2].string)
+					th = Theme(row.contents[1].string, row.contents[1].string, end)
 					recaps.append(th)
+					if (row.contents[5].string == "Filler"):
+						th = Theme(row.contents[1].string, row.contents[1].string)
+						fillers.append(th)
 
 	print ("\t\tFinished")
 	
 	# OnePiece always shows 40 seconds of preview at the end
 	previews = [Theme(1, 1100, 40)]
 
-	result["69"] = combine(intros, openings, endings, previews, recaps)
+	result["69"] = combine(intros, openings, endings, previews, recaps, fillers)
 	print ("\tFinished OnePiece");
 
 
@@ -156,7 +160,7 @@ def getLength(url):
 	res = soup.find(string="Dauer:").parent.parent.next_sibling.string
 	return parseTime(res)
 	
-def combine(intros, openings, endings, previews, recaps):
+def combine(intros, openings, endings, previews, recaps, fillers):
 	ret = {}
 	maxEp = 0
 	
@@ -168,7 +172,7 @@ def combine(intros, openings, endings, previews, recaps):
 		maxEp = max(maxEp, o.episodeUntil)
 	
 	for x in range(1, maxEp):
-		e = createEpisode(x, intros, openings, endings, previews, recaps)
+		e = createEpisode(x, intros, openings, endings, previews, recaps, fillers)
 		if e != prevValue or x == maxEp:
 			if zoneBeginning != 0:
 				key = "episode " + str(zoneBeginning)
@@ -180,7 +184,7 @@ def combine(intros, openings, endings, previews, recaps):
 		
 	return ret
 	
-def createEpisode(episode, intros, openings, endings, previews, recaps):
+def createEpisode(episode, intros, openings, endings, previews, recaps, fillers):
 	ret = {}
 	
 	ep = int(episode)
@@ -221,6 +225,10 @@ def createEpisode(episode, intros, openings, endings, previews, recaps):
 				"start": start,
 				"length": r.length - start
 			}
+	
+	for f in fillers:
+		if f.episodeFrom <= ep and f.episodeUntil >= ep:
+			ret["filler"] = True
 	
 	return ret
 
