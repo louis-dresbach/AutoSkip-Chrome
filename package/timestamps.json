@@ -450,7 +450,8 @@
             "recap": {
                 "start": 199,
                 "length": -75
-            }
+            },
+            "filler": true
         },
         "episode 304": {
             "opening": {
@@ -671,7 +672,8 @@
             "recap": {
                 "start": 199,
                 "length": -8
-            }
+            },
+            "filler": true
         },
         "episodes 318-319": {
             "opening": {
@@ -688,7 +690,8 @@
             "recap": {
                 "start": 199,
                 "length": -39
-            }
+            },
+            "filler": true
         },
         "episode 320": {
             "opening": {
@@ -807,7 +810,8 @@
             "recap": {
                 "start": 199,
                 "length": 131
-            }
+            },
+            "filler": true
         },
         "episode 327": {
             "opening": {
@@ -824,7 +828,8 @@
             "recap": {
                 "start": 199,
                 "length": 54
-            }
+            },
+            "filler": true
         },
         "episode 328": {
             "opening": {
@@ -841,7 +846,8 @@
             "recap": {
                 "start": 199,
                 "length": 40
-            }
+            },
+            "filler": true
         },
         "episode 329": {
             "opening": {
@@ -858,7 +864,8 @@
             "recap": {
                 "start": 199,
                 "length": 86
-            }
+            },
+            "filler": true
         },
         "episode 330": {
             "opening": {
@@ -875,7 +882,8 @@
             "recap": {
                 "start": 199,
                 "length": 88
-            }
+            },
+            "filler": true
         },
         "episode 331": {
             "opening": {
@@ -892,7 +900,8 @@
             "recap": {
                 "start": 199,
                 "length": 106
-            }
+            },
+            "filler": true
         },
         "episode 332": {
             "opening": {
@@ -909,7 +918,8 @@
             "recap": {
                 "start": 199,
                 "length": 26
-            }
+            },
+            "filler": true
         },
         "episode 333": {
             "opening": {
@@ -926,7 +936,8 @@
             "recap": {
                 "start": 199,
                 "length": 31
-            }
+            },
+            "filler": true
         },
         "episode 334": {
             "opening": {
@@ -943,7 +954,8 @@
             "recap": {
                 "start": 199,
                 "length": 111
-            }
+            },
+            "filler": true
         },
         "episode 335": {
             "opening": {
@@ -960,7 +972,8 @@
             "recap": {
                 "start": 199,
                 "length": 16
-            }
+            },
+            "filler": true
         },
         "episode 336": {
             "opening": {
@@ -977,7 +990,8 @@
             "recap": {
                 "start": 199,
                 "length": -33
-            }
+            },
+            "filler": true
         },
         "episode 337": {
             "opening": {
@@ -1759,7 +1773,8 @@
             "recap": {
                 "start": 199,
                 "length": -34
-            }
+            },
+            "filler": true
         },
         "episode 383": {
             "opening": {
@@ -1776,9 +1791,28 @@
             "recap": {
                 "start": 199,
                 "length": 31
-            }
+            },
+            "filler": true
         },
-        "episodes 384-385": {
+        "episode 384": {
+            "opening": {
+                "start": 14,
+                "length": 149
+            },
+            "intro": {
+                "start": 163,
+                "length": 36
+            },
+            "preview": {
+                "length": 40
+            },
+            "recap": {
+                "start": 199,
+                "length": 3
+            },
+            "filler": true
+        },
+        "episode 385": {
             "opening": {
                 "start": 14,
                 "length": 149
@@ -2150,7 +2184,8 @@
             "recap": {
                 "start": 211,
                 "length": -44
-            }
+            },
+            "filler": true
         },
         "episode 407": {
             "opening": {
@@ -2167,7 +2202,8 @@
             "recap": {
                 "start": 211,
                 "length": 59
-            }
+            },
+            "filler": true
         },
         "episode 408": {
             "opening": {
@@ -2490,7 +2526,8 @@
             "recap": {
                 "start": 206,
                 "length": 56
-            }
+            },
+            "filler": true
         },
         "episode 427": {
             "opening": {
@@ -2507,7 +2544,8 @@
             "recap": {
                 "start": 206,
                 "length": 57
-            }
+            },
+            "filler": true
         },
         "episode 428": {
             "opening": {
@@ -2524,7 +2562,8 @@
             "recap": {
                 "start": 206,
                 "length": 54
-            }
+            },
+            "filler": true
         },
         "episode 429": {
             "opening": {
@@ -2541,7 +2580,8 @@
             "recap": {
                 "start": 206,
                 "length": 102
-            }
+            },
+            "filler": true
         },
         "episode 430": {
             "opening": {
@@ -3017,7 +3057,8 @@
             "recap": {
                 "start": 206,
                 "length": 21
-            }
+            },
+            "filler": true
         },
         "episode 458": {
             "opening": {
@@ -3034,7 +3075,8 @@
             "recap": {
                 "start": 206,
                 "length": 9
-            }
+            },
+            "filler": true
         },
         "episode 459": {
             "opening": {
@@ -3612,7 +3654,8 @@
             "recap": {
                 "start": 211,
                 "length": -45
-            }
+            },
+            "filler": true
         },
         "episode 493": {
             "opening": {
@@ -4400,7 +4443,8 @@
             "recap": {
                 "start": 204,
                 "length": -39
-            }
+            },
+            "filler": true
         },
         "episode 543": {
             "opening": {
@@ -4944,7 +4988,8 @@
             "recap": {
                 "start": 204,
                 "length": 20
-            }
+            },
+            "filler": true
         },
         "episode 576": {
             "opening": {
@@ -4961,7 +5006,8 @@
             "recap": {
                 "start": 204,
                 "length": 58
-            }
+            },
+            "filler": true
         },
         "episode 577": {
             "opening": {
@@ -4978,7 +5024,8 @@
             "recap": {
                 "start": 204,
                 "length": 91
-            }
+            },
+            "filler": true
         },
         "episode 578": {
             "opening": {
@@ -4995,7 +5042,8 @@
             "recap": {
                 "start": 204,
                 "length": 88
-            }
+            },
+            "filler": true
         },
         "episode 579": {
             "opening": {
@@ -5807,7 +5855,8 @@
             "recap": {
                 "start": 204,
                 "length": 52
-            }
+            },
+            "filler": true
         },
         "episode 627": {
             "opening": {
@@ -5824,7 +5873,8 @@
             "recap": {
                 "start": 204,
                 "length": 69
-            }
+            },
+            "filler": true
         },
         "episode 628": {
             "opening": {
@@ -5841,7 +5891,8 @@
             "recap": {
                 "start": 204,
                 "length": 42
-            }
+            },
+            "filler": true
         },
         "episode 629": {
             "opening": {
@@ -7847,7 +7898,8 @@
             "recap": {
                 "start": 204,
                 "length": 5
-            }
+            },
+            "filler": true
         },
         "episode 748": {
             "opening": {
@@ -7864,7 +7916,8 @@
             "recap": {
                 "start": 204,
                 "length": 54
-            }
+            },
+            "filler": true
         },
         "episode 749": {
             "opening": {
@@ -7881,7 +7934,8 @@
             "recap": {
                 "start": 204,
                 "length": 111
-            }
+            },
+            "filler": true
         },
         "episode 750": {
             "opening": {
@@ -7898,7 +7952,8 @@
             "recap": {
                 "start": 204,
                 "length": 150
-            }
+            },
+            "filler": true
         },
         "episode 751": {
             "opening": {
@@ -8323,7 +8378,8 @@
             "recap": {
                 "start": 226,
                 "length": 23
-            }
+            },
+            "filler": true
         },
         "episode 776": {
             "opening": {
@@ -8408,7 +8464,8 @@
             "recap": {
                 "start": 226,
                 "length": 12
-            }
+            },
+            "filler": true
         },
         "episode 781": {
             "opening": {
@@ -8425,7 +8482,8 @@
             "recap": {
                 "start": 226,
                 "length": 95
-            }
+            },
+            "filler": true
         },
         "episode 782": {
             "opening": {
@@ -8442,7 +8500,8 @@
             "recap": {
                 "start": 226,
                 "length": 39
-            }
+            },
+            "filler": true
         },
         "episode 783": {
             "opening": {
@@ -8851,7 +8910,8 @@
             "recap": {
                 "start": 164,
                 "length": 239
-            }
+            },
+            "filler": true
         },
         "episode 808": {
             "opening": {
@@ -9780,7 +9840,42 @@
                 "length": -55
             }
         },
-        "episodes 880-890": {
+        "episode 880": {
+            "opening": {
+                "start": 14,
+                "length": 150
+            },
+            "intro": {
+                "start": 164,
+                "length": 51
+            },
+            "preview": {
+                "length": 40
+            },
+            "recap": {
+                "start": 215,
+                "length": 0
+            }
+        },
+        "episode 881": {
+            "opening": {
+                "start": 14,
+                "length": 150
+            },
+            "intro": {
+                "start": 164,
+                "length": 51
+            },
+            "preview": {
+                "length": 40
+            },
+            "recap": {
+                "start": 215,
+                "length": 0
+            },
+            "filler": true
+        },
+        "episodes 882-890": {
             "opening": {
                 "start": 14,
                 "length": 150
@@ -9860,7 +9955,8 @@
             "recap": {
                 "start": 134,
                 "length": 8
-            }
+            },
+            "filler": true
         },
         "episode 896": {
             "opening": {
@@ -9873,7 +9969,8 @@
             "recap": {
                 "start": 134,
                 "length": 81
-            }
+            },
+            "filler": true
         },
         "episode 897": {
             "opening": {
