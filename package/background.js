@@ -13,6 +13,10 @@ let watchlist = {};
 let prevWindowState;
 
 let playerData = new Map();
+chrome.storage.sync.get("playerData", ({ playerData }) => {
+	playerData = playerData;
+});
+
 
 let groupwatch = {};
 
@@ -333,6 +337,15 @@ chrome.runtime.onMessage.addListener(
 	else if (request.setData) {
 		//console.log(request);
 		playerData.set(request.url, request.value);
+				
+		const it = playerData.entries();
+		while (playerData.size > 100) {
+			const k = it.next().value[0];
+			console.log("deleting "+k)
+			playerData.delete(k)
+		}
+		
+		chrome.storage.sync.set({ playerData });
 	}
   }
 );

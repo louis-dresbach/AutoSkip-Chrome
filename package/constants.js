@@ -4,6 +4,9 @@ const _DEBUG = false;
 const gogoanime = [ // GogoAnime domains
 	"gogoanime.lu", 
 	"www1.gogoanime.ee",
+	"www2.gogoanime.ee",
+	"www3.gogoanime.ee",
+	"www4.gogoanime.ee",
 	"gogoanime.ee",
 	"gogoanime.tel"
 ]

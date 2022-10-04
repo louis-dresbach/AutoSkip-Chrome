@@ -6,7 +6,8 @@
 
 if (window.self !== window.top) {
 	// If we are in an iframe, open a new tab with current page
-	chrome.runtime.sendMessage({ openTab: window.location.toString() });
+	if (!document.hidden)
+		chrome.runtime.sendMessage({ openTab: window.location.toString() });
 }
 else {
 	let aS = false;
@@ -162,7 +163,7 @@ else {
 			let timeElapsed, timeCountDown, timeDuration;
 												
 			if ("filler" in timestamps && timestamps["filler"] === true && sF === true) {
-				nextEpisode();
+				nextEp();
 			}
 			
 			if (_jw.includes(window.location.hostname)) {

@@ -125,8 +125,8 @@ def main():
 
 	print ("\t\tFinished")
 	
-	# OnePiece always shows 40 seconds of preview at the end
-	previews = [Theme(1, 1100, 40)]
+	# OnePiece shows 40 seconds of preview at the end until episode 618
+	previews = [Theme(1, 618, 40)]
 
 	result["69"] = combine(intros, openings, endings, previews, recaps, fillers)
 	print ("\tFinished OnePiece");
