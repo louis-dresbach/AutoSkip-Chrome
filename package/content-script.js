@@ -124,7 +124,7 @@ window.onload = function () {
 		if (f.src) {
 			let u = new URL(f.src);
 			if (_jw.includes(u.hostname) || _vjs.includes(u.hostname)) {
-				chrome.runtime.sendMessage({ setData: true, url: u, value: { title: title, season: season, episode: episode, host: window.location.toString() }});
+				chrome.runtime.sendMessage({ setData: true, url: u.href, value: { title: title, season: season, episode: episode, host: window.location.toString() }});
 				theFrame = f;
 				return;
 			}

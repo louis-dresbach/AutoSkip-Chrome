@@ -22,7 +22,7 @@ else {
 
 	let timestamps = {};
 
-	const interval = 2000;
+	const interval = 500;
 	let vTries = 0;
 	let vMaxTries = 30;
 
@@ -141,19 +141,19 @@ else {
 			let time = timestamps["opening"]["start"] + timestamps["opening"]["length"];
 			if (timestamps["intro"])
 				time += timestamps["intro"]["length"];
-			window.postMessage({ player: "seek", time: time }, "*");
+			window.postMessage({ player: "seek", time: time - 0.5 }, "*");
 		}
 	}
 
 	const skipRecap = () => {
 		if ("recap" in timestamps) {
-			window.postMessage({ player: "seek", time: timestamps["recap"]["start"] + timestamps["recap"]["length"] }, "*");
+			window.postMessage({ player: "seek", time: timestamps["recap"]["start"] + timestamps["recap"]["length"] - 0.5 }, "*");
 		}
 	}
 
 	const skipPreview = () => {
 		if ("preview" in timestamps) {
-			window.postMessage({ player: "seek", time: timestamps["preview"]["start"] + timestamps["preview"]["length"] }, "*");
+			window.postMessage({ player: "seek", time: timestamps["preview"]["start"] + timestamps["preview"]["length"] - 0.5 }, "*");
 		}
 	}
 
@@ -206,7 +206,15 @@ else {
 				if ("opening" in timestamps && timestamps["opening"]["start"] > -1 && 
 					timeElapsed >= timestamps["opening"]["start"] && timeElapsed <= timestamps["opening"]["start"] + timestamps["opening"]["length"] - 2) {
 					if (sI) {
-						skipIntro();
+						// if we are going to skip recap anyway and it is right after the intro, immediately skip to the end of that
+						if (sR && "recap" in timestamps && timestamps["recap"]["start"] > -1 &&
+							timestamps["recap"]["start"] >= timestamps["opening"]["start"] + timestamps["opening"]["length"] - 2 &&
+							timestamps["recap"]["start"] <= timestamps["opening"]["start"] + timestamps["opening"]["length"] + 2) {
+							skipRecap();
+						}
+						else {
+							skipIntro();
+						}
 					}
 					else {
 						buttonSkipIntro.style.display = "block";

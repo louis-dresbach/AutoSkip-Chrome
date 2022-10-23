@@ -8,6 +8,10 @@ const gogoanime = [ // GogoAnime domains
 	"www3.gogoanime.ee",
 	"www4.gogoanime.ee",
 	"gogoanime.ee",
+	"www1.gogoanime.dk",
+	"www2.gogoanime.dk",
+	"www3.gogoanime.dk",
+	"gogoanime.dk",
 	"gogoanime.tel"
 ]
 const bs = [ // BurningSeries domains
@@ -27,7 +31,8 @@ const _jw = [ // websites that use JWPlayer
 	"goload.io",
 	"gogohd.net",
 	"videovard.sx",
-	"myplayer.sbs"
+	"myplayer.sbs",
+	"streamsss.net"
 ];
 const _vjs = [ // websites where we access everything through the HTML5 video element
 	"vupload.com",

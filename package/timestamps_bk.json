@@ -64,8 +64,8 @@
     "69": {
         "episodes 1-30": {
             "opening": {
-                "start": 0,
-                "length": 123
+                "start": 14,
+                "length": 109
             },
             "ending": {
                 "length": 70
@@ -76,8 +76,8 @@
         },
         "episodes 31-46": {
             "opening": {
-                "start": 0,
-                "length": 123
+                "start": 14,
+                "length": 109
             },
             "ending": {
                 "length": 71
@@ -88,8 +88,8 @@
         },
         "episodes 47-60": {
             "opening": {
-                "start": 0,
-                "length": 124
+                "start": 14,
+                "length": 110
             },
             "ending": {
                 "length": 71
@@ -100,8 +100,8 @@
         },
         "episodes 61-62": {
             "opening": {
-                "start": 0,
-                "length": 124
+                "start": 14,
+                "length": 110
             },
             "preview": {
                 "length": 40
@@ -109,8 +109,8 @@
         },
         "episodes 63-73": {
             "opening": {
-                "start": 0,
-                "length": 124
+                "start": 14,
+                "length": 110
             },
             "ending": {
                 "length": 69
@@ -121,8 +121,8 @@
         },
         "episodes 74-81": {
             "opening": {
-                "start": 0,
-                "length": 124
+                "start": 14,
+                "length": 110
             },
             "ending": {
                 "length": 71
@@ -133,8 +133,8 @@
         },
         "episodes 82-94": {
             "opening": {
-                "start": 0,
-                "length": 124
+                "start": 14,
+                "length": 110
             },
             "ending": {
                 "length": 72
@@ -145,8 +145,8 @@
         },
         "episodes 95-106": {
             "opening": {
-                "start": 0,
-                "length": 124
+                "start": 14,
+                "length": 110
             },
             "ending": {
                 "length": 70
@@ -157,8 +157,8 @@
         },
         "episodes 107-115": {
             "opening": {
-                "start": 0,
-                "length": 124
+                "start": 14,
+                "length": 110
             },
             "ending": {
                 "length": 71
@@ -169,8 +169,8 @@
         },
         "episodes 116-118": {
             "opening": {
-                "start": 0,
-                "length": 123
+                "start": 14,
+                "length": 109
             },
             "ending": {
                 "length": 71
@@ -181,8 +181,8 @@
         },
         "episodes 119-126": {
             "opening": {
-                "start": 0,
-                "length": 123
+                "start": 14,
+                "length": 109
             },
             "ending": {
                 "length": 70
@@ -193,8 +193,8 @@
         },
         "episodes 127-128": {
             "opening": {
-                "start": 0,
-                "length": 123
+                "start": 14,
+                "length": 109
             },
             "ending": {
                 "length": 192
@@ -205,8 +205,8 @@
         },
         "episodes 129-132": {
             "opening": {
-                "start": 0,
-                "length": 123
+                "start": 14,
+                "length": 109
             },
             "ending": {
                 "length": 70
@@ -217,8 +217,8 @@
         },
         "episodes 133-168": {
             "opening": {
-                "start": 0,
-                "length": 123
+                "start": 14,
+                "length": 109
             },
             "ending": {
                 "length": 71
@@ -229,8 +229,8 @@
         },
         "episodes 169-181": {
             "opening": {
-                "start": 0,
-                "length": 124
+                "start": 14,
+                "length": 110
             },
             "ending": {
                 "length": 71
@@ -241,8 +241,8 @@
         },
         "episodes 182-195": {
             "opening": {
-                "start": 0,
-                "length": 124
+                "start": 14,
+                "length": 110
             },
             "ending": {
                 "length": 72
@@ -253,8 +253,8 @@
         },
         "episodes 196-206": {
             "opening": {
-                "start": 0,
-                "length": 124
+                "start": 14,
+                "length": 110
             },
             "ending": {
                 "length": 70
@@ -265,8 +265,8 @@
         },
         "episodes 207-245": {
             "opening": {
-                "start": 0,
-                "length": 123
+                "start": 14,
+                "length": 109
             },
             "ending": {
                 "length": 71
@@ -277,8 +277,8 @@
         },
         "episodes 246-255": {
             "opening": {
-                "start": 0,
-                "length": 123
+                "start": 14,
+                "length": 109
             },
             "ending": {
                 "length": 70
@@ -289,8 +289,8 @@
         },
         "episodes 256-263": {
             "opening": {
-                "start": 0,
-                "length": 123
+                "start": 14,
+                "length": 109
             },
             "ending": {
                 "length": 72
@@ -301,8 +301,8 @@
         },
         "episodes 264-278": {
             "opening": {
-                "start": 0,
-                "length": 124
+                "start": 14,
+                "length": 110
             },
             "ending": {
                 "length": 72
@@ -313,8 +313,8 @@
         },
         "episodes 279-283": {
             "opening": {
-                "start": 0,
-                "length": 123
+                "start": 14,
+                "length": 109
             },
             "preview": {
                 "length": 40
@@ -322,8 +322,8 @@
         },
         "episodes 284-296": {
             "opening": {
-                "start": 0,
-                "length": 163
+                "start": 14,
+                "length": 149
             },
             "intro": {
                 "start": 163,
@@ -335,8 +335,8 @@
         },
         "episode 297": {
             "opening": {
-                "start": 0,
-                "length": 163
+                "start": 14,
+                "length": 149
             },
             "intro": {
                 "start": 163,
@@ -352,8 +352,8 @@
         },
         "episode 298": {
             "opening": {
-                "start": 0,
-                "length": 163
+                "start": 14,
+                "length": 149
             },
             "intro": {
                 "start": 163,
@@ -369,8 +369,8 @@
         },
         "episode 299": {
             "opening": {
-                "start": 0,
-                "length": 163
+                "start": 14,
+                "length": 149
             },
             "intro": {
                 "start": 163,
@@ -386,8 +386,8 @@
         },
         "episode 300": {
             "opening": {
-                "start": 0,
-                "length": 163
+                "start": 14,
+                "length": 149
             },
             "intro": {
                 "start": 163,
@@ -403,8 +403,8 @@
         },
         "episode 301": {
             "opening": {
-                "start": 0,
-                "length": 163
+                "start": 14,
+                "length": 149
             },
             "intro": {
                 "start": 163,
@@ -420,8 +420,8 @@
         },
         "episode 302": {
             "opening": {
-                "start": 0,
-                "length": 163
+                "start": 14,
+                "length": 149
             },
             "intro": {
                 "start": 163,
@@ -437,8 +437,8 @@
         },
         "episode 303": {
             "opening": {
-                "start": 0,
-                "length": 163
+                "start": 14,
+                "length": 149
             },
             "intro": {
                 "start": 163,
@@ -455,8 +455,8 @@
         },
         "episode 304": {
             "opening": {
-                "start": 0,
-                "length": 163
+                "start": 14,
+                "length": 149
             },
             "intro": {
                 "start": 163,
@@ -472,8 +472,8 @@
         },
         "episode 305": {
             "opening": {
-                "start": 0,
-                "length": 163
+                "start": 14,
+                "length": 149
             },
             "intro": {
                 "start": 163,
@@ -489,8 +489,8 @@
         },
         "episode 306": {
             "opening": {
-                "start": 0,
-                "length": 163
+                "start": 14,
+                "length": 149
             },
             "intro": {
                 "start": 163,
@@ -506,8 +506,8 @@
         },
         "episode 307": {
             "opening": {
-                "start": 0,
-                "length": 163
+                "start": 14,
+                "length": 149
             },
             "intro": {
                 "start": 163,
@@ -523,8 +523,8 @@
         },
         "episode 308": {
             "opening": {
-                "start": 0,
-                "length": 163
+                "start": 14,
+                "length": 149
             },
             "intro": {
                 "start": 163,
@@ -540,8 +540,8 @@
         },
         "episode 309": {
             "opening": {
-                "start": 0,
-                "length": 163
+                "start": 14,
+                "length": 149
             },
             "intro": {
                 "start": 163,
@@ -557,8 +557,8 @@
         },
         "episode 310": {
             "opening": {
-                "start": 0,
-                "length": 163
+                "start": 14,
+                "length": 149
             },
             "intro": {
                 "start": 163,
@@ -574,8 +574,8 @@
         },
         "episode 311": {
             "opening": {
-                "start": 0,
-                "length": 163
+                "start": 14,
+                "length": 149
             },
             "intro": {
                 "start": 163,
@@ -591,8 +591,8 @@
         },
         "episode 312": {
             "opening": {
-                "start": 0,
-                "length": 163
+                "start": 14,
+                "length": 149
             },
             "intro": {
                 "start": 163,
@@ -608,8 +608,8 @@
         },
         "episodes 313-314": {
             "opening": {
-                "start": 0,
-                "length": 163
+                "start": 14,
+                "length": 149
             },
             "intro": {
                 "start": 163,
@@ -625,8 +625,8 @@
         },
         "episode 315": {
             "opening": {
-                "start": 0,
-                "length": 163
+                "start": 14,
+                "length": 149
             },
             "intro": {
                 "start": 163,
@@ -642,8 +642,8 @@
         },
         "episode 316": {
             "opening": {
-                "start": 0,
-                "length": 163
+                "start": 14,
+                "length": 149
             },
             "intro": {
                 "start": 163,
@@ -659,8 +659,8 @@
         },
         "episode 317": {
             "opening": {
-                "start": 0,
-                "length": 163
+                "start": 14,
+                "length": 149
             },
             "intro": {
                 "start": 163,
@@ -677,8 +677,8 @@
         },
         "episodes 318-319": {
             "opening": {
-                "start": 0,
-                "length": 163
+                "start": 14,
+                "length": 149
             },
             "intro": {
                 "start": 163,
@@ -695,8 +695,8 @@
         },
         "episode 320": {
             "opening": {
-                "start": 0,
-                "length": 163
+                "start": 14,
+                "length": 149
             },
             "intro": {
                 "start": 163,
@@ -712,8 +712,8 @@
         },
         "episode 321": {
             "opening": {
-                "start": 0,
-                "length": 163
+                "start": 14,
+                "length": 149
             },
             "intro": {
                 "start": 163,
@@ -729,8 +729,8 @@
         },
         "episode 322": {
             "opening": {
-                "start": 0,
-                "length": 163
+                "start": 14,
+                "length": 149
             },
             "intro": {
                 "start": 163,
@@ -746,8 +746,8 @@
         },
         "episode 323": {
             "opening": {
-                "start": 0,
-                "length": 163
+                "start": 14,
+                "length": 149
             },
             "intro": {
                 "start": 163,
@@ -763,8 +763,8 @@
         },
         "episode 324": {
             "opening": {
-                "start": 0,
-                "length": 163
+                "start": 14,
+                "length": 149
             },
             "intro": {
                 "start": 163,
@@ -780,8 +780,8 @@
         },
         "episode 325": {
             "opening": {
-                "start": 0,
-                "length": 163
+                "start": 14,
+                "length": 149
             },
             "intro": {
                 "start": 163,
@@ -797,8 +797,8 @@
         },
         "episode 326": {
             "opening": {
-                "start": 0,
-                "length": 163
+                "start": 14,
+                "length": 149
             },
             "intro": {
                 "start": 163,
@@ -815,8 +815,8 @@
         },
         "episode 327": {
             "opening": {
-                "start": 0,
-                "length": 163
+                "start": 14,
+                "length": 149
             },
             "intro": {
                 "start": 163,
@@ -833,8 +833,8 @@
         },
         "episode 328": {
             "opening": {
-                "start": 0,
-                "length": 163
+                "start": 14,
+                "length": 149
             },
             "intro": {
                 "start": 163,
@@ -851,8 +851,8 @@
         },
         "episode 329": {
             "opening": {
-                "start": 0,
-                "length": 163
+                "start": 14,
+                "length": 149
             },
             "intro": {
                 "start": 163,
@@ -869,8 +869,8 @@
         },
         "episode 330": {
             "opening": {
-                "start": 0,
-                "length": 163
+                "start": 14,
+                "length": 149
             },
             "intro": {
                 "start": 163,
@@ -887,8 +887,8 @@
         },
         "episode 331": {
             "opening": {
-                "start": 0,
-                "length": 163
+                "start": 14,
+                "length": 149
             },
             "intro": {
                 "start": 163,
@@ -905,8 +905,8 @@
         },
         "episode 332": {
             "opening": {
-                "start": 0,
-                "length": 163
+                "start": 14,
+                "length": 149
             },
             "intro": {
                 "start": 163,
@@ -923,8 +923,8 @@
         },
         "episode 333": {
             "opening": {
-                "start": 0,
-                "length": 163
+                "start": 14,
+                "length": 149
             },
             "intro": {
                 "start": 163,
@@ -941,8 +941,8 @@
         },
         "episode 334": {
             "opening": {
-                "start": 0,
-                "length": 163
+                "start": 14,
+                "length": 149
             },
             "intro": {
                 "start": 163,
@@ -959,8 +959,8 @@
         },
         "episode 335": {
             "opening": {
-                "start": 0,
-                "length": 163
+                "start": 14,
+                "length": 149
             },
             "intro": {
                 "start": 163,
@@ -977,8 +977,8 @@
         },
         "episode 336": {
             "opening": {
-                "start": 0,
-                "length": 163
+                "start": 14,
+                "length": 149
             },
             "intro": {
                 "start": 163,
@@ -995,8 +995,8 @@
         },
         "episode 337": {
             "opening": {
-                "start": 0,
-                "length": 163
+                "start": 14,
+                "length": 149
             },
             "intro": {
                 "start": 163,
@@ -1012,8 +1012,8 @@
         },
         "episode 338": {
             "opening": {
-                "start": 0,
-                "length": 163
+                "start": 14,
+                "length": 149
             },
             "intro": {
                 "start": 163,
@@ -1029,8 +1029,8 @@
         },
         "episode 339": {
             "opening": {
-                "start": 0,
-                "length": 163
+                "start": 14,
+                "length": 149
             },
             "intro": {
                 "start": 163,
@@ -1046,8 +1046,8 @@
         },
         "episode 340": {
             "opening": {
-                "start": 0,
-                "length": 163
+                "start": 14,
+                "length": 149
             },
             "intro": {
                 "start": 163,
@@ -1063,8 +1063,8 @@
         },
         "episode 341": {
             "opening": {
-                "start": 0,
-                "length": 163
+                "start": 14,
+                "length": 149
             },
             "intro": {
                 "start": 163,
@@ -1080,8 +1080,8 @@
         },
         "episode 342": {
             "opening": {
-                "start": 0,
-                "length": 163
+                "start": 14,
+                "length": 149
             },
             "intro": {
                 "start": 163,
@@ -1097,8 +1097,8 @@
         },
         "episode 343": {
             "opening": {
-                "start": 0,
-                "length": 163
+                "start": 14,
+                "length": 149
             },
             "intro": {
                 "start": 163,
@@ -1114,8 +1114,8 @@
         },
         "episode 344": {
             "opening": {
-                "start": 0,
-                "length": 163
+                "start": 14,
+                "length": 149
             },
             "intro": {
                 "start": 163,
@@ -1131,8 +1131,8 @@
         },
         "episode 345": {
             "opening": {
-                "start": 0,
-                "length": 163
+                "start": 14,
+                "length": 149
             },
             "intro": {
                 "start": 163,
@@ -1148,8 +1148,8 @@
         },
         "episode 346": {
             "opening": {
-                "start": 0,
-                "length": 163
+                "start": 14,
+                "length": 149
             },
             "intro": {
                 "start": 163,
@@ -1165,8 +1165,8 @@
         },
         "episode 347": {
             "opening": {
-                "start": 0,
-                "length": 163
+                "start": 14,
+                "length": 149
             },
             "intro": {
                 "start": 163,
@@ -1182,8 +1182,8 @@
         },
         "episode 348": {
             "opening": {
-                "start": 0,
-                "length": 163
+                "start": 14,
+                "length": 149
             },
             "intro": {
                 "start": 163,
@@ -1199,8 +1199,8 @@
         },
         "episode 349": {
             "opening": {
-                "start": 0,
-                "length": 163
+                "start": 14,
+                "length": 149
             },
             "intro": {
                 "start": 163,
@@ -1216,8 +1216,8 @@
         },
         "episode 350": {
             "opening": {
-                "start": 0,
-                "length": 163
+                "start": 14,
+                "length": 149
             },
             "intro": {
                 "start": 163,
@@ -1233,8 +1233,8 @@
         },
         "episode 351": {
             "opening": {
-                "start": 0,
-                "length": 163
+                "start": 14,
+                "length": 149
             },
             "intro": {
                 "start": 163,
@@ -1250,8 +1250,8 @@
         },
         "episode 352": {
             "opening": {
-                "start": 0,
-                "length": 163
+                "start": 14,
+                "length": 149
             },
             "intro": {
                 "start": 163,
@@ -1267,8 +1267,8 @@
         },
         "episode 353": {
             "opening": {
-                "start": 0,
-                "length": 163
+                "start": 14,
+                "length": 149
             },
             "intro": {
                 "start": 163,
@@ -1284,8 +1284,8 @@
         },
         "episode 354": {
             "opening": {
-                "start": 0,
-                "length": 163
+                "start": 14,
+                "length": 149
             },
             "intro": {
                 "start": 163,
@@ -1301,8 +1301,8 @@
         },
         "episode 355": {
             "opening": {
-                "start": 0,
-                "length": 163
+                "start": 14,
+                "length": 149
             },
             "intro": {
                 "start": 163,
@@ -1318,8 +1318,8 @@
         },
         "episode 356": {
             "opening": {
-                "start": 0,
-                "length": 163
+                "start": 14,
+                "length": 149
             },
             "intro": {
                 "start": 163,
@@ -1335,8 +1335,8 @@
         },
         "episode 357": {
             "opening": {
-                "start": 0,
-                "length": 163
+                "start": 14,
+                "length": 149
             },
             "intro": {
                 "start": 163,
@@ -1352,8 +1352,8 @@
         },
         "episode 358": {
             "opening": {
-                "start": 0,
-                "length": 163
+                "start": 14,
+                "length": 149
             },
             "intro": {
                 "start": 163,
@@ -1369,8 +1369,8 @@
         },
         "episode 359": {
             "opening": {
-                "start": 0,
-                "length": 163
+                "start": 14,
+                "length": 149
             },
             "intro": {
                 "start": 163,
@@ -1386,8 +1386,8 @@
         },
         "episode 360": {
             "opening": {
-                "start": 0,
-                "length": 163
+                "start": 14,
+                "length": 149
             },
             "intro": {
                 "start": 163,
@@ -1403,8 +1403,8 @@
         },
         "episode 361": {
             "opening": {
-                "start": 0,
-                "length": 163
+                "start": 14,
+                "length": 149
             },
             "intro": {
                 "start": 163,
@@ -1420,8 +1420,8 @@
         },
         "episode 362": {
             "opening": {
-                "start": 0,
-                "length": 163
+                "start": 14,
+                "length": 149
             },
             "intro": {
                 "start": 163,
@@ -1437,8 +1437,8 @@
         },
         "episode 363": {
             "opening": {
-                "start": 0,
-                "length": 163
+                "start": 14,
+                "length": 149
             },
             "intro": {
                 "start": 163,
@@ -1454,8 +1454,8 @@
         },
         "episode 364": {
             "opening": {
-                "start": 0,
-                "length": 163
+                "start": 14,
+                "length": 149
             },
             "intro": {
                 "start": 163,
@@ -1471,8 +1471,8 @@
         },
         "episode 365": {
             "opening": {
-                "start": 0,
-                "length": 163
+                "start": 14,
+                "length": 149
             },
             "intro": {
                 "start": 163,
@@ -1488,8 +1488,8 @@
         },
         "episode 366": {
             "opening": {
-                "start": 0,
-                "length": 163
+                "start": 14,
+                "length": 149
             },
             "intro": {
                 "start": 163,
@@ -1505,8 +1505,8 @@
         },
         "episode 367": {
             "opening": {
-                "start": 0,
-                "length": 163
+                "start": 14,
+                "length": 149
             },
             "intro": {
                 "start": 163,
@@ -1522,8 +1522,8 @@
         },
         "episode 368": {
             "opening": {
-                "start": 0,
-                "length": 163
+                "start": 14,
+                "length": 149
             },
             "intro": {
                 "start": 163,
@@ -1539,8 +1539,8 @@
         },
         "episode 369": {
             "opening": {
-                "start": 0,
-                "length": 163
+                "start": 14,
+                "length": 149
             },
             "intro": {
                 "start": 163,
@@ -1556,8 +1556,8 @@
         },
         "episode 370": {
             "opening": {
-                "start": 0,
-                "length": 163
+                "start": 14,
+                "length": 149
             },
             "intro": {
                 "start": 163,
@@ -1573,8 +1573,8 @@
         },
         "episode 371": {
             "opening": {
-                "start": 0,
-                "length": 163
+                "start": 14,
+                "length": 149
             },
             "intro": {
                 "start": 163,
@@ -1590,8 +1590,8 @@
         },
         "episode 372": {
             "opening": {
-                "start": 0,
-                "length": 163
+                "start": 14,
+                "length": 149
             },
             "intro": {
                 "start": 163,
@@ -1607,8 +1607,8 @@
         },
         "episode 373": {
             "opening": {
-                "start": 0,
-                "length": 163
+                "start": 14,
+                "length": 149
             },
             "intro": {
                 "start": 163,
@@ -1624,8 +1624,8 @@
         },
         "episode 374": {
             "opening": {
-                "start": 0,
-                "length": 163
+                "start": 14,
+                "length": 149
             },
             "intro": {
                 "start": 163,
@@ -1641,8 +1641,8 @@
         },
         "episode 375": {
             "opening": {
-                "start": 0,
-                "length": 163
+                "start": 14,
+                "length": 149
             },
             "intro": {
                 "start": 163,
@@ -1658,8 +1658,8 @@
         },
         "episode 376": {
             "opening": {
-                "start": 0,
-                "length": 163
+                "start": 14,
+                "length": 149
             },
             "intro": {
                 "start": 163,
@@ -1675,8 +1675,8 @@
         },
         "episode 377": {
             "opening": {
-                "start": 0,
-                "length": 163
+                "start": 14,
+                "length": 149
             },
             "intro": {
                 "start": 163,
@@ -1692,8 +1692,8 @@
         },
         "episode 378": {
             "opening": {
-                "start": 0,
-                "length": 163
+                "start": 14,
+                "length": 149
             },
             "intro": {
                 "start": 163,
@@ -1709,8 +1709,8 @@
         },
         "episode 379": {
             "opening": {
-                "start": 0,
-                "length": 163
+                "start": 14,
+                "length": 149
             },
             "intro": {
                 "start": 163,
@@ -1726,8 +1726,8 @@
         },
         "episode 380": {
             "opening": {
-                "start": 0,
-                "length": 163
+                "start": 14,
+                "length": 149
             },
             "intro": {
                 "start": 163,
@@ -1743,8 +1743,8 @@
         },
         "episode 381": {
             "opening": {
-                "start": 0,
-                "length": 163
+                "start": 14,
+                "length": 149
             },
             "intro": {
                 "start": 163,
@@ -1760,8 +1760,8 @@
         },
         "episode 382": {
             "opening": {
-                "start": 0,
-                "length": 163
+                "start": 14,
+                "length": 149
             },
             "intro": {
                 "start": 163,
@@ -1778,8 +1778,8 @@
         },
         "episode 383": {
             "opening": {
-                "start": 0,
-                "length": 163
+                "start": 14,
+                "length": 149
             },
             "intro": {
                 "start": 163,
@@ -1796,8 +1796,8 @@
         },
         "episode 384": {
             "opening": {
-                "start": 0,
-                "length": 163
+                "start": 14,
+                "length": 149
             },
             "intro": {
                 "start": 163,
@@ -1814,8 +1814,8 @@
         },
         "episode 385": {
             "opening": {
-                "start": 0,
-                "length": 163
+                "start": 14,
+                "length": 149
             },
             "intro": {
                 "start": 163,
@@ -1831,8 +1831,8 @@
         },
         "episode 386": {
             "opening": {
-                "start": 0,
-                "length": 163
+                "start": 14,
+                "length": 149
             },
             "intro": {
                 "start": 163,
@@ -1848,8 +1848,8 @@
         },
         "episode 387": {
             "opening": {
-                "start": 0,
-                "length": 163
+                "start": 14,
+                "length": 149
             },
             "intro": {
                 "start": 163,
@@ -1865,8 +1865,8 @@
         },
         "episode 388": {
             "opening": {
-                "start": 0,
-                "length": 163
+                "start": 14,
+                "length": 149
             },
             "intro": {
                 "start": 163,
@@ -1882,8 +1882,8 @@
         },
         "episode 389": {
             "opening": {
-                "start": 0,
-                "length": 163
+                "start": 14,
+                "length": 149
             },
             "intro": {
                 "start": 163,
@@ -1899,8 +1899,8 @@
         },
         "episode 390": {
             "opening": {
-                "start": 0,
-                "length": 163
+                "start": 14,
+                "length": 149
             },
             "intro": {
                 "start": 163,
@@ -1916,8 +1916,8 @@
         },
         "episode 391": {
             "opening": {
-                "start": 0,
-                "length": 163
+                "start": 14,
+                "length": 149
             },
             "intro": {
                 "start": 163,
@@ -1933,8 +1933,8 @@
         },
         "episode 392": {
             "opening": {
-                "start": 0,
-                "length": 163
+                "start": 14,
+                "length": 149
             },
             "intro": {
                 "start": 163,
@@ -1950,8 +1950,8 @@
         },
         "episode 393": {
             "opening": {
-                "start": 0,
-                "length": 163
+                "start": 14,
+                "length": 149
             },
             "intro": {
                 "start": 163,
@@ -1967,8 +1967,8 @@
         },
         "episode 394": {
             "opening": {
-                "start": 0,
-                "length": 163
+                "start": 14,
+                "length": 149
             },
             "intro": {
                 "start": 163,
@@ -1984,8 +1984,8 @@
         },
         "episode 395": {
             "opening": {
-                "start": 0,
-                "length": 164
+                "start": 14,
+                "length": 150
             },
             "intro": {
                 "start": 164,
@@ -2001,8 +2001,8 @@
         },
         "episode 396": {
             "opening": {
-                "start": 0,
-                "length": 164
+                "start": 14,
+                "length": 150
             },
             "intro": {
                 "start": 164,
@@ -2018,8 +2018,8 @@
         },
         "episode 397": {
             "opening": {
-                "start": 0,
-                "length": 164
+                "start": 14,
+                "length": 150
             },
             "intro": {
                 "start": 164,
@@ -2035,8 +2035,8 @@
         },
         "episode 398": {
             "opening": {
-                "start": 0,
-                "length": 164
+                "start": 14,
+                "length": 150
             },
             "intro": {
                 "start": 164,
@@ -2052,8 +2052,8 @@
         },
         "episode 399": {
             "opening": {
-                "start": 0,
-                "length": 164
+                "start": 14,
+                "length": 150
             },
             "intro": {
                 "start": 164,
@@ -2069,8 +2069,8 @@
         },
         "episode 400": {
             "opening": {
-                "start": 0,
-                "length": 164
+                "start": 14,
+                "length": 150
             },
             "intro": {
                 "start": 164,
@@ -2086,8 +2086,8 @@
         },
         "episode 401": {
             "opening": {
-                "start": 0,
-                "length": 164
+                "start": 14,
+                "length": 150
             },
             "intro": {
                 "start": 164,
@@ -2103,8 +2103,8 @@
         },
         "episode 402": {
             "opening": {
-                "start": 0,
-                "length": 164
+                "start": 14,
+                "length": 150
             },
             "intro": {
                 "start": 164,
@@ -2120,8 +2120,8 @@
         },
         "episode 403": {
             "opening": {
-                "start": 0,
-                "length": 164
+                "start": 14,
+                "length": 150
             },
             "intro": {
                 "start": 164,
@@ -2137,8 +2137,8 @@
         },
         "episode 404": {
             "opening": {
-                "start": 0,
-                "length": 164
+                "start": 14,
+                "length": 150
             },
             "intro": {
                 "start": 164,
@@ -2154,8 +2154,8 @@
         },
         "episode 405": {
             "opening": {
-                "start": 0,
-                "length": 164
+                "start": 14,
+                "length": 150
             },
             "intro": {
                 "start": 164,
@@ -2171,8 +2171,8 @@
         },
         "episode 406": {
             "opening": {
-                "start": 0,
-                "length": 164
+                "start": 14,
+                "length": 150
             },
             "intro": {
                 "start": 164,
@@ -2189,8 +2189,8 @@
         },
         "episode 407": {
             "opening": {
-                "start": 0,
-                "length": 164
+                "start": 14,
+                "length": 150
             },
             "intro": {
                 "start": 164,
@@ -2207,8 +2207,8 @@
         },
         "episode 408": {
             "opening": {
-                "start": 0,
-                "length": 164
+                "start": 14,
+                "length": 150
             },
             "intro": {
                 "start": 164,
@@ -2224,8 +2224,8 @@
         },
         "episode 409": {
             "opening": {
-                "start": 0,
-                "length": 164
+                "start": 14,
+                "length": 150
             },
             "intro": {
                 "start": 164,
@@ -2241,8 +2241,8 @@
         },
         "episode 410": {
             "opening": {
-                "start": 0,
-                "length": 164
+                "start": 14,
+                "length": 150
             },
             "intro": {
                 "start": 164,
@@ -2258,8 +2258,8 @@
         },
         "episode 411": {
             "opening": {
-                "start": 0,
-                "length": 164
+                "start": 14,
+                "length": 150
             },
             "intro": {
                 "start": 164,
@@ -2275,8 +2275,8 @@
         },
         "episode 412": {
             "opening": {
-                "start": 0,
-                "length": 164
+                "start": 14,
+                "length": 150
             },
             "intro": {
                 "start": 164,
@@ -2292,8 +2292,8 @@
         },
         "episode 413": {
             "opening": {
-                "start": 0,
-                "length": 164
+                "start": 14,
+                "length": 150
             },
             "intro": {
                 "start": 164,
@@ -2309,8 +2309,8 @@
         },
         "episode 414": {
             "opening": {
-                "start": 0,
-                "length": 164
+                "start": 14,
+                "length": 150
             },
             "intro": {
                 "start": 164,
@@ -2326,8 +2326,8 @@
         },
         "episode 415": {
             "opening": {
-                "start": 0,
-                "length": 164
+                "start": 14,
+                "length": 150
             },
             "intro": {
                 "start": 164,
@@ -2343,8 +2343,8 @@
         },
         "episode 416": {
             "opening": {
-                "start": 0,
-                "length": 164
+                "start": 14,
+                "length": 150
             },
             "intro": {
                 "start": 164,
@@ -2360,8 +2360,8 @@
         },
         "episode 417": {
             "opening": {
-                "start": 0,
-                "length": 164
+                "start": 14,
+                "length": 150
             },
             "intro": {
                 "start": 164,
@@ -2377,8 +2377,8 @@
         },
         "episode 418": {
             "opening": {
-                "start": 0,
-                "length": 164
+                "start": 14,
+                "length": 150
             },
             "intro": {
                 "start": 164,
@@ -2394,8 +2394,8 @@
         },
         "episode 419": {
             "opening": {
-                "start": 0,
-                "length": 164
+                "start": 14,
+                "length": 150
             },
             "intro": {
                 "start": 164,
@@ -2411,8 +2411,8 @@
         },
         "episode 420": {
             "opening": {
-                "start": 0,
-                "length": 164
+                "start": 14,
+                "length": 150
             },
             "intro": {
                 "start": 164,
@@ -2428,8 +2428,8 @@
         },
         "episode 421": {
             "opening": {
-                "start": 0,
-                "length": 164
+                "start": 14,
+                "length": 150
             },
             "intro": {
                 "start": 164,
@@ -2445,8 +2445,8 @@
         },
         "episode 422": {
             "opening": {
-                "start": 0,
-                "length": 164
+                "start": 14,
+                "length": 150
             },
             "intro": {
                 "start": 164,
@@ -2462,8 +2462,8 @@
         },
         "episode 423": {
             "opening": {
-                "start": 0,
-                "length": 164
+                "start": 14,
+                "length": 150
             },
             "intro": {
                 "start": 164,
@@ -2479,8 +2479,8 @@
         },
         "episode 424": {
             "opening": {
-                "start": 0,
-                "length": 164
+                "start": 14,
+                "length": 150
             },
             "intro": {
                 "start": 164,
@@ -2496,8 +2496,8 @@
         },
         "episode 425": {
             "opening": {
-                "start": 0,
-                "length": 164
+                "start": 14,
+                "length": 150
             },
             "intro": {
                 "start": 164,
@@ -2513,8 +2513,8 @@
         },
         "episode 426": {
             "opening": {
-                "start": 0,
-                "length": 159
+                "start": 14,
+                "length": 145
             },
             "intro": {
                 "start": 159,
@@ -2531,8 +2531,8 @@
         },
         "episode 427": {
             "opening": {
-                "start": 0,
-                "length": 159
+                "start": 14,
+                "length": 145
             },
             "intro": {
                 "start": 159,
@@ -2549,8 +2549,8 @@
         },
         "episode 428": {
             "opening": {
-                "start": 0,
-                "length": 159
+                "start": 14,
+                "length": 145
             },
             "intro": {
                 "start": 159,
@@ -2567,8 +2567,8 @@
         },
         "episode 429": {
             "opening": {
-                "start": 0,
-                "length": 159
+                "start": 14,
+                "length": 145
             },
             "intro": {
                 "start": 159,
@@ -2585,8 +2585,8 @@
         },
         "episode 430": {
             "opening": {
-                "start": 0,
-                "length": 159
+                "start": 14,
+                "length": 145
             },
             "intro": {
                 "start": 159,
@@ -2602,8 +2602,8 @@
         },
         "episode 431": {
             "opening": {
-                "start": 0,
-                "length": 159
+                "start": 14,
+                "length": 145
             },
             "intro": {
                 "start": 159,
@@ -2619,8 +2619,8 @@
         },
         "episode 432": {
             "opening": {
-                "start": 0,
-                "length": 159
+                "start": 14,
+                "length": 145
             },
             "intro": {
                 "start": 159,
@@ -2636,8 +2636,8 @@
         },
         "episode 433": {
             "opening": {
-                "start": 0,
-                "length": 159
+                "start": 14,
+                "length": 145
             },
             "intro": {
                 "start": 159,
@@ -2653,8 +2653,8 @@
         },
         "episode 434": {
             "opening": {
-                "start": 0,
-                "length": 159
+                "start": 14,
+                "length": 145
             },
             "intro": {
                 "start": 159,
@@ -2670,8 +2670,8 @@
         },
         "episode 435": {
             "opening": {
-                "start": 0,
-                "length": 159
+                "start": 14,
+                "length": 145
             },
             "intro": {
                 "start": 159,
@@ -2687,8 +2687,8 @@
         },
         "episode 436": {
             "opening": {
-                "start": 0,
-                "length": 159
+                "start": 14,
+                "length": 145
             },
             "intro": {
                 "start": 159,
@@ -2704,8 +2704,8 @@
         },
         "episode 437": {
             "opening": {
-                "start": 0,
-                "length": 159
+                "start": 14,
+                "length": 145
             },
             "intro": {
                 "start": 159,
@@ -2721,8 +2721,8 @@
         },
         "episode 438": {
             "opening": {
-                "start": 0,
-                "length": 159
+                "start": 14,
+                "length": 145
             },
             "intro": {
                 "start": 159,
@@ -2738,8 +2738,8 @@
         },
         "episode 439": {
             "opening": {
-                "start": 0,
-                "length": 159
+                "start": 14,
+                "length": 145
             },
             "intro": {
                 "start": 159,
@@ -2755,8 +2755,8 @@
         },
         "episode 440": {
             "opening": {
-                "start": 0,
-                "length": 159
+                "start": 14,
+                "length": 145
             },
             "intro": {
                 "start": 159,
@@ -2772,8 +2772,8 @@
         },
         "episode 441": {
             "opening": {
-                "start": 0,
-                "length": 159
+                "start": 14,
+                "length": 145
             },
             "intro": {
                 "start": 159,
@@ -2789,8 +2789,8 @@
         },
         "episode 442": {
             "opening": {
-                "start": 0,
-                "length": 159
+                "start": 14,
+                "length": 145
             },
             "intro": {
                 "start": 159,
@@ -2806,8 +2806,8 @@
         },
         "episode 443": {
             "opening": {
-                "start": 0,
-                "length": 159
+                "start": 14,
+                "length": 145
             },
             "intro": {
                 "start": 159,
@@ -2823,8 +2823,8 @@
         },
         "episode 444": {
             "opening": {
-                "start": 0,
-                "length": 159
+                "start": 14,
+                "length": 145
             },
             "intro": {
                 "start": 159,
@@ -2840,8 +2840,8 @@
         },
         "episode 445": {
             "opening": {
-                "start": 0,
-                "length": 159
+                "start": 14,
+                "length": 145
             },
             "intro": {
                 "start": 159,
@@ -2857,8 +2857,8 @@
         },
         "episode 446": {
             "opening": {
-                "start": 0,
-                "length": 159
+                "start": 14,
+                "length": 145
             },
             "intro": {
                 "start": 159,
@@ -2874,8 +2874,8 @@
         },
         "episode 447": {
             "opening": {
-                "start": 0,
-                "length": 159
+                "start": 14,
+                "length": 145
             },
             "intro": {
                 "start": 159,
@@ -2891,8 +2891,8 @@
         },
         "episode 448": {
             "opening": {
-                "start": 0,
-                "length": 159
+                "start": 14,
+                "length": 145
             },
             "intro": {
                 "start": 159,
@@ -2908,8 +2908,8 @@
         },
         "episode 449": {
             "opening": {
-                "start": 0,
-                "length": 159
+                "start": 14,
+                "length": 145
             },
             "intro": {
                 "start": 159,
@@ -2925,8 +2925,8 @@
         },
         "episode 450": {
             "opening": {
-                "start": 0,
-                "length": 159
+                "start": 14,
+                "length": 145
             },
             "intro": {
                 "start": 159,
@@ -2942,8 +2942,8 @@
         },
         "episode 451": {
             "opening": {
-                "start": 0,
-                "length": 159
+                "start": 14,
+                "length": 145
             },
             "intro": {
                 "start": 159,
@@ -2959,8 +2959,8 @@
         },
         "episode 452": {
             "opening": {
-                "start": 0,
-                "length": 159
+                "start": 14,
+                "length": 145
             },
             "intro": {
                 "start": 159,
@@ -2976,8 +2976,8 @@
         },
         "episode 453": {
             "opening": {
-                "start": 0,
-                "length": 159
+                "start": 14,
+                "length": 145
             },
             "intro": {
                 "start": 159,
@@ -2993,8 +2993,8 @@
         },
         "episode 454": {
             "opening": {
-                "start": 0,
-                "length": 159
+                "start": 14,
+                "length": 145
             },
             "intro": {
                 "start": 159,
@@ -3010,8 +3010,8 @@
         },
         "episode 455": {
             "opening": {
-                "start": 0,
-                "length": 159
+                "start": 14,
+                "length": 145
             },
             "intro": {
                 "start": 159,
@@ -3027,8 +3027,8 @@
         },
         "episode 456": {
             "opening": {
-                "start": 0,
-                "length": 159
+                "start": 14,
+                "length": 145
             },
             "intro": {
                 "start": 159,
@@ -3044,8 +3044,8 @@
         },
         "episode 457": {
             "opening": {
-                "start": 0,
-                "length": 159
+                "start": 14,
+                "length": 145
             },
             "intro": {
                 "start": 159,
@@ -3062,8 +3062,8 @@
         },
         "episode 458": {
             "opening": {
-                "start": 0,
-                "length": 159
+                "start": 14,
+                "length": 145
             },
             "intro": {
                 "start": 159,
@@ -3080,8 +3080,8 @@
         },
         "episode 459": {
             "opening": {
-                "start": 0,
-                "length": 164
+                "start": 14,
+                "length": 150
             },
             "intro": {
                 "start": 164,
@@ -3097,8 +3097,8 @@
         },
         "episode 460": {
             "opening": {
-                "start": 0,
-                "length": 164
+                "start": 14,
+                "length": 150
             },
             "intro": {
                 "start": 164,
@@ -3114,8 +3114,8 @@
         },
         "episode 461": {
             "opening": {
-                "start": 0,
-                "length": 164
+                "start": 14,
+                "length": 150
             },
             "intro": {
                 "start": 164,
@@ -3131,8 +3131,8 @@
         },
         "episode 462": {
             "opening": {
-                "start": 0,
-                "length": 164
+                "start": 14,
+                "length": 150
             },
             "intro": {
                 "start": 164,
@@ -3148,8 +3148,8 @@
         },
         "episode 463": {
             "opening": {
-                "start": 0,
-                "length": 164
+                "start": 14,
+                "length": 150
             },
             "intro": {
                 "start": 164,
@@ -3165,8 +3165,8 @@
         },
         "episode 464": {
             "opening": {
-                "start": 0,
-                "length": 164
+                "start": 14,
+                "length": 150
             },
             "intro": {
                 "start": 164,
@@ -3182,8 +3182,8 @@
         },
         "episode 465": {
             "opening": {
-                "start": 0,
-                "length": 164
+                "start": 14,
+                "length": 150
             },
             "intro": {
                 "start": 164,
@@ -3199,8 +3199,8 @@
         },
         "episode 466": {
             "opening": {
-                "start": 0,
-                "length": 164
+                "start": 14,
+                "length": 150
             },
             "intro": {
                 "start": 164,
@@ -3216,8 +3216,8 @@
         },
         "episode 467": {
             "opening": {
-                "start": 0,
-                "length": 164
+                "start": 14,
+                "length": 150
             },
             "intro": {
                 "start": 164,
@@ -3233,8 +3233,8 @@
         },
         "episode 468": {
             "opening": {
-                "start": 0,
-                "length": 164
+                "start": 14,
+                "length": 150
             },
             "intro": {
                 "start": 164,
@@ -3250,8 +3250,8 @@
         },
         "episode 469": {
             "opening": {
-                "start": 0,
-                "length": 164
+                "start": 14,
+                "length": 150
             },
             "intro": {
                 "start": 164,
@@ -3267,8 +3267,8 @@
         },
         "episode 470": {
             "opening": {
-                "start": 0,
-                "length": 164
+                "start": 14,
+                "length": 150
             },
             "intro": {
                 "start": 164,
@@ -3284,8 +3284,8 @@
         },
         "episode 471": {
             "opening": {
-                "start": 0,
-                "length": 164
+                "start": 14,
+                "length": 150
             },
             "intro": {
                 "start": 164,
@@ -3301,8 +3301,8 @@
         },
         "episode 472": {
             "opening": {
-                "start": 0,
-                "length": 164
+                "start": 14,
+                "length": 150
             },
             "intro": {
                 "start": 164,
@@ -3318,8 +3318,8 @@
         },
         "episode 473": {
             "opening": {
-                "start": 0,
-                "length": 164
+                "start": 14,
+                "length": 150
             },
             "intro": {
                 "start": 164,
@@ -3335,8 +3335,8 @@
         },
         "episode 474": {
             "opening": {
-                "start": 0,
-                "length": 164
+                "start": 14,
+                "length": 150
             },
             "intro": {
                 "start": 164,
@@ -3352,8 +3352,8 @@
         },
         "episode 475": {
             "opening": {
-                "start": 0,
-                "length": 164
+                "start": 14,
+                "length": 150
             },
             "intro": {
                 "start": 164,
@@ -3369,8 +3369,8 @@
         },
         "episode 476": {
             "opening": {
-                "start": 0,
-                "length": 164
+                "start": 14,
+                "length": 150
             },
             "intro": {
                 "start": 164,
@@ -3386,8 +3386,8 @@
         },
         "episode 477": {
             "opening": {
-                "start": 0,
-                "length": 164
+                "start": 14,
+                "length": 150
             },
             "intro": {
                 "start": 164,
@@ -3403,8 +3403,8 @@
         },
         "episode 478": {
             "opening": {
-                "start": 0,
-                "length": 164
+                "start": 14,
+                "length": 150
             },
             "intro": {
                 "start": 164,
@@ -3420,8 +3420,8 @@
         },
         "episode 479": {
             "opening": {
-                "start": 0,
-                "length": 164
+                "start": 14,
+                "length": 150
             },
             "intro": {
                 "start": 164,
@@ -3437,8 +3437,8 @@
         },
         "episode 480": {
             "opening": {
-                "start": 0,
-                "length": 164
+                "start": 14,
+                "length": 150
             },
             "intro": {
                 "start": 164,
@@ -3454,8 +3454,8 @@
         },
         "episode 481": {
             "opening": {
-                "start": 0,
-                "length": 164
+                "start": 14,
+                "length": 150
             },
             "intro": {
                 "start": 164,
@@ -3471,8 +3471,8 @@
         },
         "episode 482": {
             "opening": {
-                "start": 0,
-                "length": 164
+                "start": 14,
+                "length": 150
             },
             "intro": {
                 "start": 164,
@@ -3488,8 +3488,8 @@
         },
         "episode 483": {
             "opening": {
-                "start": 0,
-                "length": 164
+                "start": 14,
+                "length": 150
             },
             "intro": {
                 "start": 164,
@@ -3505,8 +3505,8 @@
         },
         "episode 484": {
             "opening": {
-                "start": 0,
-                "length": 164
+                "start": 14,
+                "length": 150
             },
             "intro": {
                 "start": 164,
@@ -3522,8 +3522,8 @@
         },
         "episode 485": {
             "opening": {
-                "start": 0,
-                "length": 164
+                "start": 14,
+                "length": 150
             },
             "intro": {
                 "start": 164,
@@ -3539,8 +3539,8 @@
         },
         "episode 486": {
             "opening": {
-                "start": 0,
-                "length": 164
+                "start": 14,
+                "length": 150
             },
             "intro": {
                 "start": 164,
@@ -3556,8 +3556,8 @@
         },
         "episode 487": {
             "opening": {
-                "start": 0,
-                "length": 164
+                "start": 14,
+                "length": 150
             },
             "intro": {
                 "start": 164,
@@ -3573,8 +3573,8 @@
         },
         "episode 488": {
             "opening": {
-                "start": 0,
-                "length": 164
+                "start": 14,
+                "length": 150
             },
             "intro": {
                 "start": 164,
@@ -3590,8 +3590,8 @@
         },
         "episode 489": {
             "opening": {
-                "start": 0,
-                "length": 164
+                "start": 14,
+                "length": 150
             },
             "intro": {
                 "start": 164,
@@ -3607,8 +3607,8 @@
         },
         "episode 490": {
             "opening": {
-                "start": 0,
-                "length": 164
+                "start": 14,
+                "length": 150
             },
             "intro": {
                 "start": 164,
@@ -3624,8 +3624,8 @@
         },
         "episode 491": {
             "opening": {
-                "start": 0,
-                "length": 164
+                "start": 14,
+                "length": 150
             },
             "intro": {
                 "start": 164,
@@ -3641,8 +3641,8 @@
         },
         "episode 492": {
             "opening": {
-                "start": 0,
-                "length": 164
+                "start": 14,
+                "length": 150
             },
             "intro": {
                 "start": 164,
@@ -3659,8 +3659,8 @@
         },
         "episode 493": {
             "opening": {
-                "start": 0,
-                "length": 164
+                "start": 14,
+                "length": 150
             },
             "intro": {
                 "start": 164,
@@ -3676,8 +3676,8 @@
         },
         "episode 494": {
             "opening": {
-                "start": 0,
-                "length": 164
+                "start": 14,
+                "length": 150
             },
             "intro": {
                 "start": 164,
@@ -3693,8 +3693,8 @@
         },
         "episode 495": {
             "opening": {
-                "start": 0,
-                "length": 164
+                "start": 14,
+                "length": 150
             },
             "intro": {
                 "start": 164,
@@ -3710,8 +3710,8 @@
         },
         "episode 496": {
             "opening": {
-                "start": 0,
-                "length": 164
+                "start": 14,
+                "length": 150
             },
             "intro": {
                 "start": 164,
@@ -3727,8 +3727,8 @@
         },
         "episode 497": {
             "opening": {
-                "start": 0,
-                "length": 164
+                "start": 14,
+                "length": 150
             },
             "intro": {
                 "start": 164,
@@ -3744,8 +3744,8 @@
         },
         "episode 498": {
             "opening": {
-                "start": 0,
-                "length": 164
+                "start": 14,
+                "length": 150
             },
             "intro": {
                 "start": 164,
@@ -3761,8 +3761,8 @@
         },
         "episode 499": {
             "opening": {
-                "start": 0,
-                "length": 164
+                "start": 14,
+                "length": 150
             },
             "intro": {
                 "start": 164,
@@ -3778,8 +3778,8 @@
         },
         "episode 500": {
             "opening": {
-                "start": 0,
-                "length": 164
+                "start": 14,
+                "length": 150
             },
             "intro": {
                 "start": 164,
@@ -3795,8 +3795,8 @@
         },
         "episode 501": {
             "opening": {
-                "start": 0,
-                "length": 164
+                "start": 14,
+                "length": 150
             },
             "intro": {
                 "start": 164,
@@ -3812,8 +3812,8 @@
         },
         "episode 502": {
             "opening": {
-                "start": 0,
-                "length": 164
+                "start": 14,
+                "length": 150
             },
             "intro": {
                 "start": 164,
@@ -3829,8 +3829,8 @@
         },
         "episode 503": {
             "opening": {
-                "start": 0,
-                "length": 164
+                "start": 14,
+                "length": 150
             },
             "intro": {
                 "start": 164,
@@ -3846,8 +3846,8 @@
         },
         "episode 504": {
             "opening": {
-                "start": 0,
-                "length": 164
+                "start": 14,
+                "length": 150
             },
             "intro": {
                 "start": 164,
@@ -3863,8 +3863,8 @@
         },
         "episode 505": {
             "opening": {
-                "start": 0,
-                "length": 164
+                "start": 14,
+                "length": 150
             },
             "intro": {
                 "start": 164,
@@ -3880,8 +3880,8 @@
         },
         "episode 506": {
             "opening": {
-                "start": 0,
-                "length": 164
+                "start": 14,
+                "length": 150
             },
             "intro": {
                 "start": 164,
@@ -3897,8 +3897,8 @@
         },
         "episodes 507-508": {
             "opening": {
-                "start": 0,
-                "length": 164
+                "start": 14,
+                "length": 150
             },
             "intro": {
                 "start": 164,
@@ -3914,8 +3914,8 @@
         },
         "episode 509": {
             "opening": {
-                "start": 0,
-                "length": 164
+                "start": 14,
+                "length": 150
             },
             "intro": {
                 "start": 164,
@@ -3931,8 +3931,8 @@
         },
         "episode 510": {
             "opening": {
-                "start": 0,
-                "length": 164
+                "start": 14,
+                "length": 150
             },
             "intro": {
                 "start": 164,
@@ -3948,8 +3948,8 @@
         },
         "episode 511": {
             "opening": {
-                "start": 0,
-                "length": 164
+                "start": 14,
+                "length": 150
             },
             "intro": {
                 "start": 164,
@@ -3965,8 +3965,8 @@
         },
         "episode 512": {
             "opening": {
-                "start": 0,
-                "length": 164
+                "start": 14,
+                "length": 150
             },
             "intro": {
                 "start": 164,
@@ -3982,8 +3982,8 @@
         },
         "episode 513": {
             "opening": {
-                "start": 0,
-                "length": 164
+                "start": 14,
+                "length": 150
             },
             "intro": {
                 "start": 164,
@@ -3999,8 +3999,8 @@
         },
         "episode 514": {
             "opening": {
-                "start": 0,
-                "length": 164
+                "start": 14,
+                "length": 150
             },
             "intro": {
                 "start": 164,
@@ -4016,8 +4016,8 @@
         },
         "episode 515": {
             "opening": {
-                "start": 0,
-                "length": 164
+                "start": 14,
+                "length": 150
             },
             "intro": {
                 "start": 164,
@@ -4033,8 +4033,8 @@
         },
         "episode 516": {
             "opening": {
-                "start": 0,
-                "length": 164
+                "start": 14,
+                "length": 150
             },
             "intro": {
                 "start": 164,
@@ -4050,8 +4050,8 @@
         },
         "episode 517": {
             "opening": {
-                "start": 0,
-                "length": 164
+                "start": 14,
+                "length": 150
             },
             "preview": {
                 "length": 40
@@ -4059,8 +4059,8 @@
         },
         "episode 518": {
             "opening": {
-                "start": 0,
-                "length": 164
+                "start": 14,
+                "length": 150
             },
             "preview": {
                 "length": 40
@@ -4072,8 +4072,8 @@
         },
         "episode 519": {
             "opening": {
-                "start": 0,
-                "length": 164
+                "start": 14,
+                "length": 150
             },
             "preview": {
                 "length": 40
@@ -4085,8 +4085,8 @@
         },
         "episode 520": {
             "opening": {
-                "start": 0,
-                "length": 164
+                "start": 14,
+                "length": 150
             },
             "preview": {
                 "length": 40
@@ -4098,8 +4098,8 @@
         },
         "episode 521": {
             "opening": {
-                "start": 0,
-                "length": 164
+                "start": 14,
+                "length": 150
             },
             "preview": {
                 "length": 40
@@ -4111,8 +4111,8 @@
         },
         "episode 522": {
             "opening": {
-                "start": 0,
-                "length": 164
+                "start": 14,
+                "length": 150
             },
             "preview": {
                 "length": 40
@@ -4124,8 +4124,8 @@
         },
         "episode 523": {
             "opening": {
-                "start": 0,
-                "length": 164
+                "start": 14,
+                "length": 150
             },
             "intro": {
                 "start": 164,
@@ -4141,8 +4141,8 @@
         },
         "episode 524": {
             "opening": {
-                "start": 0,
-                "length": 164
+                "start": 14,
+                "length": 150
             },
             "intro": {
                 "start": 164,
@@ -4158,8 +4158,8 @@
         },
         "episode 525": {
             "opening": {
-                "start": 0,
-                "length": 164
+                "start": 14,
+                "length": 150
             },
             "intro": {
                 "start": 164,
@@ -4175,8 +4175,8 @@
         },
         "episode 526": {
             "opening": {
-                "start": 0,
-                "length": 164
+                "start": 14,
+                "length": 150
             },
             "intro": {
                 "start": 164,
@@ -4192,8 +4192,8 @@
         },
         "episode 527": {
             "opening": {
-                "start": 0,
-                "length": 164
+                "start": 14,
+                "length": 150
             },
             "intro": {
                 "start": 164,
@@ -4209,8 +4209,8 @@
         },
         "episode 528": {
             "opening": {
-                "start": 0,
-                "length": 164
+                "start": 14,
+                "length": 150
             },
             "intro": {
                 "start": 164,
@@ -4226,8 +4226,8 @@
         },
         "episode 529": {
             "opening": {
-                "start": 0,
-                "length": 164
+                "start": 14,
+                "length": 150
             },
             "intro": {
                 "start": 164,
@@ -4243,8 +4243,8 @@
         },
         "episode 530": {
             "opening": {
-                "start": 0,
-                "length": 164
+                "start": 14,
+                "length": 150
             },
             "intro": {
                 "start": 164,
@@ -4260,8 +4260,8 @@
         },
         "episode 531": {
             "opening": {
-                "start": 0,
-                "length": 164
+                "start": 14,
+                "length": 150
             },
             "intro": {
                 "start": 164,
@@ -4277,8 +4277,8 @@
         },
         "episode 532": {
             "opening": {
-                "start": 0,
-                "length": 164
+                "start": 14,
+                "length": 150
             },
             "intro": {
                 "start": 164,
@@ -4294,8 +4294,8 @@
         },
         "episode 533": {
             "opening": {
-                "start": 0,
-                "length": 164
+                "start": 14,
+                "length": 150
             },
             "intro": {
                 "start": 164,
@@ -4311,8 +4311,8 @@
         },
         "episode 534": {
             "opening": {
-                "start": 0,
-                "length": 164
+                "start": 14,
+                "length": 150
             },
             "intro": {
                 "start": 164,
@@ -4328,8 +4328,8 @@
         },
         "episode 535": {
             "opening": {
-                "start": 0,
-                "length": 164
+                "start": 14,
+                "length": 150
             },
             "intro": {
                 "start": 164,
@@ -4345,8 +4345,8 @@
         },
         "episode 536": {
             "opening": {
-                "start": 0,
-                "length": 164
+                "start": 14,
+                "length": 150
             },
             "intro": {
                 "start": 164,
@@ -4362,8 +4362,8 @@
         },
         "episodes 537-538": {
             "opening": {
-                "start": 0,
-                "length": 164
+                "start": 14,
+                "length": 150
             },
             "intro": {
                 "start": 164,
@@ -4379,8 +4379,8 @@
         },
         "episode 539": {
             "opening": {
-                "start": 0,
-                "length": 164
+                "start": 14,
+                "length": 150
             },
             "intro": {
                 "start": 164,
@@ -4396,8 +4396,8 @@
         },
         "episode 540": {
             "opening": {
-                "start": 0,
-                "length": 164
+                "start": 14,
+                "length": 150
             },
             "intro": {
                 "start": 164,
@@ -4413,8 +4413,8 @@
         },
         "episode 541": {
             "opening": {
-                "start": 0,
-                "length": 164
+                "start": 14,
+                "length": 150
             },
             "intro": {
                 "start": 164,
@@ -4430,8 +4430,8 @@
         },
         "episode 542": {
             "opening": {
-                "start": 0,
-                "length": 164
+                "start": 14,
+                "length": 150
             },
             "intro": {
                 "start": 164,
@@ -4448,8 +4448,8 @@
         },
         "episode 543": {
             "opening": {
-                "start": 0,
-                "length": 164
+                "start": 14,
+                "length": 150
             },
             "intro": {
                 "start": 164,
@@ -4465,8 +4465,8 @@
         },
         "episode 544": {
             "opening": {
-                "start": 0,
-                "length": 164
+                "start": 14,
+                "length": 150
             },
             "intro": {
                 "start": 164,
@@ -4482,8 +4482,8 @@
         },
         "episode 545": {
             "opening": {
-                "start": 0,
-                "length": 164
+                "start": 14,
+                "length": 150
             },
             "intro": {
                 "start": 164,
@@ -4499,8 +4499,8 @@
         },
         "episode 546": {
             "opening": {
-                "start": 0,
-                "length": 164
+                "start": 14,
+                "length": 150
             },
             "intro": {
                 "start": 164,
@@ -4516,8 +4516,8 @@
         },
         "episode 547": {
             "opening": {
-                "start": 0,
-                "length": 164
+                "start": 14,
+                "length": 150
             },
             "intro": {
                 "start": 164,
@@ -4533,8 +4533,8 @@
         },
         "episode 548": {
             "opening": {
-                "start": 0,
-                "length": 164
+                "start": 14,
+                "length": 150
             },
             "intro": {
                 "start": 164,
@@ -4550,8 +4550,8 @@
         },
         "episode 549": {
             "opening": {
-                "start": 0,
-                "length": 164
+                "start": 14,
+                "length": 150
             },
             "intro": {
                 "start": 164,
@@ -4567,8 +4567,8 @@
         },
         "episode 550": {
             "opening": {
-                "start": 0,
-                "length": 164
+                "start": 14,
+                "length": 150
             },
             "intro": {
                 "start": 164,
@@ -4584,8 +4584,8 @@
         },
         "episode 551": {
             "opening": {
-                "start": 0,
-                "length": 164
+                "start": 14,
+                "length": 150
             },
             "intro": {
                 "start": 164,
@@ -4601,8 +4601,8 @@
         },
         "episode 552": {
             "opening": {
-                "start": 0,
-                "length": 164
+                "start": 14,
+                "length": 150
             },
             "intro": {
                 "start": 164,
@@ -4618,8 +4618,8 @@
         },
         "episodes 553-554": {
             "opening": {
-                "start": 0,
-                "length": 164
+                "start": 14,
+                "length": 150
             },
             "intro": {
                 "start": 164,
@@ -4635,8 +4635,8 @@
         },
         "episode 555": {
             "opening": {
-                "start": 0,
-                "length": 164
+                "start": 14,
+                "length": 150
             },
             "intro": {
                 "start": 164,
@@ -4652,8 +4652,8 @@
         },
         "episode 556": {
             "opening": {
-                "start": 0,
-                "length": 164
+                "start": 14,
+                "length": 150
             },
             "intro": {
                 "start": 164,
@@ -4669,8 +4669,8 @@
         },
         "episode 557": {
             "opening": {
-                "start": 0,
-                "length": 164
+                "start": 14,
+                "length": 150
             },
             "intro": {
                 "start": 164,
@@ -4686,8 +4686,8 @@
         },
         "episode 558": {
             "opening": {
-                "start": 0,
-                "length": 164
+                "start": 14,
+                "length": 150
             },
             "intro": {
                 "start": 164,
@@ -4703,8 +4703,8 @@
         },
         "episode 559": {
             "opening": {
-                "start": 0,
-                "length": 164
+                "start": 14,
+                "length": 150
             },
             "intro": {
                 "start": 164,
@@ -4720,8 +4720,8 @@
         },
         "episode 560": {
             "opening": {
-                "start": 0,
-                "length": 164
+                "start": 14,
+                "length": 150
             },
             "intro": {
                 "start": 164,
@@ -4737,8 +4737,8 @@
         },
         "episode 561": {
             "opening": {
-                "start": 0,
-                "length": 164
+                "start": 14,
+                "length": 150
             },
             "intro": {
                 "start": 164,
@@ -4754,8 +4754,8 @@
         },
         "episode 562": {
             "opening": {
-                "start": 0,
-                "length": 164
+                "start": 14,
+                "length": 150
             },
             "intro": {
                 "start": 164,
@@ -4771,8 +4771,8 @@
         },
         "episode 563": {
             "opening": {
-                "start": 0,
-                "length": 164
+                "start": 14,
+                "length": 150
             },
             "intro": {
                 "start": 164,
@@ -4788,8 +4788,8 @@
         },
         "episode 564": {
             "opening": {
-                "start": 0,
-                "length": 164
+                "start": 14,
+                "length": 150
             },
             "intro": {
                 "start": 164,
@@ -4805,8 +4805,8 @@
         },
         "episode 565": {
             "opening": {
-                "start": 0,
-                "length": 164
+                "start": 14,
+                "length": 150
             },
             "intro": {
                 "start": 164,
@@ -4822,8 +4822,8 @@
         },
         "episode 566": {
             "opening": {
-                "start": 0,
-                "length": 164
+                "start": 14,
+                "length": 150
             },
             "intro": {
                 "start": 164,
@@ -4839,8 +4839,8 @@
         },
         "episode 567": {
             "opening": {
-                "start": 0,
-                "length": 164
+                "start": 14,
+                "length": 150
             },
             "intro": {
                 "start": 164,
@@ -4856,8 +4856,8 @@
         },
         "episode 568": {
             "opening": {
-                "start": 0,
-                "length": 164
+                "start": 14,
+                "length": 150
             },
             "intro": {
                 "start": 164,
@@ -4873,8 +4873,8 @@
         },
         "episode 569": {
             "opening": {
-                "start": 0,
-                "length": 164
+                "start": 14,
+                "length": 150
             },
             "intro": {
                 "start": 164,
@@ -4890,8 +4890,8 @@
         },
         "episode 570": {
             "opening": {
-                "start": 0,
-                "length": 164
+                "start": 14,
+                "length": 150
             },
             "intro": {
                 "start": 164,
@@ -4907,8 +4907,8 @@
         },
         "episode 571": {
             "opening": {
-                "start": 0,
-                "length": 164
+                "start": 14,
+                "length": 150
             },
             "intro": {
                 "start": 164,
@@ -4924,8 +4924,8 @@
         },
         "episode 572": {
             "opening": {
-                "start": 0,
-                "length": 164
+                "start": 14,
+                "length": 150
             },
             "intro": {
                 "start": 164,
@@ -4941,8 +4941,8 @@
         },
         "episode 573": {
             "opening": {
-                "start": 0,
-                "length": 164
+                "start": 14,
+                "length": 150
             },
             "intro": {
                 "start": 164,
@@ -4958,8 +4958,8 @@
         },
         "episode 574": {
             "opening": {
-                "start": 0,
-                "length": 164
+                "start": 14,
+                "length": 150
             },
             "intro": {
                 "start": 164,
@@ -4975,8 +4975,8 @@
         },
         "episode 575": {
             "opening": {
-                "start": 0,
-                "length": 164
+                "start": 14,
+                "length": 150
             },
             "intro": {
                 "start": 164,
@@ -4993,8 +4993,8 @@
         },
         "episode 576": {
             "opening": {
-                "start": 0,
-                "length": 164
+                "start": 14,
+                "length": 150
             },
             "intro": {
                 "start": 164,
@@ -5011,8 +5011,8 @@
         },
         "episode 577": {
             "opening": {
-                "start": 0,
-                "length": 164
+                "start": 14,
+                "length": 150
             },
             "intro": {
                 "start": 164,
@@ -5029,8 +5029,8 @@
         },
         "episode 578": {
             "opening": {
-                "start": 0,
-                "length": 164
+                "start": 14,
+                "length": 150
             },
             "intro": {
                 "start": 164,
@@ -5047,8 +5047,8 @@
         },
         "episode 579": {
             "opening": {
-                "start": 0,
-                "length": 164
+                "start": 14,
+                "length": 150
             },
             "intro": {
                 "start": 164,
@@ -5064,8 +5064,8 @@
         },
         "episode 580": {
             "opening": {
-                "start": 0,
-                "length": 164
+                "start": 14,
+                "length": 150
             },
             "intro": {
                 "start": 164,
@@ -5081,8 +5081,8 @@
         },
         "episode 581": {
             "opening": {
-                "start": 0,
-                "length": 164
+                "start": 14,
+                "length": 150
             },
             "intro": {
                 "start": 164,
@@ -5098,8 +5098,8 @@
         },
         "episode 582": {
             "opening": {
-                "start": 0,
-                "length": 164
+                "start": 14,
+                "length": 150
             },
             "intro": {
                 "start": 164,
@@ -5115,8 +5115,8 @@
         },
         "episode 583": {
             "opening": {
-                "start": 0,
-                "length": 164
+                "start": 14,
+                "length": 150
             },
             "intro": {
                 "start": 164,
@@ -5132,8 +5132,8 @@
         },
         "episode 584": {
             "opening": {
-                "start": 0,
-                "length": 164
+                "start": 14,
+                "length": 150
             },
             "intro": {
                 "start": 164,
@@ -5149,8 +5149,8 @@
         },
         "episode 585": {
             "opening": {
-                "start": 0,
-                "length": 164
+                "start": 14,
+                "length": 150
             },
             "intro": {
                 "start": 164,
@@ -5166,8 +5166,8 @@
         },
         "episode 586": {
             "opening": {
-                "start": 0,
-                "length": 164
+                "start": 14,
+                "length": 150
             },
             "intro": {
                 "start": 164,
@@ -5183,8 +5183,8 @@
         },
         "episode 587": {
             "opening": {
-                "start": 0,
-                "length": 164
+                "start": 14,
+                "length": 150
             },
             "intro": {
                 "start": 164,
@@ -5200,8 +5200,8 @@
         },
         "episode 588": {
             "opening": {
-                "start": 0,
-                "length": 164
+                "start": 14,
+                "length": 150
             },
             "intro": {
                 "start": 164,
@@ -5217,8 +5217,8 @@
         },
         "episode 589": {
             "opening": {
-                "start": 0,
-                "length": 164
+                "start": 14,
+                "length": 150
             },
             "intro": {
                 "start": 164,
@@ -5234,8 +5234,8 @@
         },
         "episode 590": {
             "opening": {
-                "start": 0,
-                "length": 164
+                "start": 14,
+                "length": 150
             },
             "intro": {
                 "start": 164,
@@ -5247,8 +5247,8 @@
         },
         "episode 591": {
             "opening": {
-                "start": 0,
-                "length": 164
+                "start": 14,
+                "length": 150
             },
             "intro": {
                 "start": 164,
@@ -5264,8 +5264,8 @@
         },
         "episode 592": {
             "opening": {
-                "start": 0,
-                "length": 164
+                "start": 14,
+                "length": 150
             },
             "intro": {
                 "start": 164,
@@ -5281,8 +5281,8 @@
         },
         "episode 593": {
             "opening": {
-                "start": 0,
-                "length": 164
+                "start": 14,
+                "length": 150
             },
             "intro": {
                 "start": 164,
@@ -5298,8 +5298,8 @@
         },
         "episode 594": {
             "opening": {
-                "start": 0,
-                "length": 164
+                "start": 14,
+                "length": 150
             },
             "intro": {
                 "start": 164,
@@ -5315,8 +5315,8 @@
         },
         "episode 595": {
             "opening": {
-                "start": 0,
-                "length": 164
+                "start": 14,
+                "length": 150
             },
             "intro": {
                 "start": 164,
@@ -5332,8 +5332,8 @@
         },
         "episode 596": {
             "opening": {
-                "start": 0,
-                "length": 164
+                "start": 14,
+                "length": 150
             },
             "intro": {
                 "start": 164,
@@ -5349,8 +5349,8 @@
         },
         "episode 597": {
             "opening": {
-                "start": 0,
-                "length": 164
+                "start": 14,
+                "length": 150
             },
             "intro": {
                 "start": 164,
@@ -5366,8 +5366,8 @@
         },
         "episode 598": {
             "opening": {
-                "start": 0,
-                "length": 164
+                "start": 14,
+                "length": 150
             },
             "intro": {
                 "start": 164,
@@ -5383,8 +5383,8 @@
         },
         "episode 599": {
             "opening": {
-                "start": 0,
-                "length": 164
+                "start": 14,
+                "length": 150
             },
             "intro": {
                 "start": 164,
@@ -5400,8 +5400,8 @@
         },
         "episode 600": {
             "opening": {
-                "start": 0,
-                "length": 164
+                "start": 14,
+                "length": 150
             },
             "intro": {
                 "start": 164,
@@ -5417,8 +5417,8 @@
         },
         "episode 601": {
             "opening": {
-                "start": 0,
-                "length": 164
+                "start": 14,
+                "length": 150
             },
             "intro": {
                 "start": 164,
@@ -5434,8 +5434,8 @@
         },
         "episode 602": {
             "opening": {
-                "start": 0,
-                "length": 164
+                "start": 14,
+                "length": 150
             },
             "intro": {
                 "start": 164,
@@ -5451,8 +5451,8 @@
         },
         "episode 603": {
             "opening": {
-                "start": 0,
-                "length": 164
+                "start": 14,
+                "length": 150
             },
             "intro": {
                 "start": 164,
@@ -5468,8 +5468,8 @@
         },
         "episode 604": {
             "opening": {
-                "start": 0,
-                "length": 164
+                "start": 14,
+                "length": 150
             },
             "intro": {
                 "start": 164,
@@ -5485,8 +5485,8 @@
         },
         "episode 605": {
             "opening": {
-                "start": 0,
-                "length": 164
+                "start": 14,
+                "length": 150
             },
             "intro": {
                 "start": 164,
@@ -5502,8 +5502,8 @@
         },
         "episode 606": {
             "opening": {
-                "start": 0,
-                "length": 164
+                "start": 14,
+                "length": 150
             },
             "intro": {
                 "start": 164,
@@ -5519,8 +5519,8 @@
         },
         "episode 607": {
             "opening": {
-                "start": 0,
-                "length": 164
+                "start": 14,
+                "length": 150
             },
             "intro": {
                 "start": 164,
@@ -5536,8 +5536,8 @@
         },
         "episode 608": {
             "opening": {
-                "start": 0,
-                "length": 164
+                "start": 14,
+                "length": 150
             },
             "intro": {
                 "start": 164,
@@ -5553,8 +5553,8 @@
         },
         "episode 609": {
             "opening": {
-                "start": 0,
-                "length": 164
+                "start": 14,
+                "length": 150
             },
             "intro": {
                 "start": 164,
@@ -5570,8 +5570,8 @@
         },
         "episode 610": {
             "opening": {
-                "start": 0,
-                "length": 164
+                "start": 14,
+                "length": 150
             },
             "intro": {
                 "start": 164,
@@ -5587,8 +5587,8 @@
         },
         "episode 611": {
             "opening": {
-                "start": 0,
-                "length": 164
+                "start": 14,
+                "length": 150
             },
             "intro": {
                 "start": 164,
@@ -5604,8 +5604,8 @@
         },
         "episode 612": {
             "opening": {
-                "start": 0,
-                "length": 164
+                "start": 14,
+                "length": 150
             },
             "intro": {
                 "start": 164,
@@ -5621,8 +5621,8 @@
         },
         "episode 613": {
             "opening": {
-                "start": 0,
-                "length": 164
+                "start": 14,
+                "length": 150
             },
             "intro": {
                 "start": 164,
@@ -5638,8 +5638,8 @@
         },
         "episode 614": {
             "opening": {
-                "start": 0,
-                "length": 164
+                "start": 14,
+                "length": 150
             },
             "intro": {
                 "start": 164,
@@ -5655,8 +5655,8 @@
         },
         "episode 615": {
             "opening": {
-                "start": 0,
-                "length": 164
+                "start": 14,
+                "length": 150
             },
             "intro": {
                 "start": 164,
@@ -5672,8 +5672,8 @@
         },
         "episode 616": {
             "opening": {
-                "start": 0,
-                "length": 164
+                "start": 14,
+                "length": 150
             },
             "intro": {
                 "start": 164,
@@ -5689,8 +5689,8 @@
         },
         "episode 617": {
             "opening": {
-                "start": 0,
-                "length": 164
+                "start": 14,
+                "length": 150
             },
             "intro": {
                 "start": 164,
@@ -5706,8 +5706,8 @@
         },
         "episode 618": {
             "opening": {
-                "start": 0,
-                "length": 164
+                "start": 14,
+                "length": 150
             },
             "intro": {
                 "start": 164,
@@ -5723,8 +5723,8 @@
         },
         "episode 619": {
             "opening": {
-                "start": 0,
-                "length": 164
+                "start": 14,
+                "length": 150
             },
             "intro": {
                 "start": 164,
@@ -5737,8 +5737,8 @@
         },
         "episode 620": {
             "opening": {
-                "start": 0,
-                "length": 164
+                "start": 14,
+                "length": 150
             },
             "intro": {
                 "start": 164,
@@ -5751,8 +5751,8 @@
         },
         "episode 621": {
             "opening": {
-                "start": 0,
-                "length": 164
+                "start": 14,
+                "length": 150
             },
             "intro": {
                 "start": 164,
@@ -5765,8 +5765,8 @@
         },
         "episode 622": {
             "opening": {
-                "start": 0,
-                "length": 164
+                "start": 14,
+                "length": 150
             },
             "intro": {
                 "start": 164,
@@ -5779,8 +5779,8 @@
         },
         "episode 623": {
             "opening": {
-                "start": 0,
-                "length": 164
+                "start": 14,
+                "length": 150
             },
             "intro": {
                 "start": 164,
@@ -5793,8 +5793,8 @@
         },
         "episode 624": {
             "opening": {
-                "start": 0,
-                "length": 164
+                "start": 14,
+                "length": 150
             },
             "intro": {
                 "start": 164,
@@ -5807,8 +5807,8 @@
         },
         "episode 625": {
             "opening": {
-                "start": 0,
-                "length": 164
+                "start": 14,
+                "length": 150
             },
             "intro": {
                 "start": 164,
@@ -5821,8 +5821,8 @@
         },
         "episode 626": {
             "opening": {
-                "start": 0,
-                "length": 164
+                "start": 14,
+                "length": 150
             },
             "intro": {
                 "start": 164,
@@ -5836,8 +5836,8 @@
         },
         "episode 627": {
             "opening": {
-                "start": 0,
-                "length": 164
+                "start": 14,
+                "length": 150
             },
             "intro": {
                 "start": 164,
@@ -5851,8 +5851,8 @@
         },
         "episode 628": {
             "opening": {
-                "start": 0,
-                "length": 164
+                "start": 14,
+                "length": 150
             },
             "intro": {
                 "start": 164,
@@ -5866,8 +5866,8 @@
         },
         "episode 629": {
             "opening": {
-                "start": 0,
-                "length": 164
+                "start": 14,
+                "length": 150
             },
             "intro": {
                 "start": 164,
@@ -5880,8 +5880,8 @@
         },
         "episode 630": {
             "opening": {
-                "start": 0,
-                "length": 164
+                "start": 14,
+                "length": 150
             },
             "intro": {
                 "start": 164,
@@ -5894,8 +5894,8 @@
         },
         "episode 631": {
             "opening": {
-                "start": 0,
-                "length": 164
+                "start": 14,
+                "length": 150
             },
             "intro": {
                 "start": 164,
@@ -5908,8 +5908,8 @@
         },
         "episode 632": {
             "opening": {
-                "start": 0,
-                "length": 164
+                "start": 14,
+                "length": 150
             },
             "intro": {
                 "start": 164,
@@ -5922,8 +5922,8 @@
         },
         "episode 633": {
             "opening": {
-                "start": 0,
-                "length": 164
+                "start": 14,
+                "length": 150
             },
             "intro": {
                 "start": 164,
@@ -5936,8 +5936,8 @@
         },
         "episode 634": {
             "opening": {
-                "start": 0,
-                "length": 164
+                "start": 14,
+                "length": 150
             },
             "intro": {
                 "start": 164,
@@ -5950,8 +5950,8 @@
         },
         "episode 635": {
             "opening": {
-                "start": 0,
-                "length": 164
+                "start": 14,
+                "length": 150
             },
             "intro": {
                 "start": 164,
@@ -5964,8 +5964,8 @@
         },
         "episode 636": {
             "opening": {
-                "start": 0,
-                "length": 164
+                "start": 14,
+                "length": 150
             },
             "intro": {
                 "start": 164,
@@ -5978,8 +5978,8 @@
         },
         "episode 637": {
             "opening": {
-                "start": 0,
-                "length": 164
+                "start": 14,
+                "length": 150
             },
             "intro": {
                 "start": 164,
@@ -5992,8 +5992,8 @@
         },
         "episode 638": {
             "opening": {
-                "start": 0,
-                "length": 164
+                "start": 14,
+                "length": 150
             },
             "intro": {
                 "start": 164,
@@ -6006,8 +6006,8 @@
         },
         "episode 639": {
             "opening": {
-                "start": 0,
-                "length": 164
+                "start": 14,
+                "length": 150
             },
             "intro": {
                 "start": 164,
@@ -6020,8 +6020,8 @@
         },
         "episode 640": {
             "opening": {
-                "start": 0,
-                "length": 164
+                "start": 14,
+                "length": 150
             },
             "intro": {
                 "start": 164,
@@ -6034,8 +6034,8 @@
         },
         "episode 641": {
             "opening": {
-                "start": 0,
-                "length": 164
+                "start": 14,
+                "length": 150
             },
             "intro": {
                 "start": 164,
@@ -6048,8 +6048,8 @@
         },
         "episode 642": {
             "opening": {
-                "start": 0,
-                "length": 164
+                "start": 14,
+                "length": 150
             },
             "intro": {
                 "start": 164,
@@ -6062,8 +6062,8 @@
         },
         "episode 643": {
             "opening": {
-                "start": 0,
-                "length": 164
+                "start": 14,
+                "length": 150
             },
             "intro": {
                 "start": 164,
@@ -6076,8 +6076,8 @@
         },
         "episode 644": {
             "opening": {
-                "start": 0,
-                "length": 164
+                "start": 14,
+                "length": 150
             },
             "intro": {
                 "start": 164,
@@ -6090,8 +6090,8 @@
         },
         "episode 645": {
             "opening": {
-                "start": 0,
-                "length": 164
+                "start": 14,
+                "length": 150
             },
             "intro": {
                 "start": 164,
@@ -6104,8 +6104,8 @@
         },
         "episode 646": {
             "opening": {
-                "start": 0,
-                "length": 164
+                "start": 14,
+                "length": 150
             },
             "intro": {
                 "start": 164,
@@ -6118,8 +6118,8 @@
         },
         "episode 647": {
             "opening": {
-                "start": 0,
-                "length": 164
+                "start": 14,
+                "length": 150
             },
             "intro": {
                 "start": 164,
@@ -6132,8 +6132,8 @@
         },
         "episode 648": {
             "opening": {
-                "start": 0,
-                "length": 164
+                "start": 14,
+                "length": 150
             },
             "intro": {
                 "start": 164,
@@ -6146,8 +6146,8 @@
         },
         "episode 649": {
             "opening": {
-                "start": 0,
-                "length": 164
+                "start": 14,
+                "length": 150
             },
             "intro": {
                 "start": 164,
@@ -6160,8 +6160,8 @@
         },
         "episode 650": {
             "opening": {
-                "start": 0,
-                "length": 164
+                "start": 14,
+                "length": 150
             },
             "intro": {
                 "start": 164,
@@ -6174,8 +6174,8 @@
         },
         "episodes 651-652": {
             "opening": {
-                "start": 0,
-                "length": 164
+                "start": 14,
+                "length": 150
             },
             "intro": {
                 "start": 164,
@@ -6188,8 +6188,8 @@
         },
         "episode 653": {
             "opening": {
-                "start": 0,
-                "length": 164
+                "start": 14,
+                "length": 150
             },
             "intro": {
                 "start": 164,
@@ -6202,8 +6202,8 @@
         },
         "episode 654": {
             "opening": {
-                "start": 0,
-                "length": 164
+                "start": 14,
+                "length": 150
             },
             "intro": {
                 "start": 164,
@@ -6216,8 +6216,8 @@
         },
         "episode 655": {
             "opening": {
-                "start": 0,
-                "length": 164
+                "start": 14,
+                "length": 150
             },
             "intro": {
                 "start": 164,
@@ -6230,8 +6230,8 @@
         },
         "episode 656": {
             "opening": {
-                "start": 0,
-                "length": 164
+                "start": 14,
+                "length": 150
             },
             "intro": {
                 "start": 164,
@@ -6244,8 +6244,8 @@
         },
         "episode 657": {
             "opening": {
-                "start": 0,
-                "length": 164
+                "start": 14,
+                "length": 150
             },
             "intro": {
                 "start": 164,
@@ -6258,8 +6258,8 @@
         },
         "episode 658": {
             "opening": {
-                "start": 0,
-                "length": 164
+                "start": 14,
+                "length": 150
             },
             "intro": {
                 "start": 164,
@@ -6272,8 +6272,8 @@
         },
         "episode 659": {
             "opening": {
-                "start": 0,
-                "length": 164
+                "start": 14,
+                "length": 150
             },
             "intro": {
                 "start": 164,
@@ -6286,8 +6286,8 @@
         },
         "episode 660": {
             "opening": {
-                "start": 0,
-                "length": 164
+                "start": 14,
+                "length": 150
             },
             "intro": {
                 "start": 164,
@@ -6300,8 +6300,8 @@
         },
         "episode 661": {
             "opening": {
-                "start": 0,
-                "length": 164
+                "start": 14,
+                "length": 150
             },
             "intro": {
                 "start": 164,
@@ -6314,8 +6314,8 @@
         },
         "episode 662": {
             "opening": {
-                "start": 0,
-                "length": 164
+                "start": 14,
+                "length": 150
             },
             "intro": {
                 "start": 164,
@@ -6328,8 +6328,8 @@
         },
         "episode 663": {
             "opening": {
-                "start": 0,
-                "length": 164
+                "start": 14,
+                "length": 150
             },
             "intro": {
                 "start": 164,
@@ -6342,8 +6342,8 @@
         },
         "episode 664": {
             "opening": {
-                "start": 0,
-                "length": 164
+                "start": 14,
+                "length": 150
             },
             "intro": {
                 "start": 164,
@@ -6356,8 +6356,8 @@
         },
         "episode 665": {
             "opening": {
-                "start": 0,
-                "length": 164
+                "start": 14,
+                "length": 150
             },
             "intro": {
                 "start": 164,
@@ -6370,8 +6370,8 @@
         },
         "episode 666": {
             "opening": {
-                "start": 0,
-                "length": 164
+                "start": 14,
+                "length": 150
             },
             "intro": {
                 "start": 164,
@@ -6384,8 +6384,8 @@
         },
         "episode 667": {
             "opening": {
-                "start": 0,
-                "length": 164
+                "start": 14,
+                "length": 150
             },
             "intro": {
                 "start": 164,
@@ -6398,8 +6398,8 @@
         },
         "episode 668": {
             "opening": {
-                "start": 0,
-                "length": 164
+                "start": 14,
+                "length": 150
             },
             "intro": {
                 "start": 164,
@@ -6412,8 +6412,8 @@
         },
         "episode 669": {
             "opening": {
-                "start": 0,
-                "length": 164
+                "start": 14,
+                "length": 150
             },
             "intro": {
                 "start": 164,
@@ -6426,8 +6426,8 @@
         },
         "episode 670": {
             "opening": {
-                "start": 0,
-                "length": 164
+                "start": 14,
+                "length": 150
             },
             "intro": {
                 "start": 164,
@@ -6440,8 +6440,8 @@
         },
         "episode 671": {
             "opening": {
-                "start": 0,
-                "length": 164
+                "start": 14,
+                "length": 150
             },
             "intro": {
                 "start": 164,
@@ -6457,8 +6457,8 @@
         },
         "episode 672": {
             "opening": {
-                "start": 0,
-                "length": 164
+                "start": 14,
+                "length": 150
             },
             "intro": {
                 "start": 164,
@@ -6474,8 +6474,8 @@
         },
         "episode 673": {
             "opening": {
-                "start": 0,
-                "length": 164
+                "start": 14,
+                "length": 150
             },
             "intro": {
                 "start": 164,
@@ -6491,8 +6491,8 @@
         },
         "episode 674": {
             "opening": {
-                "start": 0,
-                "length": 164
+                "start": 14,
+                "length": 150
             },
             "intro": {
                 "start": 164,
@@ -6508,8 +6508,8 @@
         },
         "episode 675": {
             "opening": {
-                "start": 0,
-                "length": 164
+                "start": 14,
+                "length": 150
             },
             "intro": {
                 "start": 164,
@@ -6525,8 +6525,8 @@
         },
         "episode 676": {
             "opening": {
-                "start": 0,
-                "length": 164
+                "start": 14,
+                "length": 150
             },
             "intro": {
                 "start": 164,
@@ -6542,8 +6542,8 @@
         },
         "episode 677": {
             "opening": {
-                "start": 0,
-                "length": 164
+                "start": 14,
+                "length": 150
             },
             "intro": {
                 "start": 164,
@@ -6559,8 +6559,8 @@
         },
         "episode 678": {
             "opening": {
-                "start": 0,
-                "length": 164
+                "start": 14,
+                "length": 150
             },
             "intro": {
                 "start": 164,
@@ -6576,8 +6576,8 @@
         },
         "episode 679": {
             "opening": {
-                "start": 0,
-                "length": 164
+                "start": 14,
+                "length": 150
             },
             "intro": {
                 "start": 164,
@@ -6593,8 +6593,8 @@
         },
         "episode 680": {
             "opening": {
-                "start": 0,
-                "length": 164
+                "start": 14,
+                "length": 150
             },
             "intro": {
                 "start": 164,
@@ -6610,8 +6610,8 @@
         },
         "episode 681": {
             "opening": {
-                "start": 0,
-                "length": 164
+                "start": 14,
+                "length": 150
             },
             "intro": {
                 "start": 164,
@@ -6627,8 +6627,8 @@
         },
         "episode 682": {
             "opening": {
-                "start": 0,
-                "length": 164
+                "start": 14,
+                "length": 150
             },
             "intro": {
                 "start": 164,
@@ -6644,8 +6644,8 @@
         },
         "episode 683": {
             "opening": {
-                "start": 0,
-                "length": 164
+                "start": 14,
+                "length": 150
             },
             "intro": {
                 "start": 164,
@@ -6661,8 +6661,8 @@
         },
         "episode 684": {
             "opening": {
-                "start": 0,
-                "length": 164
+                "start": 14,
+                "length": 150
             },
             "intro": {
                 "start": 164,
@@ -6678,8 +6678,8 @@
         },
         "episode 685": {
             "opening": {
-                "start": 0,
-                "length": 164
+                "start": 14,
+                "length": 150
             },
             "intro": {
                 "start": 164,
@@ -6695,8 +6695,8 @@
         },
         "episode 686": {
             "opening": {
-                "start": 0,
-                "length": 164
+                "start": 14,
+                "length": 150
             },
             "intro": {
                 "start": 164,
@@ -6712,8 +6712,8 @@
         },
         "episode 687": {
             "opening": {
-                "start": 0,
-                "length": 164
+                "start": 14,
+                "length": 150
             },
             "intro": {
                 "start": 164,
@@ -6729,8 +6729,8 @@
         },
         "episode 688": {
             "opening": {
-                "start": 0,
-                "length": 164
+                "start": 14,
+                "length": 150
             },
             "intro": {
                 "start": 164,
@@ -6746,8 +6746,8 @@
         },
         "episode 689": {
             "opening": {
-                "start": 0,
-                "length": 164
+                "start": 14,
+                "length": 150
             },
             "intro": {
                 "start": 164,
@@ -6763,8 +6763,8 @@
         },
         "episode 690": {
             "opening": {
-                "start": 0,
-                "length": 164
+                "start": 14,
+                "length": 150
             },
             "intro": {
                 "start": 164,
@@ -6780,8 +6780,8 @@
         },
         "episode 691": {
             "opening": {
-                "start": 0,
-                "length": 164
+                "start": 14,
+                "length": 150
             },
             "intro": {
                 "start": 164,
@@ -6797,8 +6797,8 @@
         },
         "episode 692": {
             "opening": {
-                "start": 0,
-                "length": 164
+                "start": 14,
+                "length": 150
             },
             "intro": {
                 "start": 164,
@@ -6814,8 +6814,8 @@
         },
         "episode 693": {
             "opening": {
-                "start": 0,
-                "length": 164
+                "start": 14,
+                "length": 150
             },
             "intro": {
                 "start": 164,
@@ -6831,8 +6831,8 @@
         },
         "episode 694": {
             "opening": {
-                "start": 0,
-                "length": 164
+                "start": 14,
+                "length": 150
             },
             "intro": {
                 "start": 164,
@@ -6848,8 +6848,8 @@
         },
         "episode 695": {
             "opening": {
-                "start": 0,
-                "length": 164
+                "start": 14,
+                "length": 150
             },
             "intro": {
                 "start": 164,
@@ -6865,8 +6865,8 @@
         },
         "episode 696": {
             "opening": {
-                "start": 0,
-                "length": 164
+                "start": 14,
+                "length": 150
             },
             "intro": {
                 "start": 164,
@@ -6882,8 +6882,8 @@
         },
         "episode 697": {
             "opening": {
-                "start": 0,
-                "length": 164
+                "start": 14,
+                "length": 150
             },
             "intro": {
                 "start": 164,
@@ -6899,8 +6899,8 @@
         },
         "episode 698": {
             "opening": {
-                "start": 0,
-                "length": 164
+                "start": 14,
+                "length": 150
             },
             "intro": {
                 "start": 164,
@@ -6916,8 +6916,8 @@
         },
         "episode 699": {
             "opening": {
-                "start": 0,
-                "length": 164
+                "start": 14,
+                "length": 150
             },
             "intro": {
                 "start": 164,
@@ -6933,8 +6933,8 @@
         },
         "episode 700": {
             "opening": {
-                "start": 0,
-                "length": 164
+                "start": 14,
+                "length": 150
             },
             "intro": {
                 "start": 164,
@@ -6950,8 +6950,8 @@
         },
         "episode 701": {
             "opening": {
-                "start": 0,
-                "length": 164
+                "start": 14,
+                "length": 150
             },
             "intro": {
                 "start": 164,
@@ -6967,8 +6967,8 @@
         },
         "episode 702": {
             "opening": {
-                "start": 0,
-                "length": 164
+                "start": 14,
+                "length": 150
             },
             "intro": {
                 "start": 164,
@@ -6984,8 +6984,8 @@
         },
         "episode 703": {
             "opening": {
-                "start": 0,
-                "length": 164
+                "start": 14,
+                "length": 150
             },
             "intro": {
                 "start": 164,
@@ -7001,8 +7001,8 @@
         },
         "episode 704": {
             "opening": {
-                "start": 0,
-                "length": 164
+                "start": 14,
+                "length": 150
             },
             "intro": {
                 "start": 164,
@@ -7018,8 +7018,8 @@
         },
         "episode 705": {
             "opening": {
-                "start": 0,
-                "length": 164
+                "start": 14,
+                "length": 150
             },
             "intro": {
                 "start": 164,
@@ -7035,8 +7035,8 @@
         },
         "episode 706": {
             "opening": {
-                "start": 0,
-                "length": 164
+                "start": 14,
+                "length": 150
             },
             "intro": {
                 "start": 164,
@@ -7052,8 +7052,8 @@
         },
         "episode 707": {
             "opening": {
-                "start": 0,
-                "length": 164
+                "start": 14,
+                "length": 150
             },
             "intro": {
                 "start": 164,
@@ -7069,8 +7069,8 @@
         },
         "episode 708": {
             "opening": {
-                "start": 0,
-                "length": 164
+                "start": 14,
+                "length": 150
             },
             "intro": {
                 "start": 164,
@@ -7086,8 +7086,8 @@
         },
         "episode 709": {
             "opening": {
-                "start": 0,
-                "length": 164
+                "start": 14,
+                "length": 150
             },
             "intro": {
                 "start": 164,
@@ -7103,8 +7103,8 @@
         },
         "episode 710": {
             "opening": {
-                "start": 0,
-                "length": 164
+                "start": 14,
+                "length": 150
             },
             "intro": {
                 "start": 164,
@@ -7120,8 +7120,8 @@
         },
         "episode 711": {
             "opening": {
-                "start": 0,
-                "length": 164
+                "start": 14,
+                "length": 150
             },
             "intro": {
                 "start": 164,
@@ -7137,8 +7137,8 @@
         },
         "episode 712": {
             "opening": {
-                "start": 0,
-                "length": 164
+                "start": 14,
+                "length": 150
             },
             "intro": {
                 "start": 164,
@@ -7154,8 +7154,8 @@
         },
         "episode 713": {
             "opening": {
-                "start": 0,
-                "length": 164
+                "start": 14,
+                "length": 150
             },
             "intro": {
                 "start": 164,
@@ -7171,8 +7171,8 @@
         },
         "episode 714": {
             "opening": {
-                "start": 0,
-                "length": 164
+                "start": 14,
+                "length": 150
             },
             "intro": {
                 "start": 164,
@@ -7188,8 +7188,8 @@
         },
         "episode 715": {
             "opening": {
-                "start": 0,
-                "length": 164
+                "start": 14,
+                "length": 150
             },
             "intro": {
                 "start": 164,
@@ -7205,8 +7205,8 @@
         },
         "episode 716": {
             "opening": {
-                "start": 0,
-                "length": 164
+                "start": 14,
+                "length": 150
             },
             "intro": {
                 "start": 164,
@@ -7222,8 +7222,8 @@
         },
         "episode 717": {
             "opening": {
-                "start": 0,
-                "length": 164
+                "start": 14,
+                "length": 150
             },
             "intro": {
                 "start": 164,
@@ -7239,8 +7239,8 @@
         },
         "episode 718": {
             "opening": {
-                "start": 0,
-                "length": 164
+                "start": 14,
+                "length": 150
             },
             "intro": {
                 "start": 164,
@@ -7256,8 +7256,8 @@
         },
         "episode 719": {
             "opening": {
-                "start": 0,
-                "length": 164
+                "start": 14,
+                "length": 150
             },
             "intro": {
                 "start": 164,
@@ -7273,8 +7273,8 @@
         },
         "episode 720": {
             "opening": {
-                "start": 0,
-                "length": 164
+                "start": 14,
+                "length": 150
             },
             "intro": {
                 "start": 164,
@@ -7290,8 +7290,8 @@
         },
         "episode 721": {
             "opening": {
-                "start": 0,
-                "length": 164
+                "start": 14,
+                "length": 150
             },
             "intro": {
                 "start": 164,
@@ -7307,8 +7307,8 @@
         },
         "episode 722": {
             "opening": {
-                "start": 0,
-                "length": 164
+                "start": 14,
+                "length": 150
             },
             "intro": {
                 "start": 164,
@@ -7324,8 +7324,8 @@
         },
         "episode 723": {
             "opening": {
-                "start": 0,
-                "length": 164
+                "start": 14,
+                "length": 150
             },
             "intro": {
                 "start": 164,
@@ -7341,8 +7341,8 @@
         },
         "episode 724": {
             "opening": {
-                "start": 0,
-                "length": 164
+                "start": 14,
+                "length": 150
             },
             "intro": {
                 "start": 164,
@@ -7358,8 +7358,8 @@
         },
         "episode 725": {
             "opening": {
-                "start": 0,
-                "length": 164
+                "start": 14,
+                "length": 150
             },
             "intro": {
                 "start": 164,
@@ -7375,8 +7375,8 @@
         },
         "episode 726": {
             "opening": {
-                "start": 0,
-                "length": 164
+                "start": 14,
+                "length": 150
             },
             "intro": {
                 "start": 164,
@@ -7392,8 +7392,8 @@
         },
         "episode 727": {
             "opening": {
-                "start": 0,
-                "length": 164
+                "start": 14,
+                "length": 150
             },
             "intro": {
                 "start": 164,
@@ -7409,8 +7409,8 @@
         },
         "episode 728": {
             "opening": {
-                "start": 0,
-                "length": 164
+                "start": 14,
+                "length": 150
             },
             "intro": {
                 "start": 164,
@@ -7426,8 +7426,8 @@
         },
         "episode 729": {
             "opening": {
-                "start": 0,
-                "length": 164
+                "start": 14,
+                "length": 150
             },
             "intro": {
                 "start": 164,
@@ -7443,8 +7443,8 @@
         },
         "episode 730": {
             "opening": {
-                "start": 0,
-                "length": 164
+                "start": 14,
+                "length": 150
             },
             "intro": {
                 "start": 164,
@@ -7460,8 +7460,8 @@
         },
         "episode 731": {
             "opening": {
-                "start": 0,
-                "length": 164
+                "start": 14,
+                "length": 150
             },
             "intro": {
                 "start": 164,
@@ -7477,8 +7477,8 @@
         },
         "episode 732": {
             "opening": {
-                "start": 0,
-                "length": 164
+                "start": 14,
+                "length": 150
             },
             "intro": {
                 "start": 164,
@@ -7494,8 +7494,8 @@
         },
         "episode 733": {
             "opening": {
-                "start": 0,
-                "length": 164
+                "start": 14,
+                "length": 150
             },
             "intro": {
                 "start": 164,
@@ -7511,8 +7511,8 @@
         },
         "episode 734": {
             "opening": {
-                "start": 0,
-                "length": 164
+                "start": 14,
+                "length": 150
             },
             "intro": {
                 "start": 164,
@@ -7528,8 +7528,8 @@
         },
         "episode 735": {
             "opening": {
-                "start": 0,
-                "length": 164
+                "start": 14,
+                "length": 150
             },
             "intro": {
                 "start": 164,
@@ -7545,8 +7545,8 @@
         },
         "episode 736": {
             "opening": {
-                "start": 0,
-                "length": 164
+                "start": 14,
+                "length": 150
             },
             "intro": {
                 "start": 164,
@@ -7562,8 +7562,8 @@
         },
         "episode 737": {
             "opening": {
-                "start": 0,
-                "length": 164
+                "start": 14,
+                "length": 150
             },
             "intro": {
                 "start": 164,
@@ -7579,8 +7579,8 @@
         },
         "episode 738": {
             "opening": {
-                "start": 0,
-                "length": 164
+                "start": 14,
+                "length": 150
             },
             "intro": {
                 "start": 164,
@@ -7596,8 +7596,8 @@
         },
         "episode 739": {
             "opening": {
-                "start": 0,
-                "length": 164
+                "start": 14,
+                "length": 150
             },
             "intro": {
                 "start": 164,
@@ -7613,8 +7613,8 @@
         },
         "episode 740": {
             "opening": {
-                "start": 0,
-                "length": 164
+                "start": 14,
+                "length": 150
             },
             "intro": {
                 "start": 164,
@@ -7630,8 +7630,8 @@
         },
         "episode 741": {
             "opening": {
-                "start": 0,
-                "length": 164
+                "start": 14,
+                "length": 150
             },
             "intro": {
                 "start": 164,
@@ -7647,8 +7647,8 @@
         },
         "episode 742": {
             "opening": {
-                "start": 0,
-                "length": 164
+                "start": 14,
+                "length": 150
             },
             "intro": {
                 "start": 164,
@@ -7664,8 +7664,8 @@
         },
         "episode 743": {
             "opening": {
-                "start": 0,
-                "length": 164
+                "start": 14,
+                "length": 150
             },
             "intro": {
                 "start": 164,
@@ -7681,8 +7681,8 @@
         },
         "episode 744": {
             "opening": {
-                "start": 0,
-                "length": 164
+                "start": 14,
+                "length": 150
             },
             "intro": {
                 "start": 164,
@@ -7698,8 +7698,8 @@
         },
         "episode 745": {
             "opening": {
-                "start": 0,
-                "length": 164
+                "start": 14,
+                "length": 150
             },
             "intro": {
                 "start": 164,
@@ -7715,8 +7715,8 @@
         },
         "episode 746": {
             "opening": {
-                "start": 0,
-                "length": 164
+                "start": 14,
+                "length": 150
             },
             "intro": {
                 "start": 164,
@@ -7732,8 +7732,8 @@
         },
         "episode 747": {
             "opening": {
-                "start": 0,
-                "length": 164
+                "start": 14,
+                "length": 150
             },
             "intro": {
                 "start": 164,
@@ -7750,8 +7750,8 @@
         },
         "episode 748": {
             "opening": {
-                "start": 0,
-                "length": 164
+                "start": 14,
+                "length": 150
             },
             "intro": {
                 "start": 164,
@@ -7768,8 +7768,8 @@
         },
         "episode 749": {
             "opening": {
-                "start": 0,
-                "length": 164
+                "start": 14,
+                "length": 150
             },
             "intro": {
                 "start": 164,
@@ -7786,8 +7786,8 @@
         },
         "episode 750": {
             "opening": {
-                "start": 0,
-                "length": 164
+                "start": 14,
+                "length": 150
             },
             "intro": {
                 "start": 164,
@@ -7804,8 +7804,8 @@
         },
         "episode 751": {
             "opening": {
-                "start": 0,
-                "length": 164
+                "start": 14,
+                "length": 150
             },
             "intro": {
                 "start": 164,
@@ -7821,8 +7821,8 @@
         },
         "episode 752": {
             "opening": {
-                "start": 0,
-                "length": 164
+                "start": 14,
+                "length": 150
             },
             "intro": {
                 "start": 164,
@@ -7838,8 +7838,8 @@
         },
         "episode 753": {
             "opening": {
-                "start": 0,
-                "length": 164
+                "start": 14,
+                "length": 150
             },
             "intro": {
                 "start": 164,
@@ -7855,8 +7855,8 @@
         },
         "episode 754": {
             "opening": {
-                "start": 0,
-                "length": 164
+                "start": 14,
+                "length": 150
             },
             "intro": {
                 "start": 164,
@@ -7872,8 +7872,8 @@
         },
         "episode 755": {
             "opening": {
-                "start": 0,
-                "length": 164
+                "start": 14,
+                "length": 150
             },
             "intro": {
                 "start": 164,
@@ -7889,8 +7889,8 @@
         },
         "episode 756": {
             "opening": {
-                "start": 0,
-                "length": 164
+                "start": 14,
+                "length": 150
             },
             "intro": {
                 "start": 164,
@@ -7906,8 +7906,8 @@
         },
         "episode 757": {
             "opening": {
-                "start": 0,
-                "length": 164
+                "start": 14,
+                "length": 150
             },
             "intro": {
                 "start": 164,
@@ -7923,8 +7923,8 @@
         },
         "episode 758": {
             "opening": {
-                "start": 0,
-                "length": 164
+                "start": 14,
+                "length": 150
             },
             "intro": {
                 "start": 164,
@@ -7940,8 +7940,8 @@
         },
         "episode 759": {
             "opening": {
-                "start": 0,
-                "length": 164
+                "start": 14,
+                "length": 150
             },
             "intro": {
                 "start": 164,
@@ -7957,8 +7957,8 @@
         },
         "episode 760": {
             "opening": {
-                "start": 0,
-                "length": 164
+                "start": 14,
+                "length": 150
             },
             "intro": {
                 "start": 164,
@@ -7974,8 +7974,8 @@
         },
         "episode 761": {
             "opening": {
-                "start": 0,
-                "length": 164
+                "start": 14,
+                "length": 150
             },
             "intro": {
                 "start": 164,
@@ -7991,8 +7991,8 @@
         },
         "episode 762": {
             "opening": {
-                "start": 0,
-                "length": 164
+                "start": 14,
+                "length": 150
             },
             "intro": {
                 "start": 164,
@@ -8008,8 +8008,8 @@
         },
         "episode 763": {
             "opening": {
-                "start": 0,
-                "length": 164
+                "start": 14,
+                "length": 150
             },
             "intro": {
                 "start": 164,
@@ -8025,8 +8025,8 @@
         },
         "episode 764": {
             "opening": {
-                "start": 0,
-                "length": 164
+                "start": 14,
+                "length": 150
             },
             "intro": {
                 "start": 164,
@@ -8042,8 +8042,8 @@
         },
         "episode 765": {
             "opening": {
-                "start": 0,
-                "length": 164
+                "start": 14,
+                "length": 150
             },
             "intro": {
                 "start": 164,
@@ -8059,8 +8059,8 @@
         },
         "episode 766": {
             "opening": {
-                "start": 0,
-                "length": 164
+                "start": 14,
+                "length": 150
             },
             "intro": {
                 "start": 164,
@@ -8076,8 +8076,8 @@
         },
         "episode 767": {
             "opening": {
-                "start": 0,
-                "length": 164
+                "start": 14,
+                "length": 150
             },
             "intro": {
                 "start": 164,
@@ -8093,8 +8093,8 @@
         },
         "episode 768": {
             "opening": {
-                "start": 0,
-                "length": 164
+                "start": 14,
+                "length": 150
             },
             "intro": {
                 "start": 164,
@@ -8110,8 +8110,8 @@
         },
         "episode 769": {
             "opening": {
-                "start": 0,
-                "length": 164
+                "start": 14,
+                "length": 150
             },
             "intro": {
                 "start": 164,
@@ -8127,8 +8127,8 @@
         },
         "episode 770": {
             "opening": {
-                "start": 0,
-                "length": 164
+                "start": 14,
+                "length": 150
             },
             "intro": {
                 "start": 164,
@@ -8144,8 +8144,8 @@
         },
         "episode 771": {
             "opening": {
-                "start": 0,
-                "length": 164
+                "start": 14,
+                "length": 150
             },
             "intro": {
                 "start": 164,
@@ -8161,8 +8161,8 @@
         },
         "episode 772": {
             "opening": {
-                "start": 0,
-                "length": 164
+                "start": 14,
+                "length": 150
             },
             "intro": {
                 "start": 164,
@@ -8178,8 +8178,8 @@
         },
         "episode 773": {
             "opening": {
-                "start": 0,
-                "length": 164
+                "start": 14,
+                "length": 150
             },
             "intro": {
                 "start": 164,
@@ -8195,8 +8195,8 @@
         },
         "episode 774": {
             "opening": {
-                "start": 0,
-                "length": 164
+                "start": 14,
+                "length": 150
             },
             "intro": {
                 "start": 164,
@@ -8212,8 +8212,8 @@
         },
         "episode 775": {
             "opening": {
-                "start": 0,
-                "length": 164
+                "start": 14,
+                "length": 150
             },
             "intro": {
                 "start": 164,
@@ -8230,8 +8230,8 @@
         },
         "episode 776": {
             "opening": {
-                "start": 0,
-                "length": 164
+                "start": 14,
+                "length": 150
             },
             "intro": {
                 "start": 164,
@@ -8247,8 +8247,8 @@
         },
         "episode 777": {
             "opening": {
-                "start": 0,
-                "length": 164
+                "start": 14,
+                "length": 150
             },
             "intro": {
                 "start": 164,
@@ -8264,8 +8264,8 @@
         },
         "episode 778": {
             "opening": {
-                "start": 0,
-                "length": 164
+                "start": 14,
+                "length": 150
             },
             "intro": {
                 "start": 164,
@@ -8281,8 +8281,8 @@
         },
         "episode 779": {
             "opening": {
-                "start": 0,
-                "length": 164
+                "start": 14,
+                "length": 150
             },
             "intro": {
                 "start": 164,
@@ -8298,8 +8298,8 @@
         },
         "episode 780": {
             "opening": {
-                "start": 0,
-                "length": 164
+                "start": 14,
+                "length": 150
             },
             "intro": {
                 "start": 164,
@@ -8316,8 +8316,8 @@
         },
         "episode 781": {
             "opening": {
-                "start": 0,
-                "length": 164
+                "start": 14,
+                "length": 150
             },
             "intro": {
                 "start": 164,
@@ -8334,8 +8334,8 @@
         },
         "episode 782": {
             "opening": {
-                "start": 0,
-                "length": 164
+                "start": 14,
+                "length": 150
             },
             "intro": {
                 "start": 164,
@@ -8352,8 +8352,8 @@
         },
         "episode 783": {
             "opening": {
-                "start": 0,
-                "length": 164
+                "start": 14,
+                "length": 150
             },
             "intro": {
                 "start": 164,
@@ -8369,8 +8369,8 @@
         },
         "episode 784": {
             "opening": {
-                "start": 0,
-                "length": 164
+                "start": 14,
+                "length": 150
             },
             "intro": {
                 "start": 164,
@@ -8386,8 +8386,8 @@
         },
         "episode 785": {
             "opening": {
-                "start": 0,
-                "length": 164
+                "start": 14,
+                "length": 150
             },
             "intro": {
                 "start": 164,
@@ -8403,8 +8403,8 @@
         },
         "episode 786": {
             "opening": {
-                "start": 0,
-                "length": 164
+                "start": 14,
+                "length": 150
             },
             "intro": {
                 "start": 164,
@@ -8420,8 +8420,8 @@
         },
         "episode 787": {
             "opening": {
-                "start": 0,
-                "length": 164
+                "start": 14,
+                "length": 150
             },
             "intro": {
                 "start": 164,
@@ -8437,8 +8437,8 @@
         },
         "episode 788": {
             "opening": {
-                "start": 0,
-                "length": 164
+                "start": 14,
+                "length": 150
             },
             "intro": {
                 "start": 164,
@@ -8454,8 +8454,8 @@
         },
         "episode 789": {
             "opening": {
-                "start": 0,
-                "length": 164
+                "start": 14,
+                "length": 150
             },
             "intro": {
                 "start": 164,
@@ -8471,8 +8471,8 @@
         },
         "episode 790": {
             "opening": {
-                "start": 0,
-                "length": 164
+                "start": 14,
+                "length": 150
             },
             "intro": {
                 "start": 164,
@@ -8488,8 +8488,8 @@
         },
         "episode 791": {
             "opening": {
-                "start": 0,
-                "length": 164
+                "start": 14,
+                "length": 150
             },
             "intro": {
                 "start": 164,
@@ -8505,8 +8505,8 @@
         },
         "episode 792": {
             "opening": {
-                "start": 0,
-                "length": 164
+                "start": 14,
+                "length": 150
             },
             "intro": {
                 "start": 164,
@@ -8522,8 +8522,8 @@
         },
         "episode 793": {
             "opening": {
-                "start": 0,
-                "length": 164
+                "start": 14,
+                "length": 150
             },
             "intro": {
                 "start": 164,
@@ -8539,8 +8539,8 @@
         },
         "episode 794": {
             "opening": {
-                "start": 0,
-                "length": 164
+                "start": 14,
+                "length": 150
             },
             "intro": {
                 "start": 164,
@@ -8556,8 +8556,8 @@
         },
         "episode 795": {
             "opening": {
-                "start": 0,
-                "length": 164
+                "start": 14,
+                "length": 150
             },
             "intro": {
                 "start": 164,
@@ -8573,8 +8573,8 @@
         },
         "episode 796": {
             "opening": {
-                "start": 0,
-                "length": 164
+                "start": 14,
+                "length": 150
             },
             "intro": {
                 "start": 164,
@@ -8590,8 +8590,8 @@
         },
         "episode 797": {
             "opening": {
-                "start": 0,
-                "length": 164
+                "start": 14,
+                "length": 150
             },
             "intro": {
                 "start": 164,
@@ -8607,8 +8607,8 @@
         },
         "episode 798": {
             "opening": {
-                "start": 0,
-                "length": 164
+                "start": 14,
+                "length": 150
             },
             "intro": {
                 "start": 164,
@@ -8624,8 +8624,8 @@
         },
         "episode 799": {
             "opening": {
-                "start": 0,
-                "length": 164
+                "start": 14,
+                "length": 150
             },
             "intro": {
                 "start": 164,
@@ -8641,8 +8641,8 @@
         },
         "episode 800": {
             "opening": {
-                "start": 0,
-                "length": 164
+                "start": 14,
+                "length": 150
             },
             "intro": {
                 "start": 164,
@@ -8658,8 +8658,8 @@
         },
         "episode 801": {
             "opening": {
-                "start": 0,
-                "length": 164
+                "start": 14,
+                "length": 150
             },
             "intro": {
                 "start": 164,
@@ -8672,8 +8672,8 @@
         },
         "episode 802": {
             "opening": {
-                "start": 0,
-                "length": 164
+                "start": 14,
+                "length": 150
             },
             "intro": {
                 "start": 164,
@@ -8686,8 +8686,8 @@
         },
         "episode 803": {
             "opening": {
-                "start": 0,
-                "length": 164
+                "start": 14,
+                "length": 150
             },
             "intro": {
                 "start": 164,
@@ -8700,8 +8700,8 @@
         },
         "episode 804": {
             "opening": {
-                "start": 0,
-                "length": 164
+                "start": 14,
+                "length": 150
             },
             "recap": {
                 "start": 164,
@@ -8710,8 +8710,8 @@
         },
         "episode 805": {
             "opening": {
-                "start": 0,
-                "length": 164
+                "start": 14,
+                "length": 150
             },
             "recap": {
                 "start": 164,
@@ -8720,8 +8720,8 @@
         },
         "episode 806": {
             "opening": {
-                "start": 0,
-                "length": 164
+                "start": 14,
+                "length": 150
             },
             "recap": {
                 "start": 164,
@@ -8730,8 +8730,8 @@
         },
         "episode 807": {
             "opening": {
-                "start": 0,
-                "length": 164
+                "start": 14,
+                "length": 150
             },
             "recap": {
                 "start": 164,
@@ -8741,8 +8741,8 @@
         },
         "episode 808": {
             "opening": {
-                "start": 0,
-                "length": 164
+                "start": 14,
+                "length": 150
             },
             "recap": {
                 "start": 164,
@@ -8751,8 +8751,8 @@
         },
         "episode 809": {
             "opening": {
-                "start": 0,
-                "length": 164
+                "start": 14,
+                "length": 150
             },
             "recap": {
                 "start": 164,
@@ -8761,8 +8761,8 @@
         },
         "episode 810": {
             "opening": {
-                "start": 0,
-                "length": 164
+                "start": 14,
+                "length": 150
             },
             "recap": {
                 "start": 164,
@@ -8771,8 +8771,8 @@
         },
         "episode 811": {
             "opening": {
-                "start": 0,
-                "length": 164
+                "start": 14,
+                "length": 150
             },
             "recap": {
                 "start": 164,
@@ -8781,8 +8781,8 @@
         },
         "episode 812": {
             "opening": {
-                "start": 0,
-                "length": 164
+                "start": 14,
+                "length": 150
             },
             "recap": {
                 "start": 164,
@@ -8791,8 +8791,8 @@
         },
         "episode 813": {
             "opening": {
-                "start": 0,
-                "length": 164
+                "start": 14,
+                "length": 150
             },
             "recap": {
                 "start": 164,
@@ -8801,8 +8801,8 @@
         },
         "episode 814": {
             "opening": {
-                "start": 0,
-                "length": 164
+                "start": 14,
+                "length": 150
             },
             "recap": {
                 "start": 164,
@@ -8811,8 +8811,8 @@
         },
         "episode 815": {
             "opening": {
-                "start": 0,
-                "length": 164
+                "start": 14,
+                "length": 150
             },
             "recap": {
                 "start": 164,
@@ -8821,8 +8821,8 @@
         },
         "episode 816": {
             "opening": {
-                "start": 0,
-                "length": 164
+                "start": 14,
+                "length": 150
             },
             "recap": {
                 "start": 164,
@@ -8831,8 +8831,8 @@
         },
         "episode 817": {
             "opening": {
-                "start": 0,
-                "length": 164
+                "start": 14,
+                "length": 150
             },
             "recap": {
                 "start": 164,
@@ -8841,8 +8841,8 @@
         },
         "episode 818": {
             "opening": {
-                "start": 0,
-                "length": 164
+                "start": 14,
+                "length": 150
             },
             "recap": {
                 "start": 164,
@@ -8851,8 +8851,8 @@
         },
         "episode 819": {
             "opening": {
-                "start": 0,
-                "length": 164
+                "start": 14,
+                "length": 150
             },
             "recap": {
                 "start": 164,
@@ -8861,8 +8861,8 @@
         },
         "episode 820": {
             "opening": {
-                "start": 0,
-                "length": 164
+                "start": 14,
+                "length": 150
             },
             "recap": {
                 "start": 164,
@@ -8871,8 +8871,8 @@
         },
         "episode 821": {
             "opening": {
-                "start": 0,
-                "length": 164
+                "start": 14,
+                "length": 150
             },
             "recap": {
                 "start": 164,
@@ -8881,8 +8881,8 @@
         },
         "episode 822": {
             "opening": {
-                "start": 0,
-                "length": 164
+                "start": 14,
+                "length": 150
             },
             "recap": {
                 "start": 164,
@@ -8891,8 +8891,8 @@
         },
         "episode 823": {
             "opening": {
-                "start": 0,
-                "length": 164
+                "start": 14,
+                "length": 150
             },
             "recap": {
                 "start": 164,
@@ -8901,8 +8901,8 @@
         },
         "episode 824": {
             "opening": {
-                "start": 0,
-                "length": 164
+                "start": 14,
+                "length": 150
             },
             "recap": {
                 "start": 164,
@@ -8911,8 +8911,8 @@
         },
         "episode 825": {
             "opening": {
-                "start": 0,
-                "length": 164
+                "start": 14,
+                "length": 150
             },
             "recap": {
                 "start": 164,
@@ -8921,8 +8921,8 @@
         },
         "episode 826": {
             "opening": {
-                "start": 0,
-                "length": 164
+                "start": 14,
+                "length": 150
             },
             "recap": {
                 "start": 164,
@@ -8931,8 +8931,8 @@
         },
         "episode 827": {
             "opening": {
-                "start": 0,
-                "length": 164
+                "start": 14,
+                "length": 150
             },
             "recap": {
                 "start": 164,
@@ -8941,8 +8941,8 @@
         },
         "episode 828": {
             "opening": {
-                "start": 0,
-                "length": 164
+                "start": 14,
+                "length": 150
             },
             "recap": {
                 "start": 164,
@@ -8951,8 +8951,8 @@
         },
         "episode 829": {
             "opening": {
-                "start": 0,
-                "length": 164
+                "start": 14,
+                "length": 150
             },
             "recap": {
                 "start": 164,
@@ -8961,8 +8961,8 @@
         },
         "episode 830": {
             "opening": {
-                "start": 0,
-                "length": 164
+                "start": 14,
+                "length": 150
             },
             "recap": {
                 "start": 164,
@@ -8971,8 +8971,8 @@
         },
         "episode 831": {
             "opening": {
-                "start": 0,
-                "length": 164
+                "start": 14,
+                "length": 150
             },
             "recap": {
                 "start": 164,
@@ -8981,8 +8981,8 @@
         },
         "episode 832": {
             "opening": {
-                "start": 0,
-                "length": 164
+                "start": 14,
+                "length": 150
             },
             "recap": {
                 "start": 164,
@@ -8991,8 +8991,8 @@
         },
         "episode 833": {
             "opening": {
-                "start": 0,
-                "length": 164
+                "start": 14,
+                "length": 150
             },
             "recap": {
                 "start": 164,
@@ -9001,8 +9001,8 @@
         },
         "episode 834": {
             "opening": {
-                "start": 0,
-                "length": 164
+                "start": 14,
+                "length": 150
             },
             "recap": {
                 "start": 164,
@@ -9011,8 +9011,8 @@
         },
         "episode 835": {
             "opening": {
-                "start": 0,
-                "length": 164
+                "start": 14,
+                "length": 150
             },
             "recap": {
                 "start": 164,
@@ -9021,8 +9021,8 @@
         },
         "episode 836": {
             "opening": {
-                "start": 0,
-                "length": 164
+                "start": 14,
+                "length": 150
             },
             "recap": {
                 "start": 164,
@@ -9031,8 +9031,8 @@
         },
         "episode 837": {
             "opening": {
-                "start": 0,
-                "length": 164
+                "start": 14,
+                "length": 150
             },
             "recap": {
                 "start": 164,
@@ -9041,8 +9041,8 @@
         },
         "episode 838": {
             "opening": {
-                "start": 0,
-                "length": 164
+                "start": 14,
+                "length": 150
             },
             "recap": {
                 "start": 164,
@@ -9051,8 +9051,8 @@
         },
         "episode 839": {
             "opening": {
-                "start": 0,
-                "length": 164
+                "start": 14,
+                "length": 150
             },
             "recap": {
                 "start": 164,
@@ -9061,8 +9061,8 @@
         },
         "episode 840": {
             "opening": {
-                "start": 0,
-                "length": 164
+                "start": 14,
+                "length": 150
             },
             "recap": {
                 "start": 164,
@@ -9071,8 +9071,8 @@
         },
         "episode 841": {
             "opening": {
-                "start": 0,
-                "length": 164
+                "start": 14,
+                "length": 150
             },
             "recap": {
                 "start": 164,
@@ -9081,8 +9081,8 @@
         },
         "episode 842": {
             "opening": {
-                "start": 0,
-                "length": 164
+                "start": 14,
+                "length": 150
             },
             "recap": {
                 "start": 164,
@@ -9091,8 +9091,8 @@
         },
         "episode 843": {
             "opening": {
-                "start": 0,
-                "length": 164
+                "start": 14,
+                "length": 150
             },
             "recap": {
                 "start": 164,
@@ -9101,8 +9101,8 @@
         },
         "episode 844": {
             "opening": {
-                "start": 0,
-                "length": 164
+                "start": 14,
+                "length": 150
             },
             "recap": {
                 "start": 164,
@@ -9111,8 +9111,8 @@
         },
         "episode 845": {
             "opening": {
-                "start": 0,
-                "length": 164
+                "start": 14,
+                "length": 150
             },
             "recap": {
                 "start": 164,
@@ -9121,8 +9121,8 @@
         },
         "episode 846": {
             "opening": {
-                "start": 0,
-                "length": 164
+                "start": 14,
+                "length": 150
             },
             "recap": {
                 "start": 164,
@@ -9131,8 +9131,8 @@
         },
         "episode 847": {
             "opening": {
-                "start": 0,
-                "length": 164
+                "start": 14,
+                "length": 150
             },
             "recap": {
                 "start": 164,
@@ -9141,8 +9141,8 @@
         },
         "episode 848": {
             "opening": {
-                "start": 0,
-                "length": 164
+                "start": 14,
+                "length": 150
             },
             "recap": {
                 "start": 164,
@@ -9151,8 +9151,8 @@
         },
         "episode 849": {
             "opening": {
-                "start": 0,
-                "length": 164
+                "start": 14,
+                "length": 150
             },
             "recap": {
                 "start": 164,
@@ -9161,8 +9161,8 @@
         },
         "episode 850": {
             "opening": {
-                "start": 0,
-                "length": 164
+                "start": 14,
+                "length": 150
             },
             "recap": {
                 "start": 164,
@@ -9171,8 +9171,8 @@
         },
         "episode 851": {
             "opening": {
-                "start": 0,
-                "length": 164
+                "start": 14,
+                "length": 150
             },
             "recap": {
                 "start": 164,
@@ -9181,8 +9181,8 @@
         },
         "episode 852": {
             "opening": {
-                "start": 0,
-                "length": 164
+                "start": 14,
+                "length": 150
             },
             "recap": {
                 "start": 164,
@@ -9191,8 +9191,8 @@
         },
         "episode 853": {
             "opening": {
-                "start": 0,
-                "length": 164
+                "start": 14,
+                "length": 150
             },
             "recap": {
                 "start": 164,
@@ -9201,8 +9201,8 @@
         },
         "episode 854": {
             "opening": {
-                "start": 0,
-                "length": 164
+                "start": 14,
+                "length": 150
             },
             "recap": {
                 "start": 164,
@@ -9211,8 +9211,8 @@
         },
         "episode 855": {
             "opening": {
-                "start": 0,
-                "length": 164
+                "start": 14,
+                "length": 150
             },
             "recap": {
                 "start": 164,
@@ -9221,8 +9221,8 @@
         },
         "episode 856": {
             "opening": {
-                "start": 0,
-                "length": 164
+                "start": 14,
+                "length": 150
             },
             "recap": {
                 "start": 164,
@@ -9231,8 +9231,8 @@
         },
         "episode 857": {
             "opening": {
-                "start": 0,
-                "length": 164
+                "start": 14,
+                "length": 150
             },
             "recap": {
                 "start": 164,
@@ -9241,8 +9241,8 @@
         },
         "episode 858": {
             "opening": {
-                "start": 0,
-                "length": 164
+                "start": 14,
+                "length": 150
             },
             "recap": {
                 "start": 164,
@@ -9251,8 +9251,8 @@
         },
         "episode 859": {
             "opening": {
-                "start": 0,
-                "length": 164
+                "start": 14,
+                "length": 150
             },
             "recap": {
                 "start": 164,
@@ -9261,8 +9261,8 @@
         },
         "episode 860": {
             "opening": {
-                "start": 0,
-                "length": 164
+                "start": 14,
+                "length": 150
             },
             "recap": {
                 "start": 164,
@@ -9271,8 +9271,8 @@
         },
         "episode 861": {
             "opening": {
-                "start": 0,
-                "length": 164
+                "start": 14,
+                "length": 150
             },
             "recap": {
                 "start": 164,
@@ -9281,8 +9281,8 @@
         },
         "episode 862": {
             "opening": {
-                "start": 0,
-                "length": 164
+                "start": 14,
+                "length": 150
             },
             "recap": {
                 "start": 164,
@@ -9291,8 +9291,8 @@
         },
         "episode 863": {
             "opening": {
-                "start": 0,
-                "length": 164
+                "start": 14,
+                "length": 150
             },
             "recap": {
                 "start": 164,
@@ -9301,8 +9301,8 @@
         },
         "episode 864": {
             "opening": {
-                "start": 0,
-                "length": 164
+                "start": 14,
+                "length": 150
             },
             "recap": {
                 "start": 164,
@@ -9311,8 +9311,8 @@
         },
         "episode 865": {
             "opening": {
-                "start": 0,
-                "length": 164
+                "start": 14,
+                "length": 150
             },
             "recap": {
                 "start": 164,
@@ -9321,8 +9321,8 @@
         },
         "episode 866": {
             "opening": {
-                "start": 0,
-                "length": 164
+                "start": 14,
+                "length": 150
             },
             "recap": {
                 "start": 164,
@@ -9331,8 +9331,8 @@
         },
         "episode 867": {
             "opening": {
-                "start": 0,
-                "length": 164
+                "start": 14,
+                "length": 150
             },
             "recap": {
                 "start": 164,
@@ -9341,8 +9341,8 @@
         },
         "episode 868": {
             "opening": {
-                "start": 0,
-                "length": 164
+                "start": 14,
+                "length": 150
             },
             "recap": {
                 "start": 164,
@@ -9351,8 +9351,8 @@
         },
         "episode 869": {
             "opening": {
-                "start": 0,
-                "length": 164
+                "start": 14,
+                "length": 150
             },
             "recap": {
                 "start": 164,
@@ -9361,8 +9361,8 @@
         },
         "episode 870": {
             "opening": {
-                "start": 0,
-                "length": 164
+                "start": 14,
+                "length": 150
             },
             "recap": {
                 "start": 164,
@@ -9371,8 +9371,8 @@
         },
         "episode 871": {
             "opening": {
-                "start": 0,
-                "length": 164
+                "start": 14,
+                "length": 150
             },
             "recap": {
                 "start": 164,
@@ -9381,8 +9381,8 @@
         },
         "episode 872": {
             "opening": {
-                "start": 0,
-                "length": 164
+                "start": 14,
+                "length": 150
             },
             "recap": {
                 "start": 164,
@@ -9391,8 +9391,8 @@
         },
         "episode 873": {
             "opening": {
-                "start": 0,
-                "length": 164
+                "start": 14,
+                "length": 150
             },
             "recap": {
                 "start": 164,
@@ -9401,8 +9401,8 @@
         },
         "episode 874": {
             "opening": {
-                "start": 0,
-                "length": 164
+                "start": 14,
+                "length": 150
             },
             "recap": {
                 "start": 164,
@@ -9411,8 +9411,8 @@
         },
         "episode 875": {
             "opening": {
-                "start": 0,
-                "length": 164
+                "start": 14,
+                "length": 150
             },
             "recap": {
                 "start": 164,
@@ -9421,8 +9421,8 @@
         },
         "episode 876": {
             "opening": {
-                "start": 0,
-                "length": 164
+                "start": 14,
+                "length": 150
             },
             "recap": {
                 "start": 164,
@@ -9431,8 +9431,8 @@
         },
         "episodes 877-878": {
             "opening": {
-                "start": 0,
-                "length": 164
+                "start": 14,
+                "length": 150
             },
             "recap": {
                 "start": 164,
@@ -9441,8 +9441,8 @@
         },
         "episode 879": {
             "opening": {
-                "start": 0,
-                "length": 164
+                "start": 14,
+                "length": 150
             },
             "intro": {
                 "start": 164,
@@ -9455,8 +9455,8 @@
         },
         "episode 880": {
             "opening": {
-                "start": 0,
-                "length": 164
+                "start": 14,
+                "length": 150
             },
             "intro": {
                 "start": 164,
@@ -9469,8 +9469,8 @@
         },
         "episode 881": {
             "opening": {
-                "start": 0,
-                "length": 164
+                "start": 14,
+                "length": 150
             },
             "intro": {
                 "start": 164,
@@ -9484,8 +9484,8 @@
         },
         "episodes 882-890": {
             "opening": {
-                "start": 0,
-                "length": 164
+                "start": 14,
+                "length": 150
             },
             "intro": {
                 "start": 164,
@@ -9498,8 +9498,8 @@
         },
         "episode 891": {
             "opening": {
-                "start": 0,
-                "length": 164
+                "start": 14,
+                "length": 150
             },
             "recap": {
                 "start": 164,
@@ -9508,8 +9508,8 @@
         },
         "episode 892": {
             "opening": {
-                "start": 0,
-                "length": 134
+                "start": 14,
+                "length": 120
             },
             "recap": {
                 "start": 134,
@@ -9518,8 +9518,8 @@
         },
         "episode 893": {
             "opening": {
-                "start": 0,
-                "length": 134
+                "start": 14,
+                "length": 120
             },
             "recap": {
                 "start": 134,
@@ -9528,8 +9528,8 @@
         },
         "episode 894": {
             "opening": {
-                "start": 0,
-                "length": 134
+                "start": 14,
+                "length": 120
             },
             "recap": {
                 "start": 134,
@@ -9538,8 +9538,8 @@
         },
         "episode 895": {
             "opening": {
-                "start": 0,
-                "length": 134
+                "start": 14,
+                "length": 120
             },
             "recap": {
                 "start": 134,
@@ -9549,8 +9549,8 @@
         },
         "episode 896": {
             "opening": {
-                "start": 0,
-                "length": 134
+                "start": 14,
+                "length": 120
             },
             "recap": {
                 "start": 134,
@@ -9560,8 +9560,8 @@
         },
         "episode 897": {
             "opening": {
-                "start": 0,
-                "length": 134
+                "start": 14,
+                "length": 120
             },
             "recap": {
                 "start": 134,
@@ -9570,8 +9570,8 @@
         },
         "episode 898": {
             "opening": {
-                "start": 0,
-                "length": 134
+                "start": 14,
+                "length": 120
             },
             "recap": {
                 "start": 134,
@@ -9580,8 +9580,8 @@
         },
         "episode 899": {
             "opening": {
-                "start": 0,
-                "length": 134
+                "start": 14,
+                "length": 120
             },
             "recap": {
                 "start": 134,
@@ -9590,8 +9590,8 @@
         },
         "episode 900": {
             "opening": {
-                "start": 0,
-                "length": 134
+                "start": 14,
+                "length": 120
             },
             "recap": {
                 "start": 134,
@@ -9600,8 +9600,8 @@
         },
         "episode 901": {
             "opening": {
-                "start": 0,
-                "length": 134
+                "start": 14,
+                "length": 120
             },
             "recap": {
                 "start": 134,
@@ -9610,8 +9610,8 @@
         },
         "episode 902": {
             "opening": {
-                "start": 0,
-                "length": 134
+                "start": 14,
+                "length": 120
             },
             "recap": {
                 "start": 134,
@@ -9620,8 +9620,8 @@
         },
         "episode 903": {
             "opening": {
-                "start": 0,
-                "length": 134
+                "start": 14,
+                "length": 120
             },
             "recap": {
                 "start": 134,
@@ -9630,8 +9630,8 @@
         },
         "episode 904": {
             "opening": {
-                "start": 0,
-                "length": 134
+                "start": 14,
+                "length": 120
             },
             "recap": {
                 "start": 134,
@@ -9640,8 +9640,8 @@
         },
         "episode 905": {
             "opening": {
-                "start": 0,
-                "length": 134
+                "start": 14,
+                "length": 120
             },
             "recap": {
                 "start": 134,
@@ -9650,8 +9650,8 @@
         },
         "episode 906": {
             "opening": {
-                "start": 0,
-                "length": 134
+                "start": 14,
+                "length": 120
             },
             "recap": {
                 "start": 134,
@@ -9660,8 +9660,8 @@
         },
         "episode 907": {
             "opening": {
-                "start": 0,
-                "length": 134
+                "start": 14,
+                "length": 120
             },
             "recap": {
                 "start": 134,
@@ -9670,8 +9670,8 @@
         },
         "episode 908": {
             "opening": {
-                "start": 0,
-                "length": 134
+                "start": 14,
+                "length": 120
             },
             "recap": {
                 "start": 134,
@@ -9680,8 +9680,8 @@
         },
         "episodes 909-911": {
             "opening": {
-                "start": 0,
-                "length": 134
+                "start": 14,
+                "length": 120
             },
             "recap": {
                 "start": 134,
@@ -9690,8 +9690,8 @@
         },
         "episode 912": {
             "opening": {
-                "start": 0,
-                "length": 134
+                "start": 14,
+                "length": 120
             },
             "recap": {
                 "start": 134,
@@ -9700,8 +9700,8 @@
         },
         "episode 913": {
             "opening": {
-                "start": 0,
-                "length": 134
+                "start": 14,
+                "length": 120
             },
             "recap": {
                 "start": 134,
@@ -9710,8 +9710,8 @@
         },
         "episode 914": {
             "opening": {
-                "start": 0,
-                "length": 134
+                "start": 14,
+                "length": 120
             },
             "recap": {
                 "start": 134,
@@ -9720,8 +9720,8 @@
         },
         "episode 915": {
             "opening": {
-                "start": 0,
-                "length": 134
+                "start": 14,
+                "length": 120
             },
             "recap": {
                 "start": 134,
@@ -9730,8 +9730,8 @@
         },
         "episode 916": {
             "opening": {
-                "start": 0,
-                "length": 134
+                "start": 14,
+                "length": 120
             },
             "recap": {
                 "start": 134,
@@ -9740,8 +9740,8 @@
         },
         "episode 917": {
             "opening": {
-                "start": 0,
-                "length": 134
+                "start": 14,
+                "length": 120
             },
             "recap": {
                 "start": 134,
@@ -9750,8 +9750,8 @@
         },
         "episode 918": {
             "opening": {
-                "start": 0,
-                "length": 134
+                "start": 14,
+                "length": 120
             },
             "recap": {
                 "start": 134,
@@ -9760,8 +9760,8 @@
         },
         "episode 919": {
             "opening": {
-                "start": 0,
-                "length": 134
+                "start": 14,
+                "length": 120
             },
             "recap": {
                 "start": 134,
@@ -9770,8 +9770,8 @@
         },
         "episode 920": {
             "opening": {
-                "start": 0,
-                "length": 134
+                "start": 14,
+                "length": 120
             },
             "recap": {
                 "start": 134,
@@ -9780,8 +9780,8 @@
         },
         "episode 921": {
             "opening": {
-                "start": 0,
-                "length": 134
+                "start": 14,
+                "length": 120
             },
             "recap": {
                 "start": 134,
@@ -9790,8 +9790,8 @@
         },
         "episode 922": {
             "opening": {
-                "start": 0,
-                "length": 134
+                "start": 14,
+                "length": 120
             },
             "recap": {
                 "start": 134,
@@ -9800,8 +9800,8 @@
         },
         "episode 923": {
             "opening": {
-                "start": 0,
-                "length": 134
+                "start": 14,
+                "length": 120
             },
             "recap": {
                 "start": 134,
@@ -9810,8 +9810,8 @@
         },
         "episode 924": {
             "opening": {
-                "start": 0,
-                "length": 134
+                "start": 14,
+                "length": 120
             },
             "recap": {
                 "start": 134,
@@ -9820,8 +9820,8 @@
         },
         "episode 925": {
             "opening": {
-                "start": 0,
-                "length": 134
+                "start": 14,
+                "length": 120
             },
             "recap": {
                 "start": 134,
@@ -9830,8 +9830,8 @@
         },
         "episode 926": {
             "opening": {
-                "start": 0,
-                "length": 134
+                "start": 14,
+                "length": 120
             },
             "recap": {
                 "start": 134,
@@ -9840,8 +9840,8 @@
         },
         "episode 927": {
             "opening": {
-                "start": 0,
-                "length": 134
+                "start": 14,
+                "length": 120
             },
             "recap": {
                 "start": 134,
@@ -9850,14 +9850,14 @@
         },
         "episodes 928-999": {
             "opening": {
-                "start": 0,
-                "length": 134
+                "start": 14,
+                "length": 120
             }
         },
         "episode 1000": {
             "opening": {
-                "start": 0,
-                "length": 123
+                "start": 14,
+                "length": 109
             }
         }
     },

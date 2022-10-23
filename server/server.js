@@ -51,7 +51,11 @@ wss.on("connection", ws => {
     ws.on("message", (data) => {
 		let j = JSON.parse(data);
 		winston.log("debug", "Message from client " + ws.id + ": " + JSON.stringify(j));
-		if (j.action) {
+		if ("heartbeat" in j || "ping" in j) {
+			winston.log("debug", "Client " + ws.id + " sent a heartbeat.");
+			ws.send(JSON.stringify({ "heartbeat": true }));
+		}
+		else if ("action" in j) {
 			switch (j.action) {
 				case "NEWGROUP":
 					if (ws.channel) {
@@ -71,7 +75,7 @@ wss.on("connection", ws => {
 						clients: 1
 					});
 					index++;
-					winston.log("info", "Created new watchgroup with hash " + idhash);
+					winston.log("info", "User " + ws.id + " created new watchgroup with hash " + idhash);
 					ws.send(JSON.stringify({ event: "EVENT_JOINGROUP", message: "Successfully created a new room.", idhash: idhash, url: j.url, playerData: pd }));
 					ws.channel = idhash;
 					break;

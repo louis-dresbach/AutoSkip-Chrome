@@ -2,7 +2,7 @@
 	"name": "AutoSkipper",
 	"description": "Add features to your favorite anime sites!",
 	"author": "Louis Dresbach",
-	"version": "0.9",
+	"version": "1",
 	"manifest_version": 3,
 	"default_locale": "en",
 	"permissions": ["storage", "tabs", "notifications"], 
@@ -16,6 +16,7 @@
 			"matches": [
 				"*://*.gogoanime.lu/*-episode-*", 
 				"*://*.gogoanime.ee/*-episode-*", 
+				"*://*.gogoanime.dk/*-episode-*", 
 				"*://*.gogoanime.tel/*-episode-*", 
 				
 				"*://*.bs.to/serie/*/*", 
@@ -38,6 +39,7 @@
 			"matches": [
 				"*://*.goload.io/streaming.php?*", 
 				"*://*.gogohd.net/streaming.php?*", 
+				"*://*.streamsss.net/e/*", 
 				
 				"*://*.vupload.com/v/*", 
 				"*://*.streamz.ws/wdu?*", 

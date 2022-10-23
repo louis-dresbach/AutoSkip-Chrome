@@ -51,7 +51,7 @@ const updateWatchlist = (data) => {
 }
 
 const initWs = () => {
-	if (ws !== null) {
+	if (ws !== null && ws.readyState <= 1) {
 		return;
 	}
 	ws = new WebSocket("wss://k3i.de:8080");
@@ -64,9 +64,9 @@ const initWs = () => {
 		}
 	});
 	
-	ws.addEventListener('message', function (event) {
+	ws.addEventListener('message', (event) => {
 		let d = JSON.parse(event.data);
-		if (d.event) {
+		if ("event" in d) {
 			console.log(d);
 			if (d.event === "error") {
 				// Just in case we think we are in a group, but the server tells us otherwise
@@ -87,6 +87,7 @@ const initWs = () => {
 				chrome.notifications.create({ type: "basic", title: "AutoSkip", message: "Left group " + groupwatch.roomid, iconUrl: "Icon128px.png" });
 				groupwatch.roomid = null;
 				chrome.storage.sync.set({ groupwatch });
+				ws.close();
 			}
 			else if (d.event === "EVENT_BROADCAST") {
 				let m = d.message;
@@ -143,10 +144,18 @@ const initWs = () => {
 	});
 	ws.addEventListener("close", (e) => {
 		chrome.notifications.create({ type: "basic", title: "AutoSkip", message: "WebSocket was disconnected: " + e.code, iconUrl: "Icon128px.png" });
-		ws = null;
 		groupwatch = {};
 		chrome.storage.sync.set({ groupwatch });
 	});
+	ws.addEventListener("error", (e) => {
+		chrome.notifications.create({ type: "basic", title: "AutoSkip error", message: "An error occured with the socket connection to our server. Please try again.", iconUrl: "Icon128px.png" });
+		groupwatch = {};
+		chrome.storage.sync.set({ groupwatch });
+	});
+	
+	ws.heartbeat = setInterval(() => {
+		websocketmessage({ heartbeat: true });
+	}, 30 * 1000);
 };
 
 chrome.storage.sync.get("groupwatch", ({ groupwatch }) => {
@@ -335,14 +344,12 @@ chrome.runtime.onMessage.addListener(
 	}
 	
 	else if (request.setData) {
-		//console.log(request);
 		playerData.set(request.url, request.value);
 				
 		const it = playerData.entries();
 		while (playerData.size > 100) {
 			const k = it.next().value[0];
-			console.log("deleting "+k)
-			playerData.delete(k)
+			playerData.delete(k);
 		}
 		
 		chrome.storage.sync.set({ playerData });

@@ -7,9 +7,15 @@ from bs4 import BeautifulSoup
 debug = True
 
 def main():
+	path = "../package/"
 	result = {}
 	print ("Starting scraping")
-	with open('../package/timestamps.json', 'r') as f:
+	with open(path + "timestamps.json", 'rb') as f:
+		with open(path + "timestamps_bk.json", 'wb') as w:
+			print("Creating backup of timestamps")
+			w.write(f.read())
+	
+	with open(path + "timestamps.json", 'r') as f:
 		result = json.load(f)
 
 	print ("\tScraping opwiki.org for OnePiece")
@@ -41,7 +47,7 @@ def main():
 						# Get length
 						length = getLength("https://opwiki.org" + tr.contents[1].find("a")["href"])
 						
-						th = Theme(x[0], x[1], length, 14)
+						th = Theme(x[0], x[1], length + 14, 0)
 						openings.append(th)
 			
 			else:
@@ -50,7 +56,7 @@ def main():
 					# Get length
 					length = getLength("https://opwiki.org" + tr.contents[1].find("a")["href"])
 					
-					th = Theme(x.group(1), int(x.group(1)) + 100, length, 14)
+					th = Theme(x.group(1), int(x.group(1)) + 100, length + 14, 0)
 					openings.append(th)
 				else:
 					x = re.search("Episode (\d*)", text)
@@ -58,7 +64,7 @@ def main():
 						# Get length
 						length = getLength("https://opwiki.org" + tr.contents[1].find("a")["href"])
 						
-						th = Theme(x.group(1), x.group(1), length, 14)
+						th = Theme(x.group(1), x.group(1), length + 14, 0)
 						openings.append(th)
 	
 	# endings
@@ -126,14 +132,14 @@ def main():
 	print ("\t\tFinished")
 	
 	# OnePiece shows 40 seconds of preview at the end until episode 618
-	previews = [Theme(1, 618, 40)]
+	previews = [Theme(1, 618, 40), Theme(671, 800, 35)]
 
 	result["69"] = combine(intros, openings, endings, previews, recaps, fillers)
 	print ("\tFinished OnePiece");
 
 
 	print ("Finished scraping. Writing results to parseResults.json")
-	f = open("parseResults.json", "w")
+	f = open("../package/timestamps.json", "w")
 	f.write(json.dumps(result, indent=4))
 	f.close()
 
